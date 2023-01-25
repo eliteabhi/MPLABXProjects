@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=mkdir -p
+MKDIR=gnumkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -99,7 +99,7 @@ ${OBJECTDIR}/BlinkRoutine.o: BlinkRoutine.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/BlinkRoutine.o.d 
 	@${RM} ${OBJECTDIR}/BlinkRoutine.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/BlinkRoutine.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION) -u  -l\\\"${OBJECTDIR}/BlinkRoutine.lst\\\" -e\\\"${OBJECTDIR}/BlinkRoutine.err\\\" $(ASM_OPTIONS)    -o\\\"${OBJECTDIR}/BlinkRoutine.o\\\" \\\"BlinkRoutine.asm\\\" 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/BlinkRoutine.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/BlinkRoutine.lst\" -e\"${OBJECTDIR}/BlinkRoutine.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/BlinkRoutine.o\" \"BlinkRoutine.asm\" 
 	@${DEP_GEN} -d "${OBJECTDIR}/BlinkRoutine.o"
 	@${FIXDEPS} "${OBJECTDIR}/BlinkRoutine.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
@@ -108,7 +108,7 @@ ${OBJECTDIR}/BlinkRoutine.o: BlinkRoutine.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/BlinkRoutine.o.d 
 	@${RM} ${OBJECTDIR}/BlinkRoutine.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/BlinkRoutine.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION) -u  -l\\\"${OBJECTDIR}/BlinkRoutine.lst\\\" -e\\\"${OBJECTDIR}/BlinkRoutine.err\\\" $(ASM_OPTIONS)    -o\\\"${OBJECTDIR}/BlinkRoutine.o\\\" \\\"BlinkRoutine.asm\\\" 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/BlinkRoutine.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/BlinkRoutine.lst\" -e\"${OBJECTDIR}/BlinkRoutine.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/BlinkRoutine.o\" \"BlinkRoutine.asm\" 
 	@${DEP_GEN} -d "${OBJECTDIR}/BlinkRoutine.o"
 	@${FIXDEPS} "${OBJECTDIR}/BlinkRoutine.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
@@ -142,7 +142,7 @@ endif
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif
