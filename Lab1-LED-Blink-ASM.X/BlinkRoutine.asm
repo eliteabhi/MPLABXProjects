@@ -62,20 +62,23 @@ Start
 	
     ; DELAY ROUTINE
     Delay
-	BANKSEL varA
-	movlw 0xFF
-	movwf varA
+        BANKSEL varA
+        movlw 0xFF
+        movwf varA
+
     Outside
-	decfsz varA
-	goto Goon
-	return
+        decfsz varA
+        goto Goon
+        return
+
     Goon
-	movlw 0xFF
-	movwf varB
+        movlw 0xFF
+        movwf varB
+
     Inside
-	decfsz varB
-	goto Inside
-	goto Outside
+        decfsz varB
+        goto Inside
+        goto Outside
     
 END
     
