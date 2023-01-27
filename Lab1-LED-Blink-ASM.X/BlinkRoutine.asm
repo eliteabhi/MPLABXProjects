@@ -49,12 +49,12 @@ Start
 	
     Loop
     
-	BANKSEL LATA ; Selects LATCH A Register
-	BSF LATA, 5  ; Sets Bit 5 (RA5) to High (1)
-	call Delay   ; Calls Delay Function
-	BANKSEL LATA  ; Selects LATCH A Register again 
-	BCF LATA, 5  ; Clears Bit 5 (RA5)
-	call Delay   ; Calls Delay
+        BANKSEL LATA ; Selects LATCH A Register
+        BSF LATA, 5  ; Sets Bit 5 (RA5) to High (1)
+        call Delay   ; Calls Delay Function
+        BANKSEL LATA  ; Selects LATCH A Register again 
+        BCF LATA, 5  ; Clears Bit 5 (RA5)
+        call Delay   ; Calls Delay
 	
     goto Loop
 	
