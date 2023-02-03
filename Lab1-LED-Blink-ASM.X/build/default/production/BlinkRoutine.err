@@ -1,20 +1,20 @@
-Warning[205] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 20 : Found directive in column 1. (list)
-Warning[205] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 23 : Found directive in column 1. (CBLOCK)
-Warning[205] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 26 : Found directive in column 1. (ENDC)
-Warning[205] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 29 : Found directive in column 1. (ORG)
-Warning[203] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 30 : Found opcode in column 1. (goto)
-Warning[205] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 32 : Found directive in column 1. (ORG)
-Warning[203] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 33 : Found opcode in column 1. (RETFIE)
-Message[302] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 40 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 44 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 46 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[207] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 50 : Found label after column 1. (Loop)
-Message[302] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 53 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 56 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[207] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 64 : Found label after column 1. (Delay)
-Warning[207] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 68 : Found label after column 1. (Outside)
-Message[305] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 69 : Using default destination of 1 (file).
-Warning[207] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 72 : Found label after column 1. (Goon)
-Warning[207] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 75 : Found label after column 1. (Inside)
-Message[305] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 76 : Using default destination of 1 (file).
-Warning[205] /home/abhi/MPLABXProjects/Lab1-LED-Blink-ASM.X/BlinkRoutine.asm 80 : Found directive in column 1. (END)
+Warning[205] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 20 : Found directive in column 1. (list)
+Warning[205] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 23 : Found directive in column 1. (CBLOCK)
+Warning[205] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 26 : Found directive in column 1. (ENDC)
+Warning[205] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 29 : Found directive in column 1. (ORG)
+Warning[203] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 30 : Found opcode in column 1. (goto)
+Warning[205] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 32 : Found directive in column 1. (ORG)
+Warning[203] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 33 : Found opcode in column 1. (RETFIE)
+Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 40 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 44 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 46 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 50 : Found label after column 1. (Loop)
+Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 53 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 56 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 64 : Found label after column 1. (Delay)
+Warning[207] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 69 : Found label after column 1. (Outside)
+Message[305] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 70 : Using default destination of 1 (file).
+Warning[207] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 74 : Found label after column 1. (Goon)
+Warning[207] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 78 : Found label after column 1. (Inside)
+Message[305] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 79 : Using default destination of 1 (file).
+Warning[205] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB1-LED-BLINK-ASM.X\BLINKROUTINE.ASM 83 : Found directive in column 1. (END)

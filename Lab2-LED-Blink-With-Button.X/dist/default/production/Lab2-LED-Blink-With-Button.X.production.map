@@ -1,0 +1,51 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Fri Feb 03 11:21:19 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+                   .org_1       code   0x000004    program   0x000060
+.config_8007_BUILD/DEFAULT/PRODUCTION/BUTTONB       code   0x008007    program   0x000002
+.config_8008_BUILD/DEFAULT/PRODUCTION/BUTTONB       code   0x008008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x000033      
+                            0x008007    0x008008      
+            53 out of 8455 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    Delay   0x000020    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                   Delay2   0x00002b    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                     Goon   0x000026    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                   Inside   0x000028    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                     Loop   0x000013    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                  Outside   0x000023    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                    Start   0x000005    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                    TLoop   0x000031    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    Start   0x000005    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                     Loop   0x000013    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                    Delay   0x000020    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                  Outside   0x000023    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                     Goon   0x000026    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                   Inside   0x000028    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                   Delay2   0x00002b    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+                    TLoop   0x000031    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab2-LED-Blink-With-Button.X\ButtonBlink.asm
+
+

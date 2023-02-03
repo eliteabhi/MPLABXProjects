@@ -1,4 +1,4 @@
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  1
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ Warning[203]: Found opcode in column 1. (RETFIE)
 0004   0009           00033 RETFIE
                       00034 
 0005                  00035 Start
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  2
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -77,60 +77,92 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 000A   0022           00045     BANKSEL LATA
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
 000B   018C           00046     clrf LATA
-                      00047 
-                      00048     ; My Code ---------
-                      00049         
-Warning[207]: Found label after column 1. (Loop)
-000C                  00050     Loop
-                      00051     
-000C   0022           00052         BANKSEL LATA ; Selects LATCH A Register
+                      00047     
+000C   0021           00048     BANKSEL TRISB ; For Button
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000D   168C           00053         BSF LATA, 5  ; Sets Bit 5 (RA5) to High (1)
-000E   2???           00054         call Delay   ; Calls Delay Function
-000F   0022           00055         BANKSEL LATA  ; Selects LATCH A Register again 
+000D   178D           00049     bsf TRISB, 7
+000E   0023           00050     BANKSEL ANSELC ; Read analog select bits
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0010   128C           00056         BCF LATA, 5  ; Clears Bit 5 (RA5)
-0011   2???           00057         call Delay   ; Calls Delay
+000F   138E           00051     bcf ANSELC, 7  ; Clear bit 2
+                      00052     
+0010   0021           00053     BANKSEL OPTION_REG
+0011   3087           00054     movlw 0x87
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0012   0095           00055     movwf OPTION_REG
+                      00056     
+                      00057     ; My Code ---------
                       00058         
-0012   2???           00059     goto Loop
-                      00060         
-                      00061     ; -----------------
-                      00062         
-                      00063     ; DELAY ROUTINE
+Warning[207]: Found label after column 1. (Loop)
+0013                  00059     Loop
+                      00060     
+0013   0022           00061         BANKSEL LATA   ; Selects LATCH A Register
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0014   168C           00062         bsf LATA, 5    ; Sets Bit 5 (RA5) to High (1)
+0015   0020           00063         BANKSEL PORTB  ; Selects PORTB
+0016   1F8D           00064         btfss PORTB, 7 ; If RB7 is set, execute next intruction
+0017   3???           00065         bra Loop       ; Go back to Loop
+0018   2???           00066         call Delay2    ; Calls Delay2 Function
+0019   0022           00067         BANKSEL LATA   ; Selects LATCH A Register again 
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+001A   128C           00068         bcf LATA, 5    ; Clears Bit 5 (RA5) to Low (0)
+001B   0020           00069         BANKSEL PORTB  ; Selects PORTB
+001C   1F8D           00070         btfss PORTB, 7 ; If RB7 is set, execute next instruction
+001D   3???           00071         bra Loop       ; Go back to Loop
+001E   2???           00072         call Delay2    ; Calls Delay2
+                      00073         
+001F   2???           00074     goto Loop
+                      00075         
+                      00076     ; -----------------
+                      00077         
+                      00078     ; DELAY ROUTINE
 Warning[207]: Found label after column 1. (Delay)
-0013                  00064     Delay
-0013   0020           00065         BANKSEL varA
-0014   30FF           00066         movlw 0xFF
-0015   00B0           00067         movwf varA
-                      00068 
-Warning[207]: Found label after column 1. (Outside)
-0016                  00069     Outside
-Message[305]: Using default destination of 1 (file).
-0016   0BB0           00070         decfsz varA
-0017   2???           00071         goto Goon
-0018   0008           00072         return
-                      00073 
-Warning[207]: Found label after column 1. (Goon)
-0019                  00074     Goon
-0019   30FF           00075         movlw 0xFF
-001A   00B1           00076         movwf varB
-                      00077 
-Warning[207]: Found label after column 1. (Inside)
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  3
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-001B                  00078     Inside
+0020                  00079     Delay
+0020   0020           00080         BANKSEL varA
+0021   30FF           00081         movlw 0xFF
+0022   00B0           00082         movwf varA
+                      00083 
+Warning[207]: Found label after column 1. (Outside)
+0023                  00084     Outside
 Message[305]: Using default destination of 1 (file).
-001B   0BB1           00079         decfsz varB
-001C   2???           00080         goto Inside
-001D   2???           00081         goto Outside
-                      00082     
+0023   0BB0           00085         decfsz varA
+0024   2???           00086         goto Goon
+0025   0008           00087         return
+                      00088 
+Warning[207]: Found label after column 1. (Goon)
+0026                  00089     Goon
+0026   30FF           00090         movlw 0xFF
+0027   00B1           00091         movwf varB
+                      00092 
+Warning[207]: Found label after column 1. (Inside)
+0028                  00093     Inside
+Message[305]: Using default destination of 1 (file).
+0028   0BB1           00094         decfsz varB
+0029   2???           00095         goto Inside
+002A   2???           00096         goto Outside
+                      00097     
+                      00098         
+Warning[207]: Found label after column 1. (Delay2)
+002B                  00099     Delay2
+002B   0020           00100         BANKSEL INTCON
+002C   110B           00101         bcf INTCON, 2
+002D   0020           00102         BANKSEL TMR0
+002E   3001           00103         movlw 0x01
+002F   0095           00104         movwf TMR0
+0030   0020           00105         BANKSEL INTCON
+Warning[207]: Found label after column 1. (TLoop)
+0031                  00106     TLoop
+0031   190B           00107         btfsc INTCON, 2
+0032   0008           00108         return
+0033   2???           00109         goto TLoop
 Warning[205]: Found directive in column 1. (END)
-09E4 3EFF             00083 END
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  4
+09E4 3EFF             00110 END
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  4
 
 
 SYMBOL TABLE
@@ -189,7 +221,7 @@ BOEN                              00000004
 BORCON                            00000116
 BORRDY                            00000000
 BRG16                             00000003
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  5
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  5
 
 
 SYMBOL TABLE
@@ -248,7 +280,7 @@ CCP1AS1                           00000005
 CCP1AS2                           00000006
 CCP1ASE                           00000007
 CCP1CON                           00000293
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  6
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  6
 
 
 SYMBOL TABLE
@@ -307,7 +339,7 @@ CHS0                              00000002
 CHS1                              00000003
 CHS2                              00000004
 CHS3                              00000005
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  7
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  7
 
 
 SYMBOL TABLE
@@ -366,7 +398,7 @@ DC3B0                             00000004
 DC3B1                             00000005
 DC4B0                             00000004
 DC4B1                             00000005
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  8
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  8
 
 
 SYMBOL TABLE
@@ -375,7 +407,8 @@ SYMBOL TABLE
 DC_SHAD                           00000001
 DHEN                              00000000
 D_NOT_A                           00000005
-Delay                             00000013
+Delay                             00000020
+Delay2                            0000002B
 ECCP1AS                           00000295
 EEADR                             00000191
 EEADRH                            00000192
@@ -408,7 +441,7 @@ GCEN                              00000007
 GIE                               00000007
 GO                                00000001
 GO_NOT_DONE                       00000001
-Goon                              00000019
+Goon                              00000026
 HFIOFL                            00000003
 HFIOFR                            00000004
 HFIOFS                            00000000
@@ -424,13 +457,13 @@ INLVLA5                           00000005
 INLVLB                            0000038D
 INLVLB4                           00000004
 INLVLB5                           00000005
-INLVLB6                           00000006
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE  9
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE  9
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+INLVLB6                           00000006
 INLVLB7                           00000007
 INLVLC                            0000038E
 INLVLC0                           00000000
@@ -483,17 +516,17 @@ IOCBP6                            00000006
 IOCBP7                            00000007
 IOCIE                             00000003
 IOCIF                             00000000
-IRCF0                             00000003
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 10
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+IRCF0                             00000003
 IRCF1                             00000004
 IRCF2                             00000005
 IRCF3                             00000006
-Inside                            0000001B
+Inside                            00000028
 LATA                              0000010C
 LATA0                             00000000
 LATA1                             00000001
@@ -516,7 +549,7 @@ LATC6                             00000006
 LATC7                             00000007
 LFIOFR                            00000001
 LWLO                              00000005
-Loop                              0000000C
+Loop                              00000013
 MC1OUT                            00000000
 MC2OUT                            00000001
 MDBIT                             00000000
@@ -542,13 +575,13 @@ MDMS0                             00000000
 MDMS1                             00000001
 MDMS2                             00000002
 MDMS3                             00000003
-MDMSODIS                          00000007
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 11
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 11
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+MDMSODIS                          00000007
 MDOE                              00000006
 MDOPOL                            00000004
 MDOUT                             00000003
@@ -571,7 +604,7 @@ OSCTUNE                           00000098
 OSFIE                             00000007
 OSFIF                             00000007
 OSTS                              00000005
-Outside                           00000016
+Outside                           00000023
 P                                 00000004
 P1CSEL                            00000002
 P1DC0                             00000000
@@ -601,13 +634,13 @@ PCL                               00000002
 PCLATH                            0000000A
 PCLATH_SHAD                       00000FE7
 PCON                              00000096
-PEIE                              00000006
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 12
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 12
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+PEIE                              00000006
 PEN                               00000002
 PIE1                              00000091
 PIE2                              00000092
@@ -660,13 +693,13 @@ RC6                               00000006
 RC7                               00000007
 RCEN                              00000003
 RCIDL                             00000006
-RCIE                              00000005
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 13
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 13
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+RCIE                              00000005
 RCIF                              00000005
 RCREG                             00000199
 RCSTA                             0000019D
@@ -719,13 +752,13 @@ SSP1CON1                          00000215
 SSP1CON2                          00000216
 SSP1CON3                          00000217
 SSP1IE                            00000003
-SSP1IF                            00000003
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 14
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 14
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+SSP1IF                            00000003
 SSP1MSK                           00000213
 SSP1STAT                          00000214
 SSP2ADD                           0000021A
@@ -778,13 +811,13 @@ T1CKPS0                           00000004
 T1CKPS1                           00000005
 T1CON                             00000018
 T1GCON                            00000019
-T1GGO                             00000003
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 15
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 15
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+T1GGO                             00000003
 T1GPOL                            00000006
 T1GSEL                            00000003
 T1GSPM                            00000004
@@ -815,6 +848,7 @@ T6OUTPS0                          00000003
 T6OUTPS1                          00000004
 T6OUTPS2                          00000005
 T6OUTPS3                          00000006
+TLoop                             00000031
 TMR0                              00000015
 TMR0CS                            00000005
 TMR0IE                            00000005
@@ -836,14 +870,14 @@ TMR2IE                            00000001
 TMR2IF                            00000001
 TMR2ON                            00000002
 TMR4                              00000415
-TMR4IE                            00000001
-TMR4IF                            00000001
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 16
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 16
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TMR4IE                            00000001
+TMR4IF                            00000001
 TMR4ON                            00000002
 TMR6                              0000041C
 TMR6IE                            00000003
@@ -895,14 +929,14 @@ WCOL                              00000007
 WDTCON                            00000097
 WDTPS0                            00000001
 WDTPS1                            00000002
-WDTPS2                            00000003
-WDTPS3                            00000004
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 17
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 17
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+WDTPS2                            00000003
+WDTPS3                            00000004
 WDTPS4                            00000005
 WPUA                              0000020C
 WPUA0                             00000000
@@ -954,14 +988,14 @@ _FCMEN_ON                         00003FFF
 _FOSC_ECH                         00003FFF
 _FOSC_ECL                         00003FFD
 _FOSC_ECM                         00003FFE
-_FOSC_EXTRC                       00003FFB
-_FOSC_HS                          00003FFA
-MPASM 5.87                  BLINKROUTINE.ASM   2-3-2023  11:00:57         PAGE 18
+MPASM 5.87                   BUTTONBLINK.ASM   2-3-2023  11:21:18         PAGE 18
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+_FOSC_EXTRC                       00003FFB
+_FOSC_HS                          00003FFA
 _FOSC_INTOSC                      00003FFC
 _FOSC_LP                          00003FF8
 _FOSC_XT                          00003FF9
@@ -994,7 +1028,7 @@ varA                              00000030
 varB                              00000031
 
 Errors   :     0
-Warnings :    13 reported,     0 suppressed
-Messages :     7 reported,     0 suppressed
+Warnings :    15 reported,     0 suppressed
+Messages :    10 reported,     0 suppressed
 
 
