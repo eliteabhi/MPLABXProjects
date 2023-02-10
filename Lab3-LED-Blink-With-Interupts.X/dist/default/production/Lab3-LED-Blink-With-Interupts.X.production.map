@@ -1,0 +1,47 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Fri Feb 10 01:35:58 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+                   .org_1       code   0x000004    program   0x000062
+.config_8007_BUILD/DEFAULT/PRODUCTION/LAB3.O       code   0x008007    program   0x000002
+.config_8008_BUILD/DEFAULT/PRODUCTION/LAB3.O       code   0x008008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x000034      
+                            0x008007    0x008008      
+            54 out of 8455 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    Delay   0x00002a    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                     Goon   0x000030    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                   Inside   0x000032    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                     Loop   0x000020    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                  Outside   0x00002d    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                    Start   0x00000c    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    Start   0x00000c    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                     Loop   0x000020    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                    Delay   0x00002a    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                  Outside   0x00002d    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                     Goon   0x000030    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+                   Inside   0x000032    program     static E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab3-LED-Blink-With-Interupts.X\Lab3.asm
+
+
