@@ -6,6 +6,8 @@
 ; Assembly source line config statements
 
 #include "p16f1829.inc"
+    
+#define mask (1 << 5) ; Doesn't have to be here but it MUST be defined before 'movlw mask' ~ Abhi
 ;!!DEFINE MASK HERE!!
  
 ; CONFIG1
@@ -26,8 +28,6 @@ VarB
   
     ORG 0
     goto Start   
-
-    #define mask (1 << 2) ; Doesn't have to be here but it MUST be defined before 'movlw mask' ~ Abhi
     
     ORG 4
 	BANKSEL INTCON
@@ -38,15 +38,17 @@ VarB
 	movlw mask
 	
 	; My Code
-	xorwf LATA, mask ; XORS with mask ~ Abhi
+	xorwf LATA, 1 ; XORS with mask ~ Abhi
 	
-    RETFIE
+RETFIE
     
+goto Loop
+
     
 Start
 ;Clock Setup
     BANKSEL	OSCCON 	
-    movlw   	0x5A ; Made it go slower ~ Abhi   	 	
+    movlw   	0x6A ; Made it go slower ~ Abhi   	 	
     movwf  	OSCCON
 ;Input Output Setup
     ;Configure all of TRISA to be output
@@ -69,25 +71,18 @@ Start
     ;Interrupt Control Register Setup
     BANKSEL INTCON
     bcf INTCON, 2 ; Clears TMR0 flag
-    bcf INTCON, 7 ; Set GIE bit on INTCON
-    bcf INTCON, 5 ; set TMR0IE bit on INTCON
+    bsf INTCON, 7 ; Set GIE bit on INTCON
+    bsf INTCON, 5 ; set TMR0IE bit on INTCON
     
-    ; Turn off green LED ~ Abhi
-    BANKSEL LATA
-    bsf LATA, 5
    
     ;Execution Loop
 Loop
-    BANKSEL PORTB
-    btfss   PORTB, 7
-    bra     Loop
     BANKSEL LATA		
     bsf	    LATA, 2 ; Changed to RA2 ~ Abhi
     call Delay
     BANKSEL LATA
     bcf	    LATA, 2 ; Changed to RA2 ~ Abhi
     call Delay
-    goto Loop
     
     ;16 bit variable based delay
 Delay

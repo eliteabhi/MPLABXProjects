@@ -1,4 +1,4 @@
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  1
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -22,29 +22,29 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00008 ;==========================================================================
                       00009 
                       01367         LIST
-                      00009 ;!!DEFINE MASK HERE!!
-                      00010  
-                      00011 ; CONFIG1
-                      00012 ; __config 0xC9E4
-8007   09E4           00013  __CONFIG _CONFIG1, _FOSC_INTOSC & _WDTE_OFF & _PWRTE_OFF & _MCLRE_ON & _CP_OFF & _CPD_OFF & _BOREN_OFF 
+                      00009     
+                      00010 #define mask (1 << 5) ; Doesn't have to be here but it MUST be defined before 'movlw mask' ~ Abhi
+                      00011 ;!!DEFINE MASK HERE!!
+                      00012  
+                      00013 ; CONFIG1
+                      00014 ; __config 0xC9E4
+8007   09E4           00015  __CONFIG _CONFIG1, _FOSC_INTOSC & _WDTE_OFF & _PWRTE_OFF & _MCLRE_ON & _CP_OFF & _CPD_OFF & _BOREN_OFF 
                             & _CLKOUTEN_OFF & _IESO_OFF & _FCMEN_OFF
-                      00014 ; CONFIG2
-                      00015 ; __config 0xDEFF
-8008   3EFF           00016  __CONFIG _CONFIG2, _WRT_OFF & _PLLEN_OFF & _STVREN_ON & _BORV_LO & _LVP_ON
-                      00017 
-                      00018 
-                      00019  
-                      00020     list p=16F1829, R=DEC
-                      00021 
-                      00022     CBLOCK 0x30 ; Define GPR variable register locations
-  00000030            00023 VarA
-  00000031            00024 VarB
-                      00025     ENDC
-                      00026   
-                      00027     ORG 0
-0000   2???           00028     goto Start   
-                      00029 
-                      00030     #define mask (1 << 2) ; Doesn't have to be here but it MUST be defined before 'movlw mask' ~ Abhi
+                      00016 ; CONFIG2
+                      00017 ; __config 0xDEFF
+8008   3EFF           00018  __CONFIG _CONFIG2, _WRT_OFF & _PLLEN_OFF & _STVREN_ON & _BORV_LO & _LVP_ON
+                      00019 
+                      00020 
+                      00021  
+                      00022     list p=16F1829, R=DEC
+                      00023 
+                      00024     CBLOCK 0x30 ; Define GPR variable register locations
+  00000030            00025 VarA
+  00000031            00026 VarB
+                      00027     ENDC
+                      00028   
+                      00029     ORG 0
+0000   2???           00030     goto Start   
                       00031     
                       00032     ORG 4
 0004   0020           00033         BANKSEL INTCON
@@ -52,104 +52,99 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0006   0001           00035         RESET
 0007   110B           00036         bcf INTCON, 2
 0008   0022           00037         BANKSEL LATA
-0009   3004           00038         movlw mask
+0009   3020           00038         movlw mask
                       00039         
                       00040         ; My Code
-Warning[202]: Argument out of range.  Least significant bits used.
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  2
+000A   068C           00041         xorwf LATA, 1 ; XORS with mask ~ Abhi
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-000A   060C           00041         xorwf LATA, mask ; XORS with mask ~ Abhi
                       00042         
-000B   0009           00043     RETFIE
+Warning[203]: Found opcode in column 1. (RETFIE)
+000B   0009           00043 RETFIE
                       00044     
-                      00045     
-000C                  00046 Start
-                      00047 ;Clock Setup
-000C   0021           00048     BANKSEL     OSCCON  
-000D   305A           00049     movlw       0x5A ; Made it go slower ~ Abhi                 
+Warning[203]: Found opcode in column 1. (goto)
+000C   2???           00045 goto Loop
+                      00046 
+                      00047     
+000D                  00048 Start
+                      00049 ;Clock Setup
+000D   0021           00050     BANKSEL     OSCCON  
+000E   306A           00051     movlw       0x6A ; Made it go slower ~ Abhi                 
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-000E   0099           00050     movwf       OSCCON
-                      00051 ;Input Output Setup
-                      00052     ;Configure all of TRISA to be output
-000F   0021           00053     BANKSEL     TRISA           
+000F   0099           00052     movwf       OSCCON
+                      00053 ;Input Output Setup
+                      00054     ;Configure all of TRISA to be output
+0010   0021           00055     BANKSEL     TRISA           
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0010   018C           00054     clrf        TRISA
-                      00055     ;Set all LATCH A outputs to 0
-0011   0022           00056     BANKSEL     LATA
+0011   018C           00056     clrf        TRISA
+                      00057     ;Set all LATCH A outputs to 0
+0012   0022           00058     BANKSEL     LATA
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0012   018C           00057     clrf        LATA
-                      00058     ;Configure Push Button as Input
-0013   0021           00059     BANKSEL     TRISB
+0013   018C           00059     clrf        LATA
+                      00060     ;Configure Push Button as Input
+0014   0021           00061     BANKSEL     TRISB
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0014   178D           00060     bsf         TRISB, 7
-                      00061     ;Configure Push Input as Digital
-0015   0023           00062     BANKSEL     ANSELB
+0015   178D           00062     bsf         TRISB, 7
+                      00063     ;Configure Push Input as Digital
+0016   0023           00064     BANKSEL     ANSELB
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0016   138D           00063     bcf         ANSELB, 7
-                      00064     ;Configure Option Registor for TMR0
-0017   0021           00065     BANKSEL     OPTION_REG
-0018   3087           00066     movlw       0x87
+0017   138D           00065     bcf         ANSELB, 7
+                      00066     ;Configure Option Registor for TMR0
+0018   0021           00067     BANKSEL     OPTION_REG
+0019   3087           00068     movlw       0x87
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0019   0095           00067     movwf       OPTION_REG
-                      00068     
-                      00069     ;Interrupt Control Register Setup
-001A   0020           00070     BANKSEL INTCON
-001B   110B           00071     bcf INTCON, 2 ; Clears TMR0 flag
-001C   138B           00072     bcf INTCON, 7 ; Set GIE bit on INTCON
-001D   128B           00073     bcf INTCON, 5 ; set TMR0IE bit on INTCON
-                      00074     
-                      00075     ; Turn off green LED
-001E   0022           00076     BANKSEL LATA
+001A   0095           00069     movwf       OPTION_REG
+                      00070     
+                      00071     ;Interrupt Control Register Setup
+001B   0020           00072     BANKSEL INTCON
+001C   110B           00073     bcf INTCON, 2 ; Clears TMR0 flag
+001D   178B           00074     bsf INTCON, 7 ; Set GIE bit on INTCON
+001E   168B           00075     bsf INTCON, 5 ; set TMR0IE bit on INTCON
+                      00076     
+                      00077    
+                      00078     ;Execution Loop
+001F                  00079 Loop
+001F   0022           00080     BANKSEL LATA                
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-001F   168C           00077     bsf LATA, 5
-                      00078    
-                      00079     ;Execution Loop
-0020                  00080 Loop
-0020   0020           00081     BANKSEL PORTB
-0021   1F8D           00082     btfss   PORTB, 7
-0022   3???           00083     bra     Loop
-0023   0022           00084     BANKSEL LATA                
+0020   150C           00081     bsf     LATA, 2 ; Changed to RA2 ~ Abhi
+0021   2???           00082     call Delay
+0022   0022           00083     BANKSEL LATA
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0024   150C           00085     bsf     LATA, 2 ; Changed to RA2 ~ Abhi
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  3
+0023   110C           00084     bcf     LATA, 2 ; Changed to RA2 ~ Abhi
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-0025   2???           00086     call Delay
-0026   0022           00087     BANKSEL LATA
-Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0027   110C           00088     bcf     LATA, 2 ; Changed to RA2 ~ Abhi
-0028   2???           00089     call Delay
-0029   2???           00090     goto Loop
-                      00091     
-                      00092     ;16 bit variable based delay
-002A                  00093 Delay
-002A   0020           00094     BANKSEL VarA
-002B   30FF           00095     movlw   0xFF
-002C   00B0           00096     movwf   VarA
-002D                  00097 Outside
+0024   2???           00085     call Delay
+                      00086     
+                      00087     ;16 bit variable based delay
+0025                  00088 Delay
+0025   0020           00089     BANKSEL VarA
+0026   30FF           00090     movlw   0xFF
+0027   00B0           00091     movwf   VarA
+0028                  00092 Outside
 Message[305]: Using default destination of 1 (file).
-002D   0BB0           00098     decfsz  VarA
-002E   2???           00099     goto    Goon
-002F   0008           00100     return      
-0030                  00101 Goon
-0030   30FF           00102     movlw   0xFF
-0031   00B1           00103     movwf   VarB
-0032                  00104 Inside
+0028   0BB0           00093     decfsz  VarA
+0029   2???           00094     goto    Goon
+002A   0008           00095     return      
+002B                  00096 Goon
+002B   30FF           00097     movlw   0xFF
+002C   00B1           00098     movwf   VarB
+002D                  00099 Inside
 Message[305]: Using default destination of 1 (file).
-0032   0BB1           00105     decfsz  VarB
-0033   2???           00106     goto    Inside
-0034   2???           00107     goto    Outside
-                      00108     
-09E4 3EFF             00109     end
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  4
+002D   0BB1           00100     decfsz  VarB
+002E   2???           00101     goto    Inside
+002F   2???           00102     goto    Outside
+                      00103     
+09E4 3EFF             00104     end
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  4
 
 
 SYMBOL TABLE
@@ -208,7 +203,7 @@ BOEN                              00000004
 BORCON                            00000116
 BORRDY                            00000000
 BRG16                             00000003
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  5
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  5
 
 
 SYMBOL TABLE
@@ -267,7 +262,7 @@ CCP1AS1                           00000005
 CCP1AS2                           00000006
 CCP1ASE                           00000007
 CCP1CON                           00000293
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  6
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  6
 
 
 SYMBOL TABLE
@@ -326,7 +321,7 @@ CHS0                              00000002
 CHS1                              00000003
 CHS2                              00000004
 CHS3                              00000005
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  7
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  7
 
 
 SYMBOL TABLE
@@ -385,7 +380,7 @@ DC3B0                             00000004
 DC3B1                             00000005
 DC4B0                             00000004
 DC4B1                             00000005
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  8
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  8
 
 
 SYMBOL TABLE
@@ -394,7 +389,7 @@ SYMBOL TABLE
 DC_SHAD                           00000001
 DHEN                              00000000
 D_NOT_A                           00000005
-Delay                             0000002A
+Delay                             00000025
 ECCP1AS                           00000295
 EEADR                             00000191
 EEADRH                            00000192
@@ -427,7 +422,7 @@ GCEN                              00000007
 GIE                               00000007
 GO                                00000001
 GO_NOT_DONE                       00000001
-Goon                              00000030
+Goon                              0000002B
 HFIOFL                            00000003
 HFIOFR                            00000004
 HFIOFS                            00000000
@@ -444,7 +439,7 @@ INLVLB                            0000038D
 INLVLB4                           00000004
 INLVLB5                           00000005
 INLVLB6                           00000006
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE  9
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE  9
 
 
 SYMBOL TABLE
@@ -503,7 +498,7 @@ IOCBP7                            00000007
 IOCIE                             00000003
 IOCIF                             00000000
 IRCF0                             00000003
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 10
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 10
 
 
 SYMBOL TABLE
@@ -512,7 +507,7 @@ SYMBOL TABLE
 IRCF1                             00000004
 IRCF2                             00000005
 IRCF3                             00000006
-Inside                            00000032
+Inside                            0000002D
 LATA                              0000010C
 LATA0                             00000000
 LATA1                             00000001
@@ -535,7 +530,7 @@ LATC6                             00000006
 LATC7                             00000007
 LFIOFR                            00000001
 LWLO                              00000005
-Loop                              00000020
+Loop                              0000001F
 MC1OUT                            00000000
 MC2OUT                            00000001
 MDBIT                             00000000
@@ -562,7 +557,7 @@ MDMS1                             00000001
 MDMS2                             00000002
 MDMS3                             00000003
 MDMSODIS                          00000007
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 11
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 11
 
 
 SYMBOL TABLE
@@ -590,7 +585,7 @@ OSCTUNE                           00000098
 OSFIE                             00000007
 OSFIF                             00000007
 OSTS                              00000005
-Outside                           0000002D
+Outside                           00000028
 P                                 00000004
 P1CSEL                            00000002
 P1DC0                             00000000
@@ -621,7 +616,7 @@ PCLATH                            0000000A
 PCLATH_SHAD                       00000FE7
 PCON                              00000096
 PEIE                              00000006
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 12
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 12
 
 
 SYMBOL TABLE
@@ -680,7 +675,7 @@ RC7                               00000007
 RCEN                              00000003
 RCIDL                             00000006
 RCIE                              00000005
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 13
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 13
 
 
 SYMBOL TABLE
@@ -739,7 +734,7 @@ SSP1CON2                          00000216
 SSP1CON3                          00000217
 SSP1IE                            00000003
 SSP1IF                            00000003
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 14
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 14
 
 
 SYMBOL TABLE
@@ -787,7 +782,7 @@ STR2D                             00000003
 STR2SYNC                          00000004
 SWDTEN                            00000000
 SYNC                              00000004
-Start                             0000000C
+Start                             0000000D
 T0CS                              00000005
 T0IE                              00000005
 T0IF                              00000002
@@ -798,7 +793,7 @@ T1CKPS1                           00000005
 T1CON                             00000018
 T1GCON                            00000019
 T1GGO                             00000003
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 15
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 15
 
 
 SYMBOL TABLE
@@ -857,7 +852,7 @@ TMR2ON                            00000002
 TMR4                              00000415
 TMR4IE                            00000001
 TMR4IF                            00000001
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 16
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 16
 
 
 SYMBOL TABLE
@@ -916,7 +911,7 @@ WCOL                              00000007
 WDTCON                            00000097
 WDTPS0                            00000001
 WDTPS1                            00000002
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 17
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 17
 
 
 SYMBOL TABLE
@@ -975,7 +970,7 @@ _FCMEN_ON                         00003FFF
 _FOSC_ECH                         00003FFF
 _FOSC_ECL                         00003FFD
 _FOSC_ECM                         00003FFE
-MPASM 5.87                          LAB3.ASM   2-10-2023  1:35:57         PAGE 18
+MPASM 5.87  /HOME/ABHI/DOCUMENTS/CODE-LOCAL/   2-10-2023  12:35:36         PAGE 18
 
 
 SYMBOL TABLE
@@ -1011,10 +1006,10 @@ _WRT_BOOT                         00003FFE
 _WRT_HALF                         00003FFD
 _WRT_OFF                          00003FFF
 __16F1829                         00000001
-mask                              (1 << 2)
+mask                              (1 << 5)
 
 Errors   :     0
-Warnings :     1 reported,     0 suppressed
-Messages :    12 reported,     0 suppressed
+Warnings :     2 reported,     0 suppressed
+Messages :    11 reported,     0 suppressed
 
 

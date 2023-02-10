@@ -1,13 +1,13 @@
-Warning[202] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 41 : Argument out of range.  Least significant bits used.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 41 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 50 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 54 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 57 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 60 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 63 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 67 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 77 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 85 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 88 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[305] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 98 : Using default destination of 1 (file).
-Message[305] E:\SCHOOL\2NDYEAR\SEMESTER-II\MICRO-I\MPLABXPROJECTS\LAB3-LED-BLINK-WITH-INTERUPTS.X\LAB3.ASM 105 : Using default destination of 1 (file).
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 41 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 43 : Found opcode in column 1. (RETFIE)
+Warning[203] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 45 : Found opcode in column 1. (goto)
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 52 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 56 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 59 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 62 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 65 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 69 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 81 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 84 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 93 : Using default destination of 1 (file).
+Message[305] /home/abhi/Documents/Code-local/MPLABXProjects/Lab3-LED-Blink-With-Interupts.X/Lab3.asm 100 : Using default destination of 1 (file).

@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=gnumkdir -p
+MKDIR=mkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -99,7 +99,7 @@ ${OBJECTDIR}/Lab3.o: Lab3.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Lab3.o.d 
 	@${RM} ${OBJECTDIR}/Lab3.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Lab3.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Lab3.lst\" -e\"${OBJECTDIR}/Lab3.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Lab3.o\" \"Lab3.asm\" 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Lab3.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION) -u  -l\\\"${OBJECTDIR}/Lab3.lst\\\" -e\\\"${OBJECTDIR}/Lab3.err\\\" $(ASM_OPTIONS)    -o\\\"${OBJECTDIR}/Lab3.o\\\" \\\"Lab3.asm\\\" 
 	@${DEP_GEN} -d "${OBJECTDIR}/Lab3.o"
 	@${FIXDEPS} "${OBJECTDIR}/Lab3.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
@@ -108,7 +108,7 @@ ${OBJECTDIR}/Lab3.o: Lab3.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Lab3.o.d 
 	@${RM} ${OBJECTDIR}/Lab3.o 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Lab3.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Lab3.lst\" -e\"${OBJECTDIR}/Lab3.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Lab3.o\" \"Lab3.asm\" 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Lab3.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION) -u  -l\\\"${OBJECTDIR}/Lab3.lst\\\" -e\\\"${OBJECTDIR}/Lab3.err\\\" $(ASM_OPTIONS)    -o\\\"${OBJECTDIR}/Lab3.o\\\" \\\"Lab3.asm\\\" 
 	@${DEP_GEN} -d "${OBJECTDIR}/Lab3.o"
 	@${FIXDEPS} "${OBJECTDIR}/Lab3.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
@@ -142,7 +142,7 @@ endif
 # Enable dependency checking
 .dep.inc: .depcheck-impl
 
-DEPFILES=$(shell mplabwildcard ${POSSIBLE_DEPFILES})
+DEPFILES=$(shell "${PATH_TO_IDE_BIN}"mplabwildcard ${POSSIBLE_DEPFILES})
 ifneq (${DEPFILES},)
 include ${DEPFILES}
 endif
