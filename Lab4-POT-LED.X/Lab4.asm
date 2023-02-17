@@ -21,45 +21,35 @@ VarA
 VarB
     ENDC
   
-    ORG 0
-    goto Start   
-;!!PLACE ISR HERE!!
-    RETFIE
-    
+    res_vect code 0x000
+    goto Start
+    main_prog code
+
 Start
+ 
+    Call ADC_Initilize
+    Call PWM_Initilize
+ 
 ;Clock Setup
     BANKSEL	OSCCON 	
     movlw   	0x6A   	 	
     movwf  	OSCCON
-;Input Output Setup
-    ;Configure all of TRISA to be output
-    BANKSEL 	TRISA  	 	
-    clrf    	TRISA
-    ;Set all LATCH A outputs to 0
-    BANKSEL	LATA
-    clrf	LATA
-    ;Configure Push Button as Input
-    BANKSEL	TRISB
-    bsf		TRISB, 7
-    ;Configure Push Input as Digital
-    BANKSEL	ANSELB
-    bcf		ANSELB, 7
-    ;Configure Option Registor for TMR0
-    BANKSEL	OPTION_REG
-    movlw	0x87
-    movwf	OPTION_REG
- 
-    MOVWF CCP2CON
-    BANKSEL CCPR2L
-    CLRF  CCPR2L  ;Set initial duty cycle to 0= ?Green LED full ON?
-    BANKSEL CCPTMRS
-    CLRF  CCPTMRS ;Select timer 2 for all ccp modules
-    BANKSEL PIR2
-    BCF  PIR2, 1
-    BANKSEL T2CON 
-    MOVLW b'00000101'  ;1:1 postscaler, 4:1 prescaler and TMR2 turned on
-    MOVWF T2CON
     
+    Wait1
+	BANKSEL  PIR1
+	BTFSS    PIR1, 1
+	GOTO     Wait1
+	BANKSEL  TRISA
+	BCF  TRISA, 5   ;Starts the PWM working
+	
+;Input Output Setup
+    ;Execution Loop
+    Loop
+	call ADC_Read
+	call PWM_Duty
+	call Delay
+	goto Loop
+	
     PWM_Initilize
 	BANKSEL APFCON1
 	BSF APFCON1, 0
@@ -70,8 +60,18 @@ Start
 	MOVWF PR2  ;This will give about 1KHz as a pulse frequency
 	BANKSEL CCP2CON ;Most of the CCP2 registers are in the same bank 
 	MOVLW 0X0C
-
-    
+	MOVWF CCP2CON
+	BANKSEL CCPR2L
+	CLRF  CCPR2L  ;Set initial duty cycle to 0= ?Green LED full ON?
+	BANKSEL CCPTMRS
+	CLRF  CCPTMRS ;Select timer 2 for all ccp modules
+	BANKSEL PIR2
+	BCF  PIR2, 1
+	BANKSEL T2CON 
+	MOVLW b'00000101'  ;1:1 postscaler, 4:1 prescaler and TMR2 turned on
+	MOVWF T2CON
+	RETURN
+	
     ADC_Initilize
 	Banksel  ADCON0    ;Note  ADCON0 and ADCON1 in same bank
 	MOVLW 0X2D          ;Set channel to AN11/RB5, turn on ADC 
@@ -97,24 +97,6 @@ Start
 	BANKSEL CCPR2L
 	MOVWF CCPR2L
 	RETURN
-
-	
-    Call ADC_Initilize
-    Call PWM_Initilize
-    
-    Wait1
-	BANKSEL  PIR1
-	BTFSS    PIR1, 1
-	GOTO     Wait1
-	BANKSEL  TRISA
-	BCF  TRISA, 5   ;Starts the PWM working
-	
-    ;Execution Loop
-    Loop
-	call ADC_Read
-	call PWM_Duty
-	call Delay
-	goto Loop
     
     ;16 bit variable based delay
 Delay
