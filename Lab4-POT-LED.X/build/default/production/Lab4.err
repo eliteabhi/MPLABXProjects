@@ -1,0 +1,28 @@
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 33 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 37 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 40 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 43 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 46 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 50 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 52 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 54 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 56 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 63 : Found label after column 1. (PWM_Initilize)
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 65 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 67 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 75 : Found label after column 1. (ADC_Initilize)
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 78 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 80 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 82 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 84 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 87 : Found label after column 1. (ADC_Read)
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 89 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 90 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 94 : Found label after column 1. (PWM_Duty)
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 96 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 98 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 105 : Found label after column 1. (Wait1)
+Message[302] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 110 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 113 : Found label after column 1. (Loop)
+Message[305] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 125 : Using default destination of 1 (file).
+Message[305] /home/abhi/MPLABXProjects/Lab4-POT-LED.X/Lab4.asm 132 : Using default destination of 1 (file).
