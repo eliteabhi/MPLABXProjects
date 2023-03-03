@@ -1,9 +1,10 @@
 /*
- * File:   main.c
- * Author: Abhi Rangarajan
+ * File:   Lab6_S20.c
+ * Author: Paul Morton
  *
- * Created on March 2, 2023, 3:34 PM
+ * Created on February 28, 2020, 9:01 AM
  */
+
 
 /*
  Lab 6 Starter Code
@@ -65,6 +66,7 @@ void Display (int);
 int main(int argc, char** argv) {
 /*Variable Declaration*/  
     unsigned int Tcount, Threshold;
+    int Touch[4] = { 3, 9, 5, 4 }, mode;
 /*TouchPad Setup*/  
     CPSCON0 	=   0x8C;   //Set up Touch sensing module control reg 0
     CPSCON1     =   0x03;   //Channel Select
@@ -72,26 +74,30 @@ int main(int argc, char** argv) {
 /*Clock and Pin Configuration*/
     clockAndpin_config();      //Configures clock and pins, enables timers
     
-/*USART CONFIG*/
-    usartConfig();
-    setup_comms();
-    
 /*Threshold Value*/
-    Threshold 	=   0x0000; //using the threshold for all 3 channels
+    Threshold 	=   0x10FF; //using the threshold for all 3 channels 10FF
     
-/*Start Replace*/  
+/*Start Replace*/ 
+    
+    RA2 = ~RA2;
+    
 /*Infinite While*/
-    while (1){
-        timer_config(); //Configures Timer 0 and 1
-        while (!TMR0IF) continue;             //wait here till Timer 0 overflows
-            Tcount = (TMR1H<<8)+TMR1L;        //Save 16 bit count value in timer      
-            printf("Tcount = %x, Threshold= %x \r\n", Tcount, Threshold); //Write to UART TERMINAL
-            __delay_ms(200); //Delay Scroll on USART
-            TMR0IF = 0; //Clear the interrupt flag for Timer 1
-           if (Tcount < Threshold) //Touch Detection
-               RA5 = 1; //Hello World On
-           else
-               RA5 = 0; //Hello World Off
+    while (1) {
+        
+        mode = -1;
+
+        for ( int i = 0; i < 4; i++ ) {
+
+            CPSCON1 = Touch[i];
+            timer_config();
+            while ( ! TMR0IF ) continue;
+            Tcount = (TMR1H << 8) + TMR1L;
+            TMR0IF = 0;
+            if ( Tcount < Threshold ) mode = i;
+
+        }
+
+        Display(mode);
 
     }
 /*End Replace*/
@@ -99,9 +105,41 @@ int main(int argc, char** argv) {
 }
 
 void Display (int delay){  
-    switch(delay){
+    switch( delay ) {
 
-//  -********put the display function here!*******************
+        case 0: // Pad U
+            RA5 = ~RA5;
+            __delay_ms(100);
+            break;
+
+        case 1: // Pad T
+            RA5 = 1;
+            __delay_ms(250);
+            RA5 = 0;
+            __delay_ms(250);
+            break;
+
+        case 2: // Pad S
+            RA5 = 1;
+            __delay_ms(175);
+            RA5 = 0;
+            __delay_ms(175);
+            break;
+
+        case 3: // Pad A
+            RA5 = 1;
+            __delay_ms(175);
+            RA5 = 0;
+            __delay_ms(175);
+            RA5 = 1;
+            __delay_ms(300);
+            RA5 = 0;
+            __delay_ms(300);
+            break;
+
+        default:
+            break;
+
     }
 
 }
