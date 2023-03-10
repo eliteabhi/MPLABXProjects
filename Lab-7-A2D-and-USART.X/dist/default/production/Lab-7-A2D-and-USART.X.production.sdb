@@ -1,0 +1,238 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1829 ]
+[d frameptr 6 ]
+"464 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"56 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"48 E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab-7-A2D-and-USART.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"95
+[v _setup_comms setup_comms `(v  1 e 1 0 ]
+"107
+[v _putch putch `(v  1 e 1 0 ]
+"115
+[v _getch getch `(uc  1 e 1 0 ]
+"130
+[v _pinConfig pinConfig `(v  1 e 1 0 ]
+"146
+[v _RA5Blink RA5Blink `(v  1 e 1 0 ]
+"349 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"1183
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1233
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1272
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1764
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1905
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1925
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1945
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"2025
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"2542
+[v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
+"2948
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2995
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3031
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3284
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3304
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3324
+[v _SPBRG SPBRG `VEus  1 e 2 @411 ]
+"3371
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+"3433
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+"7044
+[v _ADGO ADGO `VEb  1 e 0 @1257 ]
+"7094
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"7674
+[v _RA5 RA5 `VEb  1 e 0 @101 ]
+"7704
+[v _RCIF RCIF `VEb  1 e 0 @141 ]
+"7712
+[v _RXDTSEL RXDTSEL `VEb  1 e 0 @2287 ]
+"7726
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"7800
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"7942
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1140 ]
+"7944
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1141 ]
+"7952
+[v _TSEN TSEN `VEb  1 e 0 @2237 ]
+"7954
+[v _TSRNG TSRNG `VEb  1 e 0 @2236 ]
+"7972
+[v _TXCKSEL TXCKSEL `VEb  1 e 0 @2282 ]
+"7974
+[v _TXEN TXEN `VEb  1 e 0 @3317 ]
+"7978
+[v _TXIF TXIF `VEb  1 e 0 @140 ]
+"354 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+"45 E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab-7-A2D-and-USART.X\main.c
+[v _Pval Pval `ui  1 e 2 0 ]
+[v _Temp Temp `ui  1 e 2 0 ]
+[v _FVval FVval `ui  1 e 2 0 ]
+"46
+[v _Ctemp Ctemp `d  1 e 3 0 ]
+"48
+[v _main main `(v  1 e 1 0 ]
+{
+"93
+} 0
+"95
+[v _setup_comms setup_comms `(v  1 e 1 0 ]
+{
+"105
+} 0
+"464 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"528
+[v printf@val val `ui  1 a 2 15 ]
+"499
+[v printf@c c `c  1 a 1 17 ]
+"506
+[v printf@prec prec `c  1 a 1 14 ]
+"508
+[v printf@flag flag `uc  1 a 1 13 ]
+"466
+[v printf@ap ap `[1]*.4v  1 a 1 12 ]
+"464
+[v printf@f f `*.25DCuc  1 p 2 0 ]
+"1541
+} 0
+"107 E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab-7-A2D-and-USART.X\main.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@byte byte `uc  1 a 1 wreg ]
+[v putch@byte byte `uc  1 a 1 wreg ]
+[v putch@byte byte `uc  1 a 1 0 ]
+"113
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
+} 0
+"130 E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab-7-A2D-and-USART.X\main.c
+[v _pinConfig pinConfig `(v  1 e 1 0 ]
+{
+"144
+} 0
+"28 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 16 ]
+"20
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 43 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 47 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 46 ]
+[v ___ftmul@exp exp `uc  1 a 1 42 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 32 ]
+[v ___ftmul@f2 f2 `f  1 p 3 35 ]
+"157
+} 0
+"56 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 11 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 15 ]
+[v ___ftdiv@exp exp `uc  1 a 1 14 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 10 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 0 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 3 ]
+"86
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 31 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 30 ]
+[v ___ftadd@sign sign `uc  1 a 1 29 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 19 ]
+[v ___ftadd@f2 f2 `f  1 p 3 22 ]
+"148
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"146 E:\School\2ndYear\Semester-II\Micro-I\MPLABXProjects\Lab-7-A2D-and-USART.X\main.c
+[v _RA5Blink RA5Blink `(v  1 e 1 0 ]
+{
+"149
+} 0
