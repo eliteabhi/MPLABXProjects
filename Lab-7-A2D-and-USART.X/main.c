@@ -42,8 +42,9 @@ unsigned char getch(void);
 unsigned char getche(void);  
   
 //*Global Vars*//  
-unsigned int Pval, Temp, FVval;  
+unsigned int Pval, Temp, FVval, Photo;  
 double Ctemp;  
+float Temperature, Voltage;
   
 void main(void) {  
   
@@ -87,7 +88,47 @@ FVRCON = 0xA2;
        __delay_ms(1000);  
          
     /*Blink RA5 once every transmission packet*/     
-       RA5Blink();  
+       // RA5Blink();
+       
+    // Turn off Green LED and turn on Red LED
+       if ( Temp > Pval ) {
+           
+           RA5 = 0;
+           RC6 = 1;
+           
+       }
+       
+       else {
+           
+           RA5 = 1;
+           RC6 = 0;
+           
+       }
+       
+       /*External Temp Read*/
+        ADCON0 = 0x19;
+       __delay_ms(10); //Allow cap to recharge  
+       ADGO = 1; // initiate conversion on the selected channel  
+       while(ADGO)continue;  
+       Temp = ((ADRESH<<8)+(ADRESL)); //Store 10 bits into Pval, 8 + 2
+       
+       Voltage = (float)(Temp * 5.0)/1024;
+       Temperature = (Voltage - .5)/ 0.01;
+       
+       /*Photo Cell read*/
+        ADCON0 = 0x1D;
+       __delay_ms(10); //Allow cap to recharge  
+       ADGO = 1; // initiate conversion on the selected channel  
+       while(ADGO)continue;  
+       Photo = ((ADRESH<<8)+(ADRESL)); //Store 10 bits into Pval, 8 + 2
+       
+       /*Write to Terminal + Temperature Math*/   
+       printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d ]\n\r", Temperature, Pval, Voltage, Photo);  
+       __delay_ms(1000);  
+       
+       if ( Photo < 0 ) RA2 = 0;
+       else RA2 = 1;
+       
    }  
  return;  
   }  

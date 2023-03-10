@@ -4,27 +4,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _pinConfig `(v ~T0 @X0 0 ef ]
 "39
 [v _setup_comms `(v ~T0 @X0 0 ef ]
-"2542 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h
+"2542 /opt/microchip/xc8/v1.45/include/pic16f1829.h
 [v _FVRCON `Vuc ~T0 @X0 0 e@279 ]
 "2025
 [v _ADCON1 `Vuc ~T0 @X0 0 e@158 ]
 "1945
 [v _ADCON0 `Vuc ~T0 @X0 0 e@157 ]
 [v F2931 `(v ~T0 @X0 1 tf1`ul ]
-"153 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic.h
+"153 /opt/microchip/xc8/v1.45/include/pic.h
 [v __delay `JF2931 ~T0 @X0 0 e ]
 [p i __delay ]
-"7044 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h
+"7044 /opt/microchip/xc8/v1.45/include/pic16f1829.h
 [v _ADGO `Vb ~T0 @X0 0 e@1257 ]
 "1925
 [v _ADRESH `Vuc ~T0 @X0 0 e@156 ]
 "1905
 [v _ADRESL `Vuc ~T0 @X0 0 e@155 ]
-"195 C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h
+"195 /opt/microchip/xc8/v1.45/include/stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"37 main.c
-[v _RA5Blink `(v ~T0 @X0 0 ef ]
-"7944 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h
+"7674 /opt/microchip/xc8/v1.45/include/pic16f1829.h
+[v _RA5 `Vb ~T0 @X0 0 e@101 ]
+"7696
+[v _RC6 `Vb ~T0 @X0 0 e@118 ]
+"7668
+[v _RA2 `Vb ~T0 @X0 0 e@98 ]
+"7944
 [v _TRISC5 `Vb ~T0 @X0 0 e@1141 ]
 "7942
 [v _TRISC4 `Vb ~T0 @X0 0 e@1140 ]
@@ -74,8 +78,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TSEN `Vb ~T0 @X0 0 e@2237 ]
 "7954
 [v _TSRNG `Vb ~T0 @X0 0 e@2236 ]
-"7674
-[v _RA5 `Vb ~T0 @X0 0 e@101 ]
 "5 main.c
 [p x FOSC=INTOSC ]
 "6
@@ -110,7 +112,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic16f1829.h: 50: extern volatile unsigned char INDF0 @ 0x000;
-"52 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h
+"52 /opt/microchip/xc8/v1.45/include/pic16f1829.h
 [; ;pic16f1829.h: 52: asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
 [; ;pic16f1829.h: 55: typedef union {
@@ -3095,296 +3097,388 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Pval `ui ~T0 @X0 1 e ]
 [v _Temp `ui ~T0 @X0 1 e ]
 [v _FVval `ui ~T0 @X0 1 e ]
-[; ;main.c: 45: unsigned int Pval, Temp, FVval;
+[v _Photo `ui ~T0 @X0 1 e ]
+[; ;main.c: 45: unsigned int Pval, Temp, FVval, Photo;
 "46
 [v _Ctemp `d ~T0 @X0 1 e ]
 [; ;main.c: 46: double Ctemp;
+"47
+[v _Temperature `f ~T0 @X0 1 e ]
+[v _Voltage `f ~T0 @X0 1 e ]
+[; ;main.c: 47: float Temperature, Voltage;
 [v $root$_main `(v ~T0 @X0 0 e ]
-"48
+"49
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 48: void main(void) {
+[; ;main.c: 49: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 50: pinConfig();
-"50
+[; ;main.c: 51: pinConfig();
+"51
 [e ( _pinConfig ..  ]
-[; ;main.c: 52: setup_comms();
-"52
+[; ;main.c: 53: setup_comms();
+"53
 [e ( _setup_comms ..  ]
-[; ;main.c: 54: FVRCON = 0xA2;
-"54
+[; ;main.c: 55: FVRCON = 0xA2;
+"55
 [e = _FVRCON -> -> 162 `i `uc ]
-[; ;main.c: 58: ADCON1 = 0xC0;
-"58
+[; ;main.c: 59: ADCON1 = 0xC0;
+"59
 [e = _ADCON1 -> -> 192 `i `uc ]
-[; ;main.c: 60: while (1) {
-"60
+[; ;main.c: 61: while (1) {
+"61
 [e :U 374 ]
 {
-[; ;main.c: 63: ADCON0 = 0x2D;
-"63
-[e = _ADCON0 -> -> 45 `i `uc ]
-[; ;main.c: 64: _delay((unsigned long)((10)*(4000000.0/4000.0)));
+[; ;main.c: 64: ADCON0 = 0x2D;
 "64
-[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
-[; ;main.c: 65: ADGO = 1;
+[e = _ADCON0 -> -> 45 `i `uc ]
+[; ;main.c: 65: _delay((unsigned long)((10)*(4000000.0/4000.0)));
 "65
-[e = _ADGO -> -> 1 `i `b ]
-[; ;main.c: 66: while(ADGO)continue;
+[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;main.c: 66: ADGO = 1;
 "66
+[e = _ADGO -> -> 1 `i `b ]
+[; ;main.c: 67: while(ADGO)continue;
+"67
 [e $U 376  ]
 [e :U 377 ]
 [e $U 376  ]
 [e :U 376 ]
 [e $ _ADGO 377  ]
 [e :U 378 ]
-[; ;main.c: 67: Pval = (unsigned)((ADRESH<<8)+(ADRESL));
-"67
+[; ;main.c: 68: Pval = (unsigned)((ADRESH<<8)+(ADRESL));
+"68
 [e = _Pval -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
-[; ;main.c: 70: ADCON0 = 0x7D;
-"70
-[e = _ADCON0 -> -> 125 `i `uc ]
-[; ;main.c: 71: _delay((unsigned long)((10)*(4000000.0/4000.0)));
+[; ;main.c: 71: ADCON0 = 0x7D;
 "71
-[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
-[; ;main.c: 72: ADGO = 1;
+[e = _ADCON0 -> -> 125 `i `uc ]
+[; ;main.c: 72: _delay((unsigned long)((10)*(4000000.0/4000.0)));
 "72
-[e = _ADGO -> -> 1 `i `b ]
-[; ;main.c: 73: while(ADGO)continue;
+[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;main.c: 73: ADGO = 1;
 "73
+[e = _ADGO -> -> 1 `i `b ]
+[; ;main.c: 74: while(ADGO)continue;
+"74
 [e $U 379  ]
 [e :U 380 ]
 [e $U 379  ]
 [e :U 379 ]
 [e $ _ADGO 380  ]
 [e :U 381 ]
-[; ;main.c: 74: FVval = ((ADRESH<<8)+(ADRESL));
-"74
+[; ;main.c: 75: FVval = ((ADRESH<<8)+(ADRESL));
+"75
 [e = _FVval -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
-[; ;main.c: 77: ADCON0 = 0x75;
-"77
-[e = _ADCON0 -> -> 117 `i `uc ]
-[; ;main.c: 78: _delay((unsigned long)((10)*(4000000.0/4000.0)));
+[; ;main.c: 78: ADCON0 = 0x75;
 "78
-[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
-[; ;main.c: 79: ADGO = 1;
+[e = _ADCON0 -> -> 117 `i `uc ]
+[; ;main.c: 79: _delay((unsigned long)((10)*(4000000.0/4000.0)));
 "79
-[e = _ADGO -> -> 1 `i `b ]
-[; ;main.c: 80: while(ADGO)continue;
+[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;main.c: 80: ADGO = 1;
 "80
+[e = _ADGO -> -> 1 `i `b ]
+[; ;main.c: 81: while(ADGO)continue;
+"81
 [e $U 382  ]
 [e :U 383 ]
 [e $U 382  ]
 [e :U 382 ]
 [e $ _ADGO 383  ]
 [e :U 384 ]
-[; ;main.c: 81: Temp = ((ADRESH<<8)+(ADRESL));
-"81
+[; ;main.c: 82: Temp = ((ADRESH<<8)+(ADRESL));
+"82
 [e = _Temp -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
-[; ;main.c: 85: Ctemp = ((0.659-((1.48)*(1-((float)Temp/1023))))/0.00132)-40;
-"85
-[e = _Ctemp - / - .0.659 * .1.48 -> - -> -> 1 `i `f / -> _Temp `f -> -> 1023 `i `f `d .0.00132 -> -> 40 `i `d ]
-[; ;main.c: 86: printf("Raw Temp value is %d RAW | Pot value is %d | Fixed Voltage is %d \n\r", Temp, Pval, FVval);
+[; ;main.c: 86: Ctemp = ((0.659-((1.48)*(1-((float)Temp/1023))))/0.00132)-40;
 "86
-[e ( _printf , , , (. :s 1C _Temp _Pval _FVval ]
-[; ;main.c: 87: _delay((unsigned long)((1000)*(4000000.0/4000.0)));
+[e = _Ctemp - / - .0.659 * .1.48 -> - -> -> 1 `i `f / -> _Temp `f -> -> 1023 `i `f `d .0.00132 -> -> 40 `i `d ]
+[; ;main.c: 87: printf("Raw Temp value is %d RAW | Pot value is %d | Fixed Voltage is %d \n\r", Temp, Pval, FVval);
 "87
+[e ( _printf , , , (. :s 1C _Temp _Pval _FVval ]
+[; ;main.c: 88: _delay((unsigned long)((1000)*(4000000.0/4000.0)));
+"88
 [e ( __delay (1 -> * -> -> 1000 `i `d / .4000000.0 .4000.0 `ul ]
-[; ;main.c: 90: RA5Blink();
-"90
-[e ( _RA5Blink ..  ]
-"91
-}
-[e :U 373 ]
-"60
-[e $U 374  ]
-[e :U 375 ]
-[; ;main.c: 91: }
-[; ;main.c: 92: return;
-"92
-[e $UE 372  ]
-[; ;main.c: 93: }
-"93
-[e :UE 372 ]
-}
-"95
-[v _setup_comms `(v ~T0 @X0 1 ef ]
+[; ;main.c: 94: if ( Temp > Pval ) {
+"94
+[e $ ! > _Temp _Pval 385  ]
 {
-[; ;main.c: 95: void setup_comms(void) {
-[e :U _setup_comms ]
-[f ]
-[; ;main.c: 96: TRISC5 = 1;
+[; ;main.c: 96: RA5 = 0;
 "96
-[e = _TRISC5 -> -> 1 `i `b ]
-[; ;main.c: 97: TRISC4 = 1;
+[e = _RA5 -> -> 0 `i `b ]
+[; ;main.c: 97: RC6 = 1;
 "97
-[e = _TRISC4 -> -> 1 `i `b ]
-[; ;main.c: 98: SPBRG = ((int)(4000000L/(16UL * 9600) -1));
-"98
-[e = _SPBRG -> -> - / -> -> 4000000 `l `ul * -> 16 `ul -> -> -> 9600 `i `l `ul -> -> -> 1 `i `l `ul `i `us ]
-[; ;main.c: 99: RCSTA = (0 | 0x90);
+[e = _RC6 -> -> 1 `i `b ]
 "99
-[e = _RCSTA -> | -> 0 `i -> 144 `i `uc ]
-[; ;main.c: 100: TXSTA = (0x4 | 0 | 0x20);
-"100
-[e = _TXSTA -> | | -> 4 `i -> 0 `i -> 32 `i `uc ]
-[; ;main.c: 101: TXEN = 1;
-"101
-[e = _TXEN -> -> 1 `i `b ]
-[; ;main.c: 102: SYNC = 0;
-"102
-[e = _SYNC -> -> 0 `i `b ]
-[; ;main.c: 103: SPEN = 1;
-"103
-[e = _SPEN -> -> 1 `i `b ]
-[; ;main.c: 104: BRGH = 1;
-"104
-[e = _BRGH -> -> 1 `i `b ]
-[; ;main.c: 105: }
-"105
-[e :UE 385 ]
 }
-"107
-[v _putch `(v ~T0 @X0 1 ef1`uc ]
-"108
+[; ;main.c: 99: }
+[e $U 386  ]
+"101
+[e :U 385 ]
+[; ;main.c: 101: else {
 {
-[; ;main.c: 107: void putch(unsigned char byte)
-[; ;main.c: 108: {
-[e :U _putch ]
-"107
-[v _byte `uc ~T0 @X0 1 r1 ]
-"108
-[f ]
-[; ;main.c: 110: while(!TXIF)
+[; ;main.c: 103: RA5 = 1;
+"103
+[e = _RA5 -> -> 1 `i `b ]
+[; ;main.c: 104: RC6 = 0;
+"104
+[e = _RC6 -> -> 0 `i `b ]
+"106
+}
+[e :U 386 ]
+[; ;main.c: 106: }
+[; ;main.c: 109: ADCON0 = 0x19;
+"109
+[e = _ADCON0 -> -> 25 `i `uc ]
+[; ;main.c: 110: _delay((unsigned long)((10)*(4000000.0/4000.0)));
 "110
+[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;main.c: 111: ADGO = 1;
+"111
+[e = _ADGO -> -> 1 `i `b ]
+[; ;main.c: 112: while(ADGO)continue;
+"112
 [e $U 387  ]
 [e :U 388 ]
-[; ;main.c: 111: continue;
-"111
 [e $U 387  ]
 [e :U 387 ]
-"110
-[e $ ! _TXIF 388  ]
+[e $ _ADGO 388  ]
 [e :U 389 ]
-[; ;main.c: 112: TXREG = byte;
-"112
-[e = _TXREG _byte ]
-[; ;main.c: 113: }
+[; ;main.c: 113: Temp = ((ADRESH<<8)+(ADRESL));
 "113
-[e :UE 386 ]
-}
+[e = _Temp -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+[; ;main.c: 115: Voltage = (float)(Temp * 5.0)/1024;
 "115
-[v _getch `(uc ~T0 @X0 1 ef ]
+[e = _Voltage / -> * -> _Temp `d .5.0 `f -> -> 1024 `i `f ]
+[; ;main.c: 116: Temperature = (Voltage - .5)/ 0.01;
 "116
-{
-[; ;main.c: 115: unsigned char getch()
-[; ;main.c: 116: {
-[e :U _getch ]
-[f ]
-[; ;main.c: 118: while(!RCIF)
-"118
-[e $U 391  ]
-[e :U 392 ]
-[; ;main.c: 119: continue;
+[e = _Temperature -> / - -> _Voltage `d .0.5 .0.01 `f ]
+[; ;main.c: 119: ADCON0 = 0x1D;
 "119
-[e $U 391  ]
-[e :U 391 ]
-"118
-[e $ ! _RCIF 392  ]
-[e :U 393 ]
-[; ;main.c: 120: return RCREG;
+[e = _ADCON0 -> -> 29 `i `uc ]
+[; ;main.c: 120: _delay((unsigned long)((10)*(4000000.0/4000.0)));
 "120
-[e ) _RCREG ]
-[e $UE 390  ]
-[; ;main.c: 121: }
+[e ( __delay (1 -> * -> -> 10 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;main.c: 121: ADGO = 1;
 "121
-[e :UE 390 ]
-}
+[e = _ADGO -> -> 1 `i `b ]
+[; ;main.c: 122: while(ADGO)continue;
+"122
+[e $U 390  ]
+[e :U 391 ]
+[e $U 390  ]
+[e :U 390 ]
+[e $ _ADGO 391  ]
+[e :U 392 ]
+[; ;main.c: 123: Photo = ((ADRESH<<8)+(ADRESL));
 "123
-[v _getche `(uc ~T0 @X0 1 ef ]
-"124
-{
-[; ;main.c: 123: unsigned char getche(void)
-[; ;main.c: 124: {
-[e :U _getche ]
-[f ]
-"125
-[v _c `uc ~T0 @X0 1 a ]
-[; ;main.c: 125: unsigned char c;
-[; ;main.c: 126: putch(c = getch());
+[e = _Photo -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
+[; ;main.c: 126: printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d ]\n\r", Temperature, Pval, Voltage, Photo);
 "126
-[e ( _putch (1 = _c ( _getch ..  ]
-[; ;main.c: 127: return c;
+[e ( _printf , , , , (. :s 2C -> _Temperature `d _Pval -> _Voltage `d _Photo ]
+[; ;main.c: 127: _delay((unsigned long)((1000)*(4000000.0/4000.0)));
 "127
-[e ) _c ]
-[e $UE 394  ]
-[; ;main.c: 128: }
-"128
-[e :UE 394 ]
-}
+[e ( __delay (1 -> * -> -> 1000 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;main.c: 129: if ( Photo < 0 ) RA2 = 0;
+"129
+[e $ ! < _Photo -> -> 0 `i `ui 393  ]
+[e = _RA2 -> -> 0 `i `b ]
+[e $U 394  ]
 "130
-[v _pinConfig `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 130: void pinConfig(void) {
-[e :U _pinConfig ]
-[f ]
-[; ;main.c: 131: OSCCON = 0x6A;
-"131
-[e = _OSCCON -> -> 106 `i `uc ]
-[; ;main.c: 132: TXCKSEL = 1;
+[e :U 393 ]
+[; ;main.c: 130: else RA2 = 1;
+[e = _RA2 -> -> 1 `i `b ]
+[e :U 394 ]
 "132
-[e = _TXCKSEL -> -> 1 `i `b ]
-[; ;main.c: 133: RXDTSEL = 1;
+}
+[e :U 373 ]
+"61
+[e $U 374  ]
+[e :U 375 ]
+[; ;main.c: 132: }
+[; ;main.c: 133: return;
 "133
-[e = _RXDTSEL -> -> 1 `i `b ]
-[; ;main.c: 135: TRISA = 0x10;
-"135
-[e = _TRISA -> -> 16 `i `uc ]
-[; ;main.c: 136: ANSELA =0x10;
+[e $UE 372  ]
+[; ;main.c: 134: }
+"134
+[e :UE 372 ]
+}
 "136
-[e = _ANSELA -> -> 16 `i `uc ]
-[; ;main.c: 137: TRISC = 0x0C;
+[v _setup_comms `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 136: void setup_comms(void) {
+[e :U _setup_comms ]
+[f ]
+[; ;main.c: 137: TRISC5 = 1;
 "137
-[e = _TRISC -> -> 12 `i `uc ]
-[; ;main.c: 138: ANSELC =0x0C;
+[e = _TRISC5 -> -> 1 `i `b ]
+[; ;main.c: 138: TRISC4 = 1;
 "138
-[e = _ANSELC -> -> 12 `i `uc ]
-[; ;main.c: 139: TRISB = 0xF0;
+[e = _TRISC4 -> -> 1 `i `b ]
+[; ;main.c: 139: SPBRG = ((int)(4000000L/(16UL * 9600) -1));
 "139
-[e = _TRISB -> -> 240 `i `uc ]
-[; ;main.c: 140: ANSELB =0xF0;
+[e = _SPBRG -> -> - / -> -> 4000000 `l `ul * -> 16 `ul -> -> -> 9600 `i `l `ul -> -> -> 1 `i `l `ul `i `us ]
+[; ;main.c: 140: RCSTA = (0 | 0x90);
 "140
-[e = _ANSELB -> -> 240 `i `uc ]
-[; ;main.c: 141: INTCON = 0;
+[e = _RCSTA -> | -> 0 `i -> 144 `i `uc ]
+[; ;main.c: 141: TXSTA = (0x4 | 0 | 0x20);
 "141
-[e = _INTCON -> -> 0 `i `uc ]
-[; ;main.c: 142: TSEN = 1;
+[e = _TXSTA -> | | -> 4 `i -> 0 `i -> 32 `i `uc ]
+[; ;main.c: 142: TXEN = 1;
 "142
-[e = _TSEN -> -> 1 `i `b ]
-[; ;main.c: 143: TSRNG = 0;
+[e = _TXEN -> -> 1 `i `b ]
+[; ;main.c: 143: SYNC = 0;
 "143
-[e = _TSRNG -> -> 0 `i `b ]
-[; ;main.c: 144: }
+[e = _SYNC -> -> 0 `i `b ]
+[; ;main.c: 144: SPEN = 1;
 "144
+[e = _SPEN -> -> 1 `i `b ]
+[; ;main.c: 145: BRGH = 1;
+"145
+[e = _BRGH -> -> 1 `i `b ]
+[; ;main.c: 146: }
+"146
 [e :UE 395 ]
 }
-"146
-[v _RA5Blink `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 146: void RA5Blink(void) {
-[e :U _RA5Blink ]
-[f ]
-[; ;main.c: 147: RA5 ^= 0x01;
-"147
-[e =^ _RA5 -> -> 1 `i `b ]
-[; ;main.c: 148: _delay((unsigned long)((200)*(4000000.0/4000.0)));
 "148
-[e ( __delay (1 -> * -> -> 200 `i `d / .4000000.0 .4000.0 `ul ]
-[; ;main.c: 149: }
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
 "149
+{
+[; ;main.c: 148: void putch(unsigned char byte)
+[; ;main.c: 149: {
+[e :U _putch ]
+"148
+[v _byte `uc ~T0 @X0 1 r1 ]
+"149
+[f ]
+[; ;main.c: 151: while(!TXIF)
+"151
+[e $U 397  ]
+[e :U 398 ]
+[; ;main.c: 152: continue;
+"152
+[e $U 397  ]
+[e :U 397 ]
+"151
+[e $ ! _TXIF 398  ]
+[e :U 399 ]
+[; ;main.c: 153: TXREG = byte;
+"153
+[e = _TXREG _byte ]
+[; ;main.c: 154: }
+"154
 [e :UE 396 ]
 }
-[p f _printf 8388736 ]
+"156
+[v _getch `(uc ~T0 @X0 1 ef ]
+"157
+{
+[; ;main.c: 156: unsigned char getch()
+[; ;main.c: 157: {
+[e :U _getch ]
+[f ]
+[; ;main.c: 159: while(!RCIF)
+"159
+[e $U 401  ]
+[e :U 402 ]
+[; ;main.c: 160: continue;
+"160
+[e $U 401  ]
+[e :U 401 ]
+"159
+[e $ ! _RCIF 402  ]
+[e :U 403 ]
+[; ;main.c: 161: return RCREG;
+"161
+[e ) _RCREG ]
+[e $UE 400  ]
+[; ;main.c: 162: }
+"162
+[e :UE 400 ]
+}
+"164
+[v _getche `(uc ~T0 @X0 1 ef ]
+"165
+{
+[; ;main.c: 164: unsigned char getche(void)
+[; ;main.c: 165: {
+[e :U _getche ]
+[f ]
+"166
+[v _c `uc ~T0 @X0 1 a ]
+[; ;main.c: 166: unsigned char c;
+[; ;main.c: 167: putch(c = getch());
+"167
+[e ( _putch (1 = _c ( _getch ..  ]
+[; ;main.c: 168: return c;
+"168
+[e ) _c ]
+[e $UE 404  ]
+[; ;main.c: 169: }
+"169
+[e :UE 404 ]
+}
+"171
+[v _pinConfig `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 171: void pinConfig(void) {
+[e :U _pinConfig ]
+[f ]
+[; ;main.c: 172: OSCCON = 0x6A;
+"172
+[e = _OSCCON -> -> 106 `i `uc ]
+[; ;main.c: 173: TXCKSEL = 1;
+"173
+[e = _TXCKSEL -> -> 1 `i `b ]
+[; ;main.c: 174: RXDTSEL = 1;
+"174
+[e = _RXDTSEL -> -> 1 `i `b ]
+[; ;main.c: 176: TRISA = 0x10;
+"176
+[e = _TRISA -> -> 16 `i `uc ]
+[; ;main.c: 177: ANSELA =0x10;
+"177
+[e = _ANSELA -> -> 16 `i `uc ]
+[; ;main.c: 178: TRISC = 0x0C;
+"178
+[e = _TRISC -> -> 12 `i `uc ]
+[; ;main.c: 179: ANSELC =0x0C;
+"179
+[e = _ANSELC -> -> 12 `i `uc ]
+[; ;main.c: 180: TRISB = 0xF0;
+"180
+[e = _TRISB -> -> 240 `i `uc ]
+[; ;main.c: 181: ANSELB =0xF0;
+"181
+[e = _ANSELB -> -> 240 `i `uc ]
+[; ;main.c: 182: INTCON = 0;
+"182
+[e = _INTCON -> -> 0 `i `uc ]
+[; ;main.c: 183: TSEN = 1;
+"183
+[e = _TSEN -> -> 1 `i `b ]
+[; ;main.c: 184: TSRNG = 0;
+"184
+[e = _TSRNG -> -> 0 `i `b ]
+[; ;main.c: 185: }
+"185
+[e :UE 405 ]
+}
+"187
+[v _RA5Blink `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 187: void RA5Blink(void) {
+[e :U _RA5Blink ]
+[f ]
+[; ;main.c: 188: RA5 ^= 0x01;
+"188
+[e =^ _RA5 -> -> 1 `i `b ]
+[; ;main.c: 189: _delay((unsigned long)((200)*(4000000.0/4000.0)));
+"189
+[e ( __delay (1 -> * -> -> 200 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;main.c: 190: }
+"190
+[e :UE 406 ]
+}
+[p f _printf 8462468 ]
+[a 2C 69 120 116 101 114 110 97 108 32 82 97 119 32 84 101 109 112 32 118 97 108 117 101 32 105 115 32 37 48 46 50 102 32 82 65 87 32 124 32 80 111 116 32 118 97 108 117 101 32 105 115 32 37 100 32 124 32 86 111 108 116 97 103 101 32 105 115 32 37 100 32 124 32 80 104 111 116 111 32 86 97 108 117 101 32 37 100 32 93 10 13 0 ]
 [a 1C 82 97 119 32 84 101 109 112 32 118 97 108 117 101 32 105 115 32 37 100 32 82 65 87 32 124 32 80 111 116 32 118 97 108 117 101 32 105 115 32 37 100 32 124 32 70 105 120 101 100 32 86 111 108 116 97 103 101 32 105 115 32 37 100 32 10 13 0 ]
-

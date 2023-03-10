@@ -21,17 +21,17 @@
 #pragma config BORV = LO
 #pragma config LVP = ON
 
-# 26 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\htc.h"
+# 26 "/opt/microchip/xc8/v1.45/include/htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
 
 
-# 13 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\xc8debug.h"
+# 13 "/opt/microchip/xc8/v1.45/include/xc8debug.h"
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 
-# 50 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h"
+# 50 "/opt/microchip/xc8/v1.45/include/pic16f1829.h"
 extern volatile unsigned char INDF0 @ 0x000;
 
 asm("INDF0 equ 00h");
@@ -3928,21 +3928,21 @@ extern volatile __bit nTO @ (((unsigned) &STATUS)*8) + 4;
 extern volatile __bit nWPUEN @ (((unsigned) &OPTION_REG)*8) + 7;
 
 
-# 28 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic.h"
+# 28 "/opt/microchip/xc8/v1.45/include/pic.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
 # 78
 extern unsigned int flash_read(unsigned short addr);
 
-# 114 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\eeprom_routines.h"
+# 114 "/opt/microchip/xc8/v1.45/include/eeprom_routines.h"
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 extern void eecpymem(volatile unsigned char *to, __eeprom unsigned char *from, unsigned char size);
 extern void memcpyee(__eeprom unsigned char *to, const unsigned char *from, unsigned char size);
 
 
-# 152 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic.h"
+# 152 "/opt/microchip/xc8/v1.45/include/pic.h"
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 #pragma intrinsic(_delaywdt)
@@ -3956,10 +3956,10 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 
-# 4 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\__size_t.h"
+# 4 "/opt/microchip/xc8/v1.45/include/__size_t.h"
 typedef unsigned size_t;
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdarg.h"
+# 7 "/opt/microchip/xc8/v1.45/include/stdarg.h"
 typedef void * va_list[1];
 
 #pragma intrinsic(__va_start)
@@ -3968,17 +3968,17 @@ extern void * __va_start(void);
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
 
-# 43 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h"
+# 43 "/opt/microchip/xc8/v1.45/include/stdio.h"
 struct __prbuf
 {
 char * ptr;
 void (* func)(char);
 };
 
-# 29 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\errno.h"
+# 29 "/opt/microchip/xc8/v1.45/include/errno.h"
 extern int errno;
 
-# 12 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\conio.h"
+# 12 "/opt/microchip/xc8/v1.45/include/conio.h"
 extern void init_uart(void);
 
 extern char getch(void);
@@ -3992,7 +3992,7 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 
-# 88 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdio.h"
+# 88 "/opt/microchip/xc8/v1.45/include/stdio.h"
 extern int cprintf(char *, ...);
 #pragma printf_check(cprintf)
 
@@ -4019,7 +4019,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 
-# 7 "C:\Program Files (x86)\Microchip\xc8\v1.45\include\stdlib.h"
+# 7 "/opt/microchip/xc8/v1.45/include/stdlib.h"
 typedef unsigned short wchar_t;
 
 # 15
@@ -4097,8 +4097,9 @@ unsigned char getch(void);
 unsigned char getche(void);
 
 
-unsigned int Pval, Temp, FVval;
+unsigned int Pval, Temp, FVval, Photo;
 double Ctemp;
+float Temperature, Voltage;
 
 void main(void) {
 
@@ -4141,8 +4142,45 @@ Ctemp = ((0.659-((1.48)*(1-((float)Temp/1023))))/0.00132)-40;
 printf("Raw Temp value is %d RAW | Pot value is %d | Fixed Voltage is %d \n\r", Temp, Pval, FVval);
 _delay((unsigned long)((1000)*(4000000.0/4000.0)));
 
+# 94
+if ( Temp > Pval ) {
 
-RA5Blink();
+RA5 = 0;
+RC6 = 1;
+
+}
+
+else {
+
+RA5 = 1;
+RC6 = 0;
+
+}
+
+
+ADCON0 = 0x19;
+_delay((unsigned long)((10)*(4000000.0/4000.0)));
+ADGO = 1;
+while(ADGO)continue;
+Temp = ((ADRESH<<8)+(ADRESL));
+
+Voltage = (float)(Temp * 5.0)/1024;
+Temperature = (Voltage - .5)/ 0.01;
+
+
+ADCON0 = 0x1D;
+_delay((unsigned long)((10)*(4000000.0/4000.0)));
+ADGO = 1;
+while(ADGO)continue;
+Photo = ((ADRESH<<8)+(ADRESL));
+
+
+printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d ]\n\r", Temperature, Pval, Voltage, Photo);
+_delay((unsigned long)((1000)*(4000000.0/4000.0)));
+
+if ( Photo < 0 ) RA2 = 0;
+else RA2 = 1;
+
 }
 return;
 }
