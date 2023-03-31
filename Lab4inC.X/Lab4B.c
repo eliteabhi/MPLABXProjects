@@ -38,14 +38,38 @@ void main(void) {
     TRISA = 0x00;
     PORTA = 0x00;
     
-    TRISB = 0x40;
-    PORTB = 0x40;
+    TRISB = 0x00;
+    PORTB = 0x00;
+    
+    TRISC = 0x00;
+    PORTC = 0x00;
+    
+    RA2 = 0;
+    RC6 = 0;
+    
+    int num = 0;
     
     while (1) {
+            
+        num++;
+        if (num % 3 == 0) {
+            
+            RA5 = 0;
+            RB7 = 1;
+            RC3 = 1;
+            __delay_ms(1000);
+            RA5 = 1;
+            RB7 = 0;
+            RC3 = 0;
+            __delay_ms(1000); 
+            
+        }
         
-        RA5 = 1;
+        RB7 = 1;
+        RC3 = 1;
         __delay_ms(500);
-        RA5 = 0;
+        RB7 = 0;
+        RC3 = 0;
         __delay_ms(500);
         
     }

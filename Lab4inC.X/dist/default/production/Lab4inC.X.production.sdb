@@ -3,6 +3,8 @@
 [d edition pro ]
 [d chip 16F1829 ]
 [d frameptr 6 ]
+"6 /opt/microchip/xc8/v1.45/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "62 /opt/microchip/xc8/v1.45/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /opt/microchip/xc8/v1.45/sources/common/ftadd.c
@@ -11,22 +13,47 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"34 /home/abhi/MPLABXProjects/Lab4inC.X/Lab4B.c
+"34 /home/abhi/Documents/Code-local/MPLABXProjects/Lab4inC.X/Lab4B.c
 [v _main main `(v  1 e 1 0 ]
 "427 /opt/microchip/xc8/v1.45/include/pic16f1829.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
 "477
 [v _PORTB PORTB `VEuc  1 e 1 @13 ]
+"516
+[v _PORTC PORTC `VEuc  1 e 1 @14 ]
 "1183
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1233
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1272
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
 "1764
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"7668
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
 "7674
 [v _RA5 RA5 `VEb  1 e 0 @101 ]
-"34 /home/abhi/MPLABXProjects/Lab4inC.X/Lab4B.c
+"7682
+[v _RB7 RB7 `VEb  1 e 0 @111 ]
+"7690
+[v _RC3 RC3 `VEb  1 e 0 @115 ]
+"7696
+[v _RC6 RC6 `VEb  1 e 0 @118 ]
+"34 /home/abhi/Documents/Code-local/MPLABXProjects/Lab4inC.X/Lab4B.c
 [v _main main `(v  1 e 1 0 ]
 {
-"54
+"50
+[v main@num num `i  1 a 2 9 ]
+"78
+} 0
+"6 /opt/microchip/xc8/v1.45/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"6
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"35
 } 0

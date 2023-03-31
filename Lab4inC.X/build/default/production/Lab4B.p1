@@ -10,8 +10,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISB `Vuc ~T0 @X0 0 e@141 ]
 "477
 [v _PORTB `Vuc ~T0 @X0 0 e@13 ]
+"1272
+[v _TRISC `Vuc ~T0 @X0 0 e@142 ]
+"516
+[v _PORTC `Vuc ~T0 @X0 0 e@14 ]
+"7668
+[v _RA2 `Vb ~T0 @X0 0 e@98 ]
+"7696
+[v _RC6 `Vb ~T0 @X0 0 e@118 ]
 "7674
 [v _RA5 `Vb ~T0 @X0 0 e@101 ]
+"7682
+[v _RB7 `Vb ~T0 @X0 0 e@111 ]
+"7690
+[v _RC3 `Vb ~T0 @X0 0 e@115 ]
 [v F2931 `(v ~T0 @X0 1 tf1`ul ]
 "153 /opt/microchip/xc8/v1.45/include/pic.h
 [v __delay `JF2931 ~T0 @X0 0 e ]
@@ -3041,39 +3053,96 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Lab4B.c: 39: PORTA = 0x00;
 "39
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;Lab4B.c: 41: TRISB = 0x40;
+[; ;Lab4B.c: 41: TRISB = 0x00;
 "41
-[e = _TRISB -> -> 64 `i `uc ]
-[; ;Lab4B.c: 42: PORTB = 0x40;
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;Lab4B.c: 42: PORTB = 0x00;
 "42
-[e = _PORTB -> -> 64 `i `uc ]
-[; ;Lab4B.c: 44: while (1) {
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;Lab4B.c: 44: TRISC = 0x00;
 "44
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;Lab4B.c: 45: PORTC = 0x00;
+"45
+[e = _PORTC -> -> 0 `i `uc ]
+[; ;Lab4B.c: 47: RA2 = 0;
+"47
+[e = _RA2 -> -> 0 `i `b ]
+[; ;Lab4B.c: 48: RC6 = 0;
+"48
+[e = _RC6 -> -> 0 `i `b ]
+"50
+[v _num `i ~T0 @X0 1 a ]
+[; ;Lab4B.c: 50: int num = 0;
+[e = _num -> 0 `i ]
+[; ;Lab4B.c: 52: while (1) {
+"52
 [e :U 374 ]
 {
-[; ;Lab4B.c: 46: RA5 = 1;
-"46
-[e = _RA5 -> -> 1 `i `b ]
-[; ;Lab4B.c: 47: _delay((unsigned long)((500)*(4000000.0/4000.0)));
-"47
-[e ( __delay (1 -> * -> -> 500 `i `d / .4000000.0 .4000.0 `ul ]
-[; ;Lab4B.c: 48: RA5 = 0;
-"48
+[; ;Lab4B.c: 54: num++;
+"54
+[e ++ _num -> 1 `i ]
+[; ;Lab4B.c: 55: if (num % 3 == 0) {
+"55
+[e $ ! == % _num -> 3 `i -> 0 `i 376  ]
+{
+[; ;Lab4B.c: 57: RA5 = 0;
+"57
 [e = _RA5 -> -> 0 `i `b ]
-[; ;Lab4B.c: 49: _delay((unsigned long)((500)*(4000000.0/4000.0)));
-"49
+[; ;Lab4B.c: 58: RB7 = 1;
+"58
+[e = _RB7 -> -> 1 `i `b ]
+[; ;Lab4B.c: 59: RC3 = 1;
+"59
+[e = _RC3 -> -> 1 `i `b ]
+[; ;Lab4B.c: 60: _delay((unsigned long)((1000)*(4000000.0/4000.0)));
+"60
+[e ( __delay (1 -> * -> -> 1000 `i `d / .4000000.0 .4000.0 `ul ]
+[; ;Lab4B.c: 61: RA5 = 1;
+"61
+[e = _RA5 -> -> 1 `i `b ]
+[; ;Lab4B.c: 62: RB7 = 0;
+"62
+[e = _RB7 -> -> 0 `i `b ]
+[; ;Lab4B.c: 63: RC3 = 0;
+"63
+[e = _RC3 -> -> 0 `i `b ]
+[; ;Lab4B.c: 64: _delay((unsigned long)((1000)*(4000000.0/4000.0)));
+"64
+[e ( __delay (1 -> * -> -> 1000 `i `d / .4000000.0 .4000.0 `ul ]
+"66
+}
+[e :U 376 ]
+[; ;Lab4B.c: 66: }
+[; ;Lab4B.c: 68: RB7 = 1;
+"68
+[e = _RB7 -> -> 1 `i `b ]
+[; ;Lab4B.c: 69: RC3 = 1;
+"69
+[e = _RC3 -> -> 1 `i `b ]
+[; ;Lab4B.c: 70: _delay((unsigned long)((500)*(4000000.0/4000.0)));
+"70
 [e ( __delay (1 -> * -> -> 500 `i `d / .4000000.0 .4000.0 `ul ]
-"51
+[; ;Lab4B.c: 71: RB7 = 0;
+"71
+[e = _RB7 -> -> 0 `i `b ]
+[; ;Lab4B.c: 72: RC3 = 0;
+"72
+[e = _RC3 -> -> 0 `i `b ]
+[; ;Lab4B.c: 73: _delay((unsigned long)((500)*(4000000.0/4000.0)));
+"73
+[e ( __delay (1 -> * -> -> 500 `i `d / .4000000.0 .4000.0 `ul ]
+"75
 }
 [e :U 373 ]
-"44
+"52
 [e $U 374  ]
 [e :U 375 ]
-[; ;Lab4B.c: 51: }
-[; ;Lab4B.c: 53: return;
-"53
+[; ;Lab4B.c: 75: }
+[; ;Lab4B.c: 77: return;
+"77
 [e $UE 372  ]
-[; ;Lab4B.c: 54: }
-"54
+[; ;Lab4B.c: 78: }
+"78
 [e :UE 372 ]
 }
