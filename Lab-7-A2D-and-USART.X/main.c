@@ -123,7 +123,7 @@ FVRCON = 0xA2;
        Photo = ((ADRESH<<8)+(ADRESL)); //Store 10 bits into Pval, 8 + 2
        
        /*Write to Terminal + Temperature Math*/   
-       printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d ]\n\r", Temperature, Pval, Voltage, Photo);  
+       printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d \n\r", Temperature, Pval, Voltage, Photo);  
        __delay_ms(1000);  
        
        if ( Photo < 0 ) RA2 = 0;

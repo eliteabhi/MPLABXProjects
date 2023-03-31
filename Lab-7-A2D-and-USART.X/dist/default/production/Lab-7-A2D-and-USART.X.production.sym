@@ -58,12 +58,12 @@ ___ftdiv@f2 20 0 BANK0 1
 __Hconfig 8009 0 CONFIG 0
 __Lconfig 8007 0 CONFIG 0
 ?___ftneg 30 0 BANK0 1
-__powers_ 18EF 0 STRCODE 0
+__powers_ 18EE 0 STRCODE 0
 ___ftpack 806 0 CODE 0
 __Hstringtext1 0 0 ABS 0
 __Lstringtext1 0 0 ABS 0
 ?___llmod 20 0 BANK0 1
-__pstringtext1 18C7 0 STRCODE 0
+__pstringtext1 18C6 0 STRCODE 0
 ?___awmod 70 0 COMMON 1
 __end_of_pinConfig 1497 0 CODE 0
 ___ftdiv@f3 2B 0 BANK0 1
@@ -117,7 +117,7 @@ _ADRESL 9B 0 ABS 0
 _INTCON B 0 ABS 0
 _FVRCON 117 0 ABS 0
 __Hsfr0 0 0 ABS 0
-__end_of__powers_ 1916 0 STRCODE 0
+__end_of__powers_ 1915 0 STRCODE 0
 __Lsfr0 0 0 ABS 0
 __Hsfr1 0 0 ABS 0
 __Lsfr1 0 0 ABS 0
@@ -147,7 +147,7 @@ __end_of___ftpack 86A 0 CODE 0
 ?___ftpack 70 0 COMMON 1
 __div_to_l_@f1 70 0 COMMON 1
 __size_of___ftpack 0 0 ABS 0
-__end_of_dpowers 18EF 0 STRCODE 0
+__end_of_dpowers 18EE 0 STRCODE 0
 __end_of_scale 1000 0 CODE 0
 __size_of___fttol 0 0 ABS 0
 __end_of___awmod 1578 0 CODE 0
@@ -170,7 +170,7 @@ __Lstringtext2 0 0 ABS 0
 __Hinit 2 0 CODE 0
 __Linit 2 0 CODE 0
 ___wmul 145E 0 CODE 0
-__pstringtext2 18EF 0 STRCODE 0
+__pstringtext2 18EE 0 STRCODE 0
 __end_of_main DBC 0 CODE 0
 __size_of___lwtoft 0 0 ABS 0
 __Htext 0 0 ABS 0
@@ -337,7 +337,7 @@ __Hspace_3 0 0 ABS 0
 __Lspace_3 0 0 ABS 0
 _setup_comms 5 0 CODE 0
 __size_of_main 0 0 ABS 0
-_dpowers 18C7 0 STRCODE 0
+_dpowers 18C6 0 STRCODE 0
 ?__div_to_l_ 70 0 COMMON 1
 __end_of_setup_comms 16 0 CODE 0
 __tdiv_to_l_ 3E 0 CODE 0
@@ -348,7 +348,7 @@ __size_of___ftdiv 0 0 ABS 0
 __Hstringtext4 0 0 ABS 0
 __Lstringtext4 0 0 ABS 0
 __end_of_isdigit 144B 0 CODE 0
-__pstringtext4 1883 0 STRCODE 0
+__pstringtext4 1882 0 STRCODE 0
 clear_ram0 800 0 CODE 0
 ___ftpack@arg 70 0 COMMON 1
 ___ftadd@exp2 3E 0 BANK0 1
@@ -505,7 +505,7 @@ text11 7C 1E7 CODE 7C 0
 text8 2E98 2FFF CODE 2E98 0
 text23 2D46 2E97 CODE 2D46 0
 text16 2C38 2D45 CODE 2C38 0
-stringtext3 3000 322B STRCODE 3000 0
+stringtext3 3000 3229 STRCODE 3000 0
 text24 100C 10D3 CODE 100C 0
 text10 2B94 2C37 CODE 2B94 0
 text15 2AF0 2B93 CODE 2AF0 0
@@ -523,26 +523,26 @@ text19 2868 2879 CODE 2868 0
 text4 2858 2867 CODE 2858 0
 %locals
 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-/tmp/xcXH4hlz2
-863 7F6 0 CODE 0
-866 7F6 0 CODE 0
-908 7F6 0 CODE 0
-909 7F7 0 CODE 0
-910 7F8 0 CODE 0
-911 7F9 0 CODE 0
-912 7FA 0 CODE 0
-913 7FB 0 CODE 0
-919 7FD 0 CODE 0
-921 7FD 0 CODE 0
-922 7FE 0 CODE 0
+/tmp/xcXJqwds9
+862 7F6 0 CODE 0
+865 7F6 0 CODE 0
+907 7F6 0 CODE 0
+908 7F7 0 CODE 0
+909 7F8 0 CODE 0
+910 7F9 0 CODE 0
+911 7FA 0 CODE 0
+912 7FB 0 CODE 0
+918 7FD 0 CODE 0
+920 7FD 0 CODE 0
+921 7FE 0 CODE 0
+896 800 0 CODE 0
 897 800 0 CODE 0
-898 800 0 CODE 0
+898 801 0 CODE 0
 899 801 0 CODE 0
-900 801 0 CODE 0
-901 802 0 CODE 0
-902 803 0 CODE 0
-903 804 0 CODE 0
-904 805 0 CODE 0
+900 802 0 CODE 0
+901 803 0 CODE 0
+902 804 0 CODE 0
+903 805 0 CODE 0
 main.c
 49 BE2 0 CODE 0
 51 BE2 0 CODE 0

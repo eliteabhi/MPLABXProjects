@@ -4175,7 +4175,7 @@ while(ADGO)continue;
 Photo = ((ADRESH<<8)+(ADRESL));
 
 
-printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d ]\n\r", Temperature, Pval, Voltage, Photo);
+printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d \n\r", Temperature, Pval, Voltage, Photo);
 _delay((unsigned long)((1000)*(4000000.0/4000.0)));
 
 if ( Photo < 0 ) RA2 = 0;

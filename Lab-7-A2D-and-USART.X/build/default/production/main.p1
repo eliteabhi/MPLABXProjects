@@ -3272,7 +3272,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 123: Photo = ((ADRESH<<8)+(ADRESL));
 "123
 [e = _Photo -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
-[; ;main.c: 126: printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d ]\n\r", Temperature, Pval, Voltage, Photo);
+[; ;main.c: 126: printf("External Raw Temp value is %0.2f RAW | Pot value is %d | Voltage is %d | Photo Value %d \n\r", Temperature, Pval, Voltage, Photo);
 "126
 [e ( _printf , , , , (. :s 2C -> _Temperature `d _Pval -> _Voltage `d _Photo ]
 [; ;main.c: 127: _delay((unsigned long)((1000)*(4000000.0/4000.0)));
@@ -3480,5 +3480,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 406 ]
 }
 [p f _printf 8462468 ]
-[a 2C 69 120 116 101 114 110 97 108 32 82 97 119 32 84 101 109 112 32 118 97 108 117 101 32 105 115 32 37 48 46 50 102 32 82 65 87 32 124 32 80 111 116 32 118 97 108 117 101 32 105 115 32 37 100 32 124 32 86 111 108 116 97 103 101 32 105 115 32 37 100 32 124 32 80 104 111 116 111 32 86 97 108 117 101 32 37 100 32 93 10 13 0 ]
 [a 1C 82 97 119 32 84 101 109 112 32 118 97 108 117 101 32 105 115 32 37 100 32 82 65 87 32 124 32 80 111 116 32 118 97 108 117 101 32 105 115 32 37 100 32 124 32 70 105 120 101 100 32 86 111 108 116 97 103 101 32 105 115 32 37 100 32 10 13 0 ]
+[a 2C 69 120 116 101 114 110 97 108 32 82 97 119 32 84 101 109 112 32 118 97 108 117 101 32 105 115 32 37 48 46 50 102 32 82 65 87 32 124 32 80 111 116 32 118 97 108 117 101 32 105 115 32 37 100 32 124 32 86 111 108 116 97 103 101 32 105 115 32 37 100 32 124 32 80 104 111 116 111 32 86 97 108 117 101 32 37 100 32 10 13 0 ]

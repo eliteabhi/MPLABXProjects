@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$/tmp/xcXCEonej.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 2 2
 $dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 cinit CODE 0 7F6 7F6 A 2
 text1 CODE 0 5 5 11 2
@@ -41,16 +45,12 @@ maintext CODE 0 BE2 BE2 1DA 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 4F 1
 cstackBANK1 BANK1 1 A0 A0 2A 1
-stringtext1 STRCODE 0 18C7 18C7 28 2
-stringtext2 STRCODE 0 18EF 18EF 27 2
-stringtext3 STRCODE 0 1800 1800 83 2
-stringtext4 STRCODE 0 1883 1883 44 2
+stringtext1 STRCODE 0 18C6 18C6 28 2
+stringtext2 STRCODE 0 18EE 18EE 27 2
+stringtext3 STRCODE 0 1800 1800 82 2
+stringtext4 STRCODE 0 1882 1882 44 2
 bssBANK1 BANK1 1 CA CA 11 1
 clrtext CODE 0 800 800 6 2
-$/tmp/xcXCU39SH.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 2 2 2 2
-config CONFIG 0 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -82,10 +82,10 @@ BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 4-4 2
 CONST 1000-142B 2
-CONST 1916-1FFF 2
+CONST 1915-1FFF 2
 ENTRY 4-4 2
 ENTRY 1000-142B 2
-ENTRY 1916-1FFF 2
+ENTRY 1915-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -112,7 +112,7 @@ SFR31 F80-FEF 1
 STACK 208B-23EF 1
 CODE 4-4 2
 CODE 1000-142B 2
-CODE 1916-1FFF 2
+CODE 1915-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -130,10 +130,10 @@ BIGRAM 2000-23EF 1
 EEDATA F000-F0FF 2
 STRCODE 4-4 2
 STRCODE 1000-142B 2
-STRCODE 1916-1FFF 2
+STRCODE 1915-1FFF 2
 STRING 4-4 2
 STRING 1000-142B 2
-STRING 1916-1FFF 2
+STRING 1915-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -148,17 +148,17 @@ STRING 1916-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-7F6 cinit CODE >863:/tmp/xcXH4hlz2
-7F6 cinit CODE >866:/tmp/xcXH4hlz2
-7F6 cinit CODE >908:/tmp/xcXH4hlz2
-7F7 cinit CODE >909:/tmp/xcXH4hlz2
-7F8 cinit CODE >910:/tmp/xcXH4hlz2
-7F9 cinit CODE >911:/tmp/xcXH4hlz2
-7FA cinit CODE >912:/tmp/xcXH4hlz2
-7FB cinit CODE >913:/tmp/xcXH4hlz2
-7FD cinit CODE >919:/tmp/xcXH4hlz2
-7FD cinit CODE >921:/tmp/xcXH4hlz2
-7FE cinit CODE >922:/tmp/xcXH4hlz2
+7F6 cinit CODE >862:/tmp/xcXJqwds9
+7F6 cinit CODE >865:/tmp/xcXJqwds9
+7F6 cinit CODE >907:/tmp/xcXJqwds9
+7F7 cinit CODE >908:/tmp/xcXJqwds9
+7F8 cinit CODE >909:/tmp/xcXJqwds9
+7F9 cinit CODE >910:/tmp/xcXJqwds9
+7FA cinit CODE >911:/tmp/xcXJqwds9
+7FB cinit CODE >912:/tmp/xcXJqwds9
+7FD cinit CODE >918:/tmp/xcXJqwds9
+7FD cinit CODE >920:/tmp/xcXJqwds9
+7FE cinit CODE >921:/tmp/xcXJqwds9
 806 text24 CODE >62:/opt/microchip/xc8/v1.45/sources/common/float.c
 806 text24 CODE >64:/opt/microchip/xc8/v1.45/sources/common/float.c
 80E text24 CODE >65:/opt/microchip/xc8/v1.45/sources/common/float.c
@@ -702,14 +702,14 @@ D91 maintext CODE >126:/home/abhi/Documents/Code-local/MPLABXProjects/Lab-7-A2D-
 DAC maintext CODE >127:/home/abhi/Documents/Code-local/MPLABXProjects/Lab-7-A2D-and-USART.X/main.c
 DB9 maintext CODE >130:/home/abhi/Documents/Code-local/MPLABXProjects/Lab-7-A2D-and-USART.X/main.c
 DBB maintext CODE >61:/home/abhi/Documents/Code-local/MPLABXProjects/Lab-7-A2D-and-USART.X/main.c
-800 clrtext CODE >897:/tmp/xcXH4hlz2
-800 clrtext CODE >898:/tmp/xcXH4hlz2
-801 clrtext CODE >899:/tmp/xcXH4hlz2
-801 clrtext CODE >900:/tmp/xcXH4hlz2
-802 clrtext CODE >901:/tmp/xcXH4hlz2
-803 clrtext CODE >902:/tmp/xcXH4hlz2
-804 clrtext CODE >903:/tmp/xcXH4hlz2
-805 clrtext CODE >904:/tmp/xcXH4hlz2
+800 clrtext CODE >896:/tmp/xcXJqwds9
+800 clrtext CODE >897:/tmp/xcXJqwds9
+801 clrtext CODE >898:/tmp/xcXJqwds9
+801 clrtext CODE >899:/tmp/xcXJqwds9
+802 clrtext CODE >900:/tmp/xcXJqwds9
+803 clrtext CODE >901:/tmp/xcXJqwds9
+804 clrtext CODE >902:/tmp/xcXJqwds9
+805 clrtext CODE >903:/tmp/xcXJqwds9
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -746,13 +746,13 @@ _TSEN 8BD 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _TXEN CF5 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _TXIF 8C 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _Temp D7 0 BANK1 1 bssBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXCU39SH.obj
+___sp 0 0 STACK 2 stack /tmp/xcXCEonej.obj
 _main 17C4 0 CODE 0 maintext dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _Voltage CA 0 BANK1 1 bssBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___ftadd@f1 33 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___ftadd@f2 36 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-start 4 0 CODE 0 init /tmp/xcXCU39SH.obj
+start 4 0 CODE 0 init /tmp/xcXCEonej.obj
 __size_of___awdiv 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __size_of___ftadd 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
@@ -777,12 +777,12 @@ ___awmod@sign 76 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-U
 ___ftge@ff1 70 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___ftge@ff2 73 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __end_of__npowers_ 304E 0 STRCODE 0 stringtext3 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-intlevel0 0 0 ENTRY 0 functab /tmp/xcXCU39SH.obj
-intlevel1 0 0 ENTRY 0 functab /tmp/xcXCU39SH.obj
-intlevel2 0 0 ENTRY 0 functab /tmp/xcXCU39SH.obj
-intlevel3 0 0 ENTRY 0 functab /tmp/xcXCU39SH.obj
-intlevel4 0 0 ENTRY 0 functab /tmp/xcXCU39SH.obj
-intlevel5 0 0 ENTRY 0 functab /tmp/xcXCU39SH.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXCEonej.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXCEonej.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXCEonej.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXCEonej.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXCEonej.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXCEonej.obj
 __size_of__div_to_l_ 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___llmod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
@@ -835,7 +835,7 @@ __end_of___llmod 2A66 0 CODE 0 text14 dist/default/production/Lab-7-A2D-and-USAR
 __size_of_isdigit 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _Temperature CD 0 BANK1 1 bssBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _INTCON B 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-_dpowers 318E 0 STRCODE 0 stringtext1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
+_dpowers 318C 0 STRCODE 0 stringtext1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __size_of__tdiv_to_l_ 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __end_of_fround 17C4 0 CODE 0 text6 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _pinConfig 28F4 0 CODE 0 text21 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
@@ -865,7 +865,7 @@ __tdiv_to_l_@f2 73 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and
 ___ftpack@arg 70 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___ftpack@exp 73 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _isdigit$348 70 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXCU39SH.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXCEonej.obj
 __end_of___ftpack 10D4 0 CODE 0 text24 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -1000,10 +1000,10 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 318E 0 STRCODE 0 stringtext1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-__pstringtext2 31DE 0 STRCODE 0 stringtext2 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
+__pstringtext1 318C 0 STRCODE 0 stringtext1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
+__pstringtext2 31DC 0 STRCODE 0 stringtext2 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __pstringtext3 3000 0 STRCODE 0 stringtext3 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-__pstringtext4 3106 0 STRCODE 0 stringtext4 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
+__pstringtext4 3104 0 STRCODE 0 stringtext4 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __pstringtext5 0 0 STRCODE 0 stringtext5 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___ftge 296A 0 CODE 0 text20 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___wmul 28BC 0 CODE 0 text7 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
@@ -1022,8 +1022,8 @@ _fround$564 5A 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART
 _fround$565 57 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
 ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXCU39SH.obj
-__powers_ 31DE 0 STRCODE 0 stringtext2 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXCEonej.obj
+__powers_ 31DC 0 STRCODE 0 stringtext2 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __size_of___ftge 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __size_of___wmul 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
@@ -1034,7 +1034,7 @@ __Lstringtext3 0 0 ABS 0 stringtext3 -
 __Lstringtext4 0 0 ABS 0 stringtext4 -
 __Lstringtext5 0 0 ABS 0 stringtext5 -
 ___awmod@counter 75 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-__end_of__powers_ 322C 0 STRCODE 0 stringtext2 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
+__end_of__powers_ 322A 0 STRCODE 0 stringtext2 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __tdiv_to_l_@cntr 24 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __tdiv_to_l_@exp1 25 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __tdiv_to_l_@quot 20 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
@@ -1100,8 +1100,8 @@ __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.product
 ___wmul@multiplier 24 0 BANK0 1 cstackBANK0 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __size_of_fround 0 0 ABS 0 - dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ___lwtoft@c 78 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-stackhi 23EF 0 ABS 0 - /tmp/xcXCU39SH.obj
-stacklo 208B 0 ABS 0 - /tmp/xcXCU39SH.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXCEonej.obj
+stacklo 208B 0 ABS 0 - /tmp/xcXCEonej.obj
 ?___lltoft 78 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 ?___lwtoft 78 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 __div_to_l_ 12C0 0 CODE 0 text12 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
@@ -1180,7 +1180,7 @@ __end_of_main 1B78 0 CODE 0 maintext dist/default/production/Lab-7-A2D-and-USART
 isdigit@c 71 0 COMMON 1 cstackCOMMON dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 printf@exp B8 0 BANK1 1 cstackBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 printf@val B4 0 BANK1 1 cstackBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
-__end_of_dpowers 31DE 0 STRCODE 0 stringtext1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
+__end_of_dpowers 31DC 0 STRCODE 0 stringtext1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _Ctemp D0 0 BANK1 1 bssBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _FVval D5 0 BANK1 1 bssBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
 _Photo D3 0 BANK1 1 bssBANK1 dist/default/production/Lab-7-A2D-and-USART.X.production.obj
@@ -1266,6 +1266,6 @@ maintext 0 BE2 17C4 1DA 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 4F 1
 cstackBANK1 1 A0 A0 3B 1
-stringtext3 0 1800 3000 116 2
+stringtext3 0 1800 3000 115 2
 reset_vec 0 0 0 4 2
 config 0 8007 1000E 2 2

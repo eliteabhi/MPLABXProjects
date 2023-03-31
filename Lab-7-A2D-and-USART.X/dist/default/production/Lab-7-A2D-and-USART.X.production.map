@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.45/dat/en_msgs.txt -cs \
   -h+dist/default/production/Lab-7-A2D-and-USART.X.production.sym \
   --cmf=dist/default/production/Lab-7-A2D-and-USART.X.production.cmf -z \
-  -Q16F1829 -o/tmp/xcXXNBBZF \
+  -Q16F1829 -o/tmp/xcXgmT7QU \
   -Mdist/default/production/Lab-7-A2D-and-USART.X.production.map -E1 \
   -ver=XC8 -ASTACK=0208Bh-023efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -pcinit=CODE -pfunctab=ENTRY -ACONFIG=08007h-08008h -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -AEEDATA=00h-0FFh/0F000h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
-  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXCU39SH.obj \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/xcXCEonej.obj \
   dist/default/production/Lab-7-A2D-and-USART.X.production.obj 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 16F1829
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXCU39SH.obj
+/tmp/xcXCEonej.obj
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -77,10 +77,10 @@ dist/default/production/Lab-7-A2D-and-USART.X.production.obj
                 cstackBANK1                          A0       A0       2A       A0       1
                 clrtext                             800      800        6      FEC       0
                 bssBANK1                             CA       CA       11       A0       1
-                stringtext4                        1883     1883       44     3000       0
-                stringtext3                        1800     1800       83     3000       0
-                stringtext2                        18EF     18EF       27     3000       0
-                stringtext1                        18C7     18C7       28     3000       0
+                stringtext4                        1882     1882       44     3000       0
+                stringtext3                        1800     1800       82     3000       0
+                stringtext2                        18EE     18EE       27     3000       0
+                stringtext1                        18C6     18C6       28     3000       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -117,10 +117,10 @@ TOTAL           Name                               Link     Load   Length     Sp
                 clrtext                             800      800        6         0
 
         CLASS   STRCODE        
-                stringtext4                        1883     1883       44         0
-                stringtext3                        1800     1800       83         0
-                stringtext2                        18EF     18EF       27         0
-                stringtext1                        18C7     18C7       28         0
+                stringtext4                        1882     1882       44         0
+                stringtext3                        1800     1800       82         0
+                stringtext2                        18EE     18EE       27         0
+                stringtext1                        18C6     18C6       28         0
 
         CLASS   STRING         
 
@@ -310,7 +310,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 text16                         00161C  000087  0016A3      2C38       0  CODE        2
                 text23                         0016A3  0000A9  00174C      2D46       0  CODE        2
                 text8                          00174C  0000B4  001800      2E98       0  CODE        2
-                stringtext3                    001800  000116  001916      3000       0  STRCODE     2
+                stringtext3                    001800  000115  001915      3000       0  STRCODE     2
                 config                         008007  000002  008009     1000E       0  CONFIG      2
 
 
@@ -333,14 +333,14 @@ UNUSED ADDRESS RANGES
         BIGRAM           02000-023EF             3F0           1
         CODE             00004-00004               1           2
                          01000-0142B             42C
-                         01916-01FFF             6EA
+                         01915-01FFF             6EB
         CONST            00004-00004               1           2
                          01000-0142B             100
-                         01916-01FFF             100
+                         01915-01FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00004-00004               1           2
                          01000-0142B             100
-                         01916-01FFF             100
+                         01915-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              0006F-0006F               1           1
                          000DB-000EF              15
@@ -390,10 +390,10 @@ UNUSED ADDRESS RANGES
         STACK            0208B-023EF             365           1
         STRCODE          00004-00004               1           2
                          01000-0142B             42C
-                         01916-01FFF             6EA
+                         01915-01FFF             6EB
         STRING           00004-00004               1           2
                          01000-0142B             100
-                         01916-01FFF             100
+                         01915-01FFF             100
 
                                   Symbol Table
 
@@ -763,9 +763,9 @@ __end_of___wmul          text7        0147A
 __end_of__div_to_l_      text12       00A7D
 __end_of__initialization cinit        007FD
 __end_of__npowers_       stringtext3  01827
-__end_of__powers_        stringtext2  01916
+__end_of__powers_        stringtext2  01915
 __end_of__tdiv_to_l_     text11       000F4
-__end_of_dpowers         stringtext1  018EF
+__end_of_dpowers         stringtext1  018EE
 __end_of_fround          text6        00BE2
 __end_of_isdigit         text5        0144B
 __end_of_main            maintext     00DBC
@@ -781,11 +781,11 @@ __pcstackBANK0           cstackBANK0  00020
 __pcstackBANK1           cstackBANK1  000A0
 __pcstackCOMMON          cstackCOMMON 00070
 __pmaintext              maintext     00BE2
-__powers_                stringtext2  018EF
-__pstringtext1           stringtext1  018C7
-__pstringtext2           stringtext2  018EF
+__powers_                stringtext2  018EE
+__pstringtext1           stringtext1  018C6
+__pstringtext2           stringtext2  018EE
 __pstringtext3           stringtext3  01800
-__pstringtext4           stringtext4  01883
+__pstringtext4           stringtext4  01882
 __pstringtext5           stringtext5  00000
 __ptext1                 text1        00005
 __ptext10                text10       015CA
@@ -842,7 +842,7 @@ __tdiv_to_l_@exp1        cstackBANK0  00025
 __tdiv_to_l_@f1          cstackCOMMON 00070
 __tdiv_to_l_@f2          cstackCOMMON 00073
 __tdiv_to_l_@quot        cstackBANK0  00020
-_dpowers                 stringtext1  018C7
+_dpowers                 stringtext1  018C6
 _fround                  text6        00A7D
 _fround$564              cstackBANK0  0005A
 _fround$565              cstackBANK0  00057
@@ -961,7 +961,7 @@ Total ram usage:        0 bytes
 		line 464 in file "/opt/microchip/xc8/v1.45/sources/common/doprnt.c"
  Parameters:    Size  Location     Type
   f               2    0[BANK1 ] PTR const unsigned char 
-		 -> STR_2(92), STR_1(68), 
+		 -> STR_2(91), STR_1(68), 
  Auto vars:     Size  Location     Type
   val             4   20[BANK1 ] unsigned long 
   tmpval          4   16[BANK1 ] struct .
@@ -1780,8 +1780,8 @@ Module		Function		Class		Link	Load	Size
 /opt/microchip/xc8/v1.45/sources/common/lltoft.c estimated size: 41
 
 shared
-		__powers_      		STRCODE        	18EF	0000	40
-		_dpowers       		STRCODE        	18C7	0000	41
+		__powers_      		STRCODE        	18EE	0000	40
+		_dpowers       		STRCODE        	18C6	0000	41
 		__npowers_     		STRCODE        	1800	0000	40
 		__initialization		CODE           	07F6	0000	8
 
