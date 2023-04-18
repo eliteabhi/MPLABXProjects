@@ -37,7 +37,7 @@
 #include <math.h>
 #include  "i2c.h"
 #define I2C_SLAVE 0x27	/* was 1E Channel of i2c slave depends on soldering on back of board*/
-#define _XTAL_FREQ 4000000.0    /*for 4mhz*/
+#define _XTAL_FREQ 32000000.0    /*for 32mhz*/
 
 //Prototypes
 void I2C_LCD_Command(unsigned char,unsigned char);
@@ -63,14 +63,15 @@ unsigned int ADC_Read()
 
 void main(void) {
 
-    OSCCON = 0x00;
     unsigned int adc_value = 0;
     
-    TRISA = 0x00;
-    TRISC = 0x00;
+    TRISA = 0x00; // Clear TRISA
+    TRISC = 0x00; // Clear TRISC
     
-    TRISC4 = 1;
-    ANSELC = ((1u << 4u) | ANSELC);
+    TRISC = ((1u << 6u)); // Sets RC6 as an Input for the Photo Resistor
+    ANSELC = ((1u << 6u) | ANSELC); // Enables Analog on RC6
+    
+    TRISA = ((1u << 2u)); // Sets RA2 as an Input for the ECHO pin on proximity sensor
     
     ADC_Initialize();
   
