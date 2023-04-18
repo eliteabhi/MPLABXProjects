@@ -38,7 +38,6 @@
 #include  "i2c.h"
 #define I2C_SLAVE 0x27	/* was 1E Channel of i2c slave depends on soldering on back of board*/
 #define _XTAL_FREQ 4000000.0    /*for 4mhz*/
-#define LED RA4
 
 //Prototypes
 void I2C_LCD_Command(unsigned char,unsigned char);
@@ -63,29 +62,25 @@ unsigned int ADC_Read()
 }
 
 void main(void) {
-	
-        OSCCON = 0x00;
+
+    OSCCON = 0x00;
     unsigned int adc_value = 0;
     
     TRISA = 0x00;
     TRISC = 0x00;
-      
-    TRISC2 = 1;
-    ANSELC = 0x00;
     
-    TRISC3 = 1;
-    ANSELC = ((1u << 3u) | ANSELC);
+    TRISC4 = 1;
+    ANSELC = ((1u << 4u) | ANSELC);
     
     ADC_Initialize();
   
   do
   {
-      if (!RB7) TRISA5 = ~TRISA5;
       
-      adc_value = ADC_Read(0);
+      adc_value = ADC_Read();
       __delay_ms(50);
 
-  }while(1); //Infinite Loop
+  } while(1); //Infinite Loop
   
     //Variables
 	unsigned char  Sout[16];
