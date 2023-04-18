@@ -1,0 +1,235 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1829 ]
+[d frameptr 6 ]
+"492 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"50 C:\Users\lexan\MPLABXProjects\Final Project.X\Final Prject main.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"56
+[v _ADC_Read ADC_Read `(ui  1 e 2 0 ]
+"65
+[v _main main `(v  1 e 1 0 ]
+"11 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c.h
+[v _I2C_LCD_Busy I2C_LCD_Busy `(uc  1 e 1 0 ]
+"40
+[v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
+"98
+[v _I2C_LCD_Command I2C_LCD_Command `(v  1 e 1 0 ]
+"12 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c_LCD.h
+[v _i2c_Init i2c_Init `(v  1 e 1 0 ]
+"29
+[v _i2c_Wait i2c_Wait `(v  1 e 1 0 ]
+"34
+[v _i2c_Start i2c_Start `(v  1 e 1 0 ]
+"41
+[v _i2c_Restart i2c_Restart `(v  1 e 1 0 ]
+"47
+[v _i2c_Stop i2c_Stop `(v  1 e 1 0 ]
+"54
+[v _i2c_Write i2c_Write `(v  1 e 1 0 ]
+"62
+[v _i2c_Address i2c_Address `(v  1 e 1 0 ]
+"73
+[v _i2c_Read i2c_Read `(uc  1 e 1 0 ]
+"1183 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1272
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1764
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1905
+[v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
+"1925
+[v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
+"1945
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+"2025
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+"3031
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3723
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3761
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3837
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+"3959
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+"4163
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+[s S25 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4185
+[u S34 . 1 `S25 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES34  1 e 1 @534 ]
+"7366
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
+"7682
+[v _RB7 RB7 `VEb  1 e 0 @111 ]
+"7684
+[v _RC0 RC0 `VEb  1 e 0 @112 ]
+"7924
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1125 ]
+"7926
+[v _TRISB4 TRISB4 `VEb  1 e 0 @1132 ]
+"7930
+[v _TRISB6 TRISB6 `VEb  1 e 0 @1134 ]
+"7938
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1138 ]
+"7940
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1139 ]
+"65 C:\Users\lexan\MPLABXProjects\Final Project.X\Final Prject main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"108
+[v main@i_146 i `i  1 a 2 23 ]
+"102
+[v main@i i `i  1 a 2 21 ]
+"91
+[v main@Sout Sout `[16]uc  1 a 16 2 ]
+"68
+[v main@adc_value adc_value `ui  1 a 2 18 ]
+"92
+[v main@Sptr Sptr `*.4uc  1 a 1 20 ]
+"116
+} 0
+"492 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"499
+[v sprintf@c c `c  1 a 1 6 ]
+"494
+[v sprintf@ap ap `[1]*.1v  1 a 1 5 ]
+"492
+[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@f f `*.25DCuc  1 p 2 0 ]
+"533
+[v sprintf@sp sp `*.4uc  1 a 1 7 ]
+"1541
+} 0
+"12 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c_LCD.h
+[v _i2c_Init i2c_Init `(v  1 e 1 0 ]
+{
+"26
+} 0
+"40 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c.h
+[v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
+{
+[v I2C_LCD_Init@Slave Slave `uc  1 a 1 wreg ]
+"41
+[v I2C_LCD_Init@Tvar1 Tvar1 `uc  1 a 1 9 ]
+"40
+[v I2C_LCD_Init@Slave Slave `uc  1 a 1 wreg ]
+"42
+[v I2C_LCD_Init@Slave Slave `uc  1 a 1 10 ]
+"58
+} 0
+"98
+[v _I2C_LCD_Command I2C_LCD_Command `(v  1 e 1 0 ]
+{
+[v I2C_LCD_Command@Slave Slave `uc  1 a 1 wreg ]
+"100
+[v I2C_LCD_Command@LoBytex LoBytex `uc  1 a 1 13 ]
+[v I2C_LCD_Command@HiBytex HiBytex `uc  1 a 1 12 ]
+"98
+[v I2C_LCD_Command@Slave Slave `uc  1 a 1 wreg ]
+[v I2C_LCD_Command@Cmd Cmd `uc  1 p 1 8 ]
+"101
+[v I2C_LCD_Command@Slave Slave `uc  1 a 1 11 ]
+"111
+} 0
+"11
+[v _I2C_LCD_Busy I2C_LCD_Busy `(uc  1 e 1 0 ]
+{
+[v I2C_LCD_Busy@Slave Slave `uc  1 a 1 wreg ]
+"13
+[v I2C_LCD_Busy@read_byte read_byte `uc  1 a 1 6 ]
+[v I2C_LCD_Busy@Temp1 Temp1 `uc  1 a 1 5 ]
+"11
+[v I2C_LCD_Busy@Slave Slave `uc  1 a 1 wreg ]
+"14
+[v I2C_LCD_Busy@Slave Slave `uc  1 a 1 7 ]
+"37
+} 0
+"54 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c_LCD.h
+[v _i2c_Write i2c_Write `(v  1 e 1 0 ]
+{
+[v i2c_Write@data data `uc  1 a 1 wreg ]
+[v i2c_Write@data data `uc  1 a 1 wreg ]
+"56
+[v i2c_Write@data data `uc  1 a 1 0 ]
+"58
+} 0
+"47
+[v _i2c_Stop i2c_Stop `(v  1 e 1 0 ]
+{
+"51
+} 0
+"34
+[v _i2c_Start i2c_Start `(v  1 e 1 0 ]
+{
+"38
+} 0
+"41
+[v _i2c_Restart i2c_Restart `(v  1 e 1 0 ]
+{
+"44
+} 0
+"73
+[v _i2c_Read i2c_Read `(uc  1 e 1 0 ]
+{
+[v i2c_Read@ack ack `uc  1 a 1 wreg ]
+"78
+[v i2c_Read@i2cReadData i2cReadData `uc  1 a 1 2 ]
+"73
+[v i2c_Read@ack ack `uc  1 a 1 wreg ]
+"80
+[v i2c_Read@ack ack `uc  1 a 1 1 ]
+"90
+} 0
+"62
+[v _i2c_Address i2c_Address `(v  1 e 1 0 ]
+{
+[v i2c_Address@address address `uc  1 a 1 wreg ]
+"64
+[v i2c_Address@l_address l_address `uc  1 a 1 3 ]
+"62
+[v i2c_Address@address address `uc  1 a 1 wreg ]
+[v i2c_Address@mode mode `uc  1 p 1 0 ]
+"66
+[v i2c_Address@address address `uc  1 a 1 2 ]
+"70
+} 0
+"29
+[v _i2c_Wait i2c_Wait `(v  1 e 1 0 ]
+{
+"31
+} 0
+"56 C:\Users\lexan\MPLABXProjects\Final Project.X\Final Prject main.c
+[v _ADC_Read ADC_Read `(ui  1 e 2 0 ]
+{
+"63
+} 0
+"50
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"54
+} 0
