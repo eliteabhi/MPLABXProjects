@@ -3,29 +3,29 @@
 [d edition pro ]
 [d chip 16F1829 ]
 [d frameptr 6 ]
-"492 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+"492 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\float.c
+"62 /opt/microchip/xc8/v1.45/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\ftadd.c
+"86 /opt/microchip/xc8/v1.45/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\pic\eeprom.c
+"4 /opt/microchip/xc8/v1.45/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"28 /opt/microchip/xc8/v1.45/sources/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v1.45/sources/pic/eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"50 C:\Users\lexan\MPLABXProjects\Final Project.X\Final Prject main.c
-[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
-"56
-[v _ADC_Read ADC_Read `(ui  1 e 2 0 ]
-"65
-[v _main main `(v  1 e 1 0 ]
-"11 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c.h
+"11 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
 [v _I2C_LCD_Busy I2C_LCD_Busy `(uc  1 e 1 0 ]
 "40
 [v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
-"98
-[v _I2C_LCD_Command I2C_LCD_Command `(v  1 e 1 0 ]
-"12 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c_LCD.h
+"61
+[v _I2C_LCD_Pos I2C_LCD_Pos `(v  1 e 1 0 ]
+"76
+[v _I2C_LCD_SWrite I2C_LCD_SWrite `(v  1 e 1 0 ]
+"12 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
 [v _i2c_Init i2c_Init `(v  1 e 1 0 ]
 "29
 [v _i2c_Wait i2c_Wait `(v  1 e 1 0 ]
@@ -41,12 +41,18 @@
 [v _i2c_Address i2c_Address `(v  1 e 1 0 ]
 "73
 [v _i2c_Read i2c_Read `(uc  1 e 1 0 ]
-"1183 C:\Program Files (x86)\Microchip\xc8\v1.45\include\pic16f1829.h
+"49 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"55
+[v _ADC_Read ADC_Read `(ui  1 e 2 0 ]
+"65
+[v _main main `(v  1 e 1 0 ]
+"784 /opt/microchip/xc8/v1.45/include/pic16f1829.h
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"804
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"1183
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-"1272
-[v _TRISC TRISC `VEuc  1 e 1 @142 ]
-"1764
-[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1905
 [v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
 "1925
@@ -55,8 +61,6 @@
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
 "2025
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
-"3031
-[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
 "3723
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
 "3761
@@ -81,36 +85,24 @@
 [v _SSP1CON2bits SSP1CON2bits `VES34  1 e 1 @534 ]
 "7366
 [v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
-"7682
-[v _RB7 RB7 `VEb  1 e 0 @111 ]
-"7684
-[v _RC0 RC0 `VEb  1 e 0 @112 ]
-"7924
-[v _TRISA5 TRISA5 `VEb  1 e 0 @1125 ]
+"7672
+[v _RA4 RA4 `VEb  1 e 0 @100 ]
 "7926
 [v _TRISB4 TRISB4 `VEb  1 e 0 @1132 ]
 "7930
 [v _TRISB6 TRISB6 `VEb  1 e 0 @1134 ]
-"7938
-[v _TRISC2 TRISC2 `VEb  1 e 0 @1138 ]
-"7940
-[v _TRISC3 TRISC3 `VEb  1 e 0 @1139 ]
-"65 C:\Users\lexan\MPLABXProjects\Final Project.X\Final Prject main.c
+"65 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"108
-[v main@i_146 i `i  1 a 2 23 ]
-"102
-[v main@i i `i  1 a 2 21 ]
-"91
-[v main@Sout Sout `[16]uc  1 a 16 2 ]
-"68
-[v main@adc_value adc_value `ui  1 a 2 18 ]
-"92
-[v main@Sptr Sptr `*.4uc  1 a 1 20 ]
-"116
+"78
+[v main@Sout Sout `[20]uc  1 a 20 11 ]
+"69
+[v main@adc_value adc_value `ui  1 a 2 32 ]
+"79
+[v main@Sptr Sptr `*.4uc  1 a 1 31 ]
+"117
 } 0
-"492 C:\Program Files (x86)\Microchip\xc8\v1.45\sources\common\doprnt.c
+"492 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
@@ -125,12 +117,64 @@
 [v sprintf@sp sp `*.4uc  1 a 1 7 ]
 "1541
 } 0
-"12 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c_LCD.h
+"12 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
 [v _i2c_Init i2c_Init `(v  1 e 1 0 ]
 {
 "26
 } 0
-"40 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c.h
+"28 /opt/microchip/xc8/v1.45/sources/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"62 /opt/microchip/xc8/v1.45/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"4 /opt/microchip/xc8/v1.45/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
+"13
+} 0
+"76 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+[v _I2C_LCD_SWrite I2C_LCD_SWrite `(v  1 e 1 0 ]
+{
+[v I2C_LCD_SWrite@Slave Slave `uc  1 a 1 wreg ]
+"77
+[v I2C_LCD_SWrite@j j `i  1 a 2 3 ]
+"78
+[v I2C_LCD_SWrite@L L `uc  1 a 1 2 ]
+[v I2C_LCD_SWrite@H H `uc  1 a 1 1 ]
+"76
+[v I2C_LCD_SWrite@Slave Slave `uc  1 a 1 wreg ]
+[v I2C_LCD_SWrite@Data Data `*.4uc  1 p 1 8 ]
+[v I2C_LCD_SWrite@Max Max `uc  1 p 1 9 ]
+"79
+[v I2C_LCD_SWrite@Slave Slave `uc  1 a 1 0 ]
+"95
+} 0
+"61
+[v _I2C_LCD_Pos I2C_LCD_Pos `(v  1 e 1 0 ]
+{
+[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 wreg ]
+"62
+[v I2C_LCD_Pos@LoBytex LoBytex `uc  1 a 1 13 ]
+[v I2C_LCD_Pos@HiBytex HiBytex `uc  1 a 1 12 ]
+"61
+[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 wreg ]
+[v I2C_LCD_Pos@Pos Pos `uc  1 p 1 8 ]
+"63
+[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 11 ]
+"73
+} 0
+"40
 [v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
 {
 [v I2C_LCD_Init@Slave Slave `uc  1 a 1 wreg ]
@@ -141,20 +185,6 @@
 "42
 [v I2C_LCD_Init@Slave Slave `uc  1 a 1 10 ]
 "58
-} 0
-"98
-[v _I2C_LCD_Command I2C_LCD_Command `(v  1 e 1 0 ]
-{
-[v I2C_LCD_Command@Slave Slave `uc  1 a 1 wreg ]
-"100
-[v I2C_LCD_Command@LoBytex LoBytex `uc  1 a 1 13 ]
-[v I2C_LCD_Command@HiBytex HiBytex `uc  1 a 1 12 ]
-"98
-[v I2C_LCD_Command@Slave Slave `uc  1 a 1 wreg ]
-[v I2C_LCD_Command@Cmd Cmd `uc  1 p 1 8 ]
-"101
-[v I2C_LCD_Command@Slave Slave `uc  1 a 1 11 ]
-"111
 } 0
 "11
 [v _I2C_LCD_Busy I2C_LCD_Busy `(uc  1 e 1 0 ]
@@ -169,7 +199,7 @@
 [v I2C_LCD_Busy@Slave Slave `uc  1 a 1 7 ]
 "37
 } 0
-"54 C:\Users\lexan\MPLABXProjects\Final Project.X\i2c_LCD.h
+"54 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
 [v _i2c_Write i2c_Write `(v  1 e 1 0 ]
 {
 [v i2c_Write@data data `uc  1 a 1 wreg ]
@@ -223,13 +253,13 @@
 {
 "31
 } 0
-"56 C:\Users\lexan\MPLABXProjects\Final Project.X\Final Prject main.c
+"55 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 [v _ADC_Read ADC_Read `(ui  1 e 2 0 ]
 {
 "63
 } 0
-"50
+"49
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
-"54
+"53
 } 0

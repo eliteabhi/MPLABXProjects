@@ -181,7 +181,7 @@ void setup_comms(void){
 	RCSTA = (NINE_BITS|0x90);
 	TXSTA = (SPEED|NINE_BITS|0x20);
     	TXEN=1;
-    	SYNC=0;
+    	SYNC=1;
     	SPEN=1;
     	BRGH=1;
 }
