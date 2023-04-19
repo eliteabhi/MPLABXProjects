@@ -4317,7 +4317,7 @@ unsigned int ADC_Read()
 {
 ADCON0 = 0b00101101;
 
-_delay((unsigned long)((2)*(16000000/4000.0)));
+_delay((unsigned long)((2)*(8000000/4000.0)));
 GO_nDONE = 1;
 while(GO_nDONE);
 return ((ADRESH<<8)+ADRESL);
@@ -4331,7 +4331,9 @@ unsigned int adc_value = 0;
 
 TRISA = 0x00;
 
-TRISA = ((1u << 2u));
+TRISA = ((1u << 1u));
+
+TRISC = 0x00;
 
 ADC_Initialize();
 
@@ -4350,7 +4352,7 @@ sprintf(Sout, "Hello World");
 
 I2C_LCD_SWrite(0x27, Sout, 11);
 
-_delay((unsigned long)((50)*(16000000/4000.0)));
+_delay((unsigned long)((50)*(8000000/4000.0)));
 
 I2C_LCD_Command(0x27, 0x01);
 sprintf(Sout, "");
@@ -4361,29 +4363,37 @@ while(1) {
 
 adc_value = ADC_Read();
 
-sprintf(Sout, "lightValue = %d", adc_value);
-
-I2C_LCD_SWrite(0x27, Sout, 16);
 
 if (adc_value < 712) RA4 = 1;
 else RA4 = 0;
 
-_delay((unsigned long)((50)*(16000000/4000.0)));
-
-I2C_LCD_Command(0x27, 0x01);
-
-RC1 = 1;
-_delay((unsigned long)((50)*(16000000/4000000.0)));
-RC1 = 0;
+RC0 = 1;
+_delay((unsigned long)((10)*(8000000/4000000.0)));
+RC0 = 0;
 int a = 0;
-
+while(!RA1);
 TMR1ON = 1;
-while(RA2);
+while(RA1);
 TMR1ON = 0;
 
 a = (TMR1L | (TMR1H<<8));
 a = a/58.82;
 a = a + 1;
+
+sprintf(Sout, "LightValue = %d", adc_value);
+
+I2C_LCD_SWrite(0x27, Sout, 16);
+
+I2C_LCD_Pos(0x27, 0x40);
+
+sprintf(Sout, "DistValue = %d", a);
+
+I2C_LCD_SWrite(0x27, Sout, 16);
+
+
+_delay((unsigned long)((50)*(8000000/4000.0)));
+
+I2C_LCD_Command(0x27, 0x01);
 
 }
 

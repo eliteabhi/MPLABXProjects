@@ -37,7 +37,7 @@
 #include <math.h>
 #include  "i2c.h"
 #define I2C_SLAVE 0x27	/* was 1E Channel of i2c slave depends on soldering on back of board*/
-#define _XTAL_FREQ 16000000   /*for 8mhz*/
+#define _XTAL_FREQ 8000000   /*for 8mhz*/
 
 //Prototypes
 void I2C_LCD_Command(unsigned char,unsigned char);
@@ -70,7 +70,9 @@ void main(void) {
     
     TRISA = 0x00; // Clear TRISA
     
-    TRISA = ((1u << 2u)); // Sets RA2 as an Input for the ECHO pin on proximity sensor
+    TRISA = ((1u << 1u)); // Sets RA1 as an Input for the ECHO pin on proximity sensor
+    
+    TRISC = 0x00;
     
     ADC_Initialize();
   
@@ -100,29 +102,37 @@ void main(void) {
         
         adc_value = ADC_Read();
                 
-        sprintf(Sout, "lightValue = %d", adc_value);
-        
-        I2C_LCD_SWrite(I2C_SLAVE, Sout, 16);
         
         if (adc_value < 712) RA4 = 1;
         else RA4 = 0;
         
-        __delay_ms(50);
-        
-        I2C_LCD_Command(I2C_SLAVE, 0x01);
-        
-        RC1 = 1;               //TRIGGER HIGH
-        __delay_us(50);               //10uS Delay
-        RC1 = 0;               //TRIGGER LOW
+        RC0 = 1;               //TRIGGER HIGH
+        __delay_us(10);               //10uS Delay
+        RC0 = 0;               //TRIGGER LOW
         int a = 0;
- //       while(!RA2);           //Waiting for Echo
+        while(!RA1);         //Waiting for Echo
         TMR1ON = 1;            //Timer Starts
-        while(RA2);            //Waiting for Echo goes LOW
+        while(RA1);            //Waiting for Echo goes LOW
         TMR1ON = 0;            //Timer Stops
 
         a = (TMR1L | (TMR1H<<8));   //Reads Timer Value
         a = a/58.82;                //Converts Time to Distance
         a = a + 1;
+        
+        sprintf(Sout, "LightValue = %d", adc_value);
+        
+        I2C_LCD_SWrite(I2C_SLAVE, Sout, 16);
+        
+        I2C_LCD_Pos(I2C_SLAVE, 0x40); //Set Position to start bottom line
+        
+        sprintf(Sout, "DistValue = %d", a);
+        
+        I2C_LCD_SWrite(I2C_SLAVE, Sout, 16);
+
+                
+        __delay_ms(50);
+        
+        I2C_LCD_Command(I2C_SLAVE, 0x01);
   
     }
  

@@ -27,6 +27,8 @@
 [v _I2C_LCD_Busy I2C_LCD_Busy `(uc  1 e 1 0 ]
 "40
 [v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
+"61
+[v _I2C_LCD_Pos I2C_LCD_Pos `(v  1 e 1 0 ]
 "76
 [v _I2C_LCD_SWrite I2C_LCD_SWrite `(v  1 e 1 0 ]
 "98
@@ -59,6 +61,8 @@
 [v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
 "1183
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1272
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
 "1905
 [v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
 "1925
@@ -91,12 +95,12 @@
 [v _SSP1CON2bits SSP1CON2bits `VES34  1 e 1 @534 ]
 "7366
 [v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
-"7668
-[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"7666
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
 "7672
 [v _RA4 RA4 `VEb  1 e 0 @100 ]
-"7686
-[v _RC1 RC1 `VEb  1 e 0 @113 ]
+"7684
+[v _RC0 RC0 `VEb  1 e 0 @112 ]
 "7894
 [v _TMR1ON TMR1ON `VEb  1 e 0 @192 ]
 "7926
@@ -108,15 +112,15 @@
 "65 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"117
+"112
 [v main@a a `i  1 a 2 55 ]
-"78
+"80
 [v main@Sout Sout `[20]uc  1 a 20 32 ]
 "69
 [v main@adc_value adc_value `ui  1 a 2 53 ]
-"79
+"81
 [v main@Sptr Sptr `*.4uc  1 a 1 52 ]
-"129
+"139
 } 0
 "492 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -225,6 +229,20 @@
 "79
 [v I2C_LCD_SWrite@Slave Slave `uc  1 a 1 0 ]
 "95
+} 0
+"61
+[v _I2C_LCD_Pos I2C_LCD_Pos `(v  1 e 1 0 ]
+{
+[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 wreg ]
+"62
+[v I2C_LCD_Pos@LoBytex LoBytex `uc  1 a 1 13 ]
+[v I2C_LCD_Pos@HiBytex HiBytex `uc  1 a 1 12 ]
+"61
+[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 wreg ]
+[v I2C_LCD_Pos@Pos Pos `uc  1 p 1 8 ]
+"63
+[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 11 ]
+"73
 } 0
 "40
 [v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
