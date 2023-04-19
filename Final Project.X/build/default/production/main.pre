@@ -4344,11 +4344,16 @@ Sptr = Sout;
 i2c_Init();
 I2C_LCD_Init(0x27);
 
-I2C_LCD_Pos(0x27, 0x40);
+I2C_LCD_Command(0x27, 0x01);
 
 sprintf(Sout, "Hello World");
 
 I2C_LCD_SWrite(0x27, Sout, 11);
+
+_delay((unsigned long)((50)*(16000000/4000.0)));
+
+I2C_LCD_Command(0x27, 0x01);
+sprintf(Sout, "");
 
 RA4 = 0;
 
@@ -4356,10 +4361,30 @@ while(1) {
 
 adc_value = ADC_Read();
 
-if (adc_value < 712.0f) RA4 = 1;
+sprintf(Sout, "lightValue = %d", adc_value);
+
+I2C_LCD_SWrite(0x27, Sout, 16);
+
+if (adc_value < 712) RA4 = 1;
 else RA4 = 0;
 
-# 115
+_delay((unsigned long)((50)*(16000000/4000.0)));
+
+I2C_LCD_Command(0x27, 0x01);
+
+RC1 = 1;
+_delay((unsigned long)((50)*(16000000/4000000.0)));
+RC1 = 0;
+int a = 0;
+
+TMR1ON = 1;
+while(RA2);
+TMR1ON = 0;
+
+a = (TMR1L | (TMR1H<<8));
+a = a/58.82;
+a = a + 1;
+
 }
 
 }

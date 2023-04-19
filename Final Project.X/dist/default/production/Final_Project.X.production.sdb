@@ -3,16 +3,22 @@
 [d edition pro ]
 [d chip 16F1829 ]
 [d frameptr 6 ]
+"32 /opt/microchip/xc8/v1.45/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
 "492 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "62 /opt/microchip/xc8/v1.45/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /opt/microchip/xc8/v1.45/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"4 /opt/microchip/xc8/v1.45/sources/common/ftge.c
-[v ___ftge __ftge `(b  1 e 0 0 ]
-"28 /opt/microchip/xc8/v1.45/sources/common/lwtoft.c
-[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"56 /opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"44 /opt/microchip/xc8/v1.45/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"6 /opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.45/sources/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
 "6 /opt/microchip/xc8/v1.45/sources/pic/eeprom.c
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
@@ -21,10 +27,10 @@
 [v _I2C_LCD_Busy I2C_LCD_Busy `(uc  1 e 1 0 ]
 "40
 [v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
-"61
-[v _I2C_LCD_Pos I2C_LCD_Pos `(v  1 e 1 0 ]
 "76
 [v _I2C_LCD_SWrite I2C_LCD_SWrite `(v  1 e 1 0 ]
+"98
+[v _I2C_LCD_Command I2C_LCD_Command `(v  1 e 1 0 ]
 "12 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
 [v _i2c_Init i2c_Init `(v  1 e 1 0 ]
 "29
@@ -85,48 +91,115 @@
 [v _SSP1CON2bits SSP1CON2bits `VES34  1 e 1 @534 ]
 "7366
 [v _GO_nDONE GO_nDONE `VEb  1 e 0 @1257 ]
+"7668
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
 "7672
 [v _RA4 RA4 `VEb  1 e 0 @100 ]
+"7686
+[v _RC1 RC1 `VEb  1 e 0 @113 ]
+"7894
+[v _TMR1ON TMR1ON `VEb  1 e 0 @192 ]
 "7926
 [v _TRISB4 TRISB4 `VEb  1 e 0 @1132 ]
 "7930
 [v _TRISB6 TRISB6 `VEb  1 e 0 @1134 ]
+"354 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
 "65 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"78
-[v main@Sout Sout `[20]uc  1 a 20 11 ]
-"69
-[v main@adc_value adc_value `ui  1 a 2 32 ]
-"79
-[v main@Sptr Sptr `*.4uc  1 a 1 31 ]
 "117
+[v main@a a `i  1 a 2 55 ]
+"78
+[v main@Sout Sout `[20]uc  1 a 20 32 ]
+"69
+[v main@adc_value adc_value `ui  1 a 2 53 ]
+"79
+[v main@Sptr Sptr `*.4uc  1 a 1 52 ]
+"129
 } 0
 "492 /opt/microchip/xc8/v1.45/sources/common/doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+"528
+[v sprintf@val val `ui  1 a 2 11 ]
 "499
-[v sprintf@c c `c  1 a 1 6 ]
+[v sprintf@c c `c  1 a 1 14 ]
+"506
+[v sprintf@prec prec `c  1 a 1 10 ]
+"508
+[v sprintf@flag flag `uc  1 a 1 9 ]
 "494
-[v sprintf@ap ap `[1]*.1v  1 a 1 5 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 8 ]
 "492
 [v sprintf@sp sp `*.4uc  1 a 1 wreg ]
 [v sprintf@f f `*.25DCuc  1 p 2 0 ]
 "533
-[v sprintf@sp sp `*.4uc  1 a 1 7 ]
+[v sprintf@sp sp `*.4uc  1 a 1 13 ]
 "1541
+} 0
+"6 /opt/microchip/xc8/v1.45/sources/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 13 ]
+"6
+[v ___lwmod@divisor divisor `ui  1 p 2 8 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 10 ]
+"26
+} 0
+"6 /opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 7 ]
+"6
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"31
 } 0
 "12 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
 [v _i2c_Init i2c_Init `(v  1 e 1 0 ]
 {
 "26
 } 0
-"28 /opt/microchip/xc8/v1.45/sources/common/lwtoft.c
-[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"44 /opt/microchip/xc8/v1.45/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
 {
-[v ___lwtoft@c c `ui  1 p 2 8 ]
-"31
+"47
+[v ___fttol@lval lval `ul  1 a 4 25 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 29 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 24 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 16 ]
+"73
+} 0
+"56 /opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 11 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 15 ]
+[v ___ftdiv@exp exp `uc  1 a 1 14 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 10 ]
+"56
+[v ___ftdiv@f2 f2 `f  1 p 3 0 ]
+[v ___ftdiv@f1 f1 `f  1 p 3 3 ]
+"86
+} 0
+"32 /opt/microchip/xc8/v1.45/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 13 ]
+"32
+[v ___awtoft@c c `i  1 p 2 8 ]
+"42
 } 0
 "62 /opt/microchip/xc8/v1.45/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
@@ -135,13 +208,6 @@
 [v ___ftpack@exp exp `uc  1 p 1 3 ]
 [v ___ftpack@sign sign `uc  1 p 1 4 ]
 "86
-} 0
-"4 /opt/microchip/xc8/v1.45/sources/common/ftge.c
-[v ___ftge __ftge `(b  1 e 0 0 ]
-{
-[v ___ftge@ff1 ff1 `f  1 p 3 0 ]
-[v ___ftge@ff2 ff2 `f  1 p 3 3 ]
-"13
 } 0
 "76 /home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
 [v _I2C_LCD_SWrite I2C_LCD_SWrite `(v  1 e 1 0 ]
@@ -160,20 +226,6 @@
 [v I2C_LCD_SWrite@Slave Slave `uc  1 a 1 0 ]
 "95
 } 0
-"61
-[v _I2C_LCD_Pos I2C_LCD_Pos `(v  1 e 1 0 ]
-{
-[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 wreg ]
-"62
-[v I2C_LCD_Pos@LoBytex LoBytex `uc  1 a 1 13 ]
-[v I2C_LCD_Pos@HiBytex HiBytex `uc  1 a 1 12 ]
-"61
-[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 wreg ]
-[v I2C_LCD_Pos@Pos Pos `uc  1 p 1 8 ]
-"63
-[v I2C_LCD_Pos@Slave Slave `uc  1 a 1 11 ]
-"73
-} 0
 "40
 [v _I2C_LCD_Init I2C_LCD_Init `(v  1 e 1 0 ]
 {
@@ -185,6 +237,20 @@
 "42
 [v I2C_LCD_Init@Slave Slave `uc  1 a 1 10 ]
 "58
+} 0
+"98
+[v _I2C_LCD_Command I2C_LCD_Command `(v  1 e 1 0 ]
+{
+[v I2C_LCD_Command@Slave Slave `uc  1 a 1 wreg ]
+"100
+[v I2C_LCD_Command@LoBytex LoBytex `uc  1 a 1 13 ]
+[v I2C_LCD_Command@HiBytex HiBytex `uc  1 a 1 12 ]
+"98
+[v I2C_LCD_Command@Slave Slave `uc  1 a 1 wreg ]
+[v I2C_LCD_Command@Cmd Cmd `uc  1 p 1 8 ]
+"101
+[v I2C_LCD_Command@Slave Slave `uc  1 a 1 11 ]
+"111
 } 0
 "11
 [v _I2C_LCD_Busy I2C_LCD_Busy `(uc  1 e 1 0 ]

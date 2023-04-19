@@ -82,35 +82,47 @@ void main(void) {
 
 	i2c_Init();				// Start I2C as Master 100KH
 	I2C_LCD_Init(I2C_SLAVE); //pass I2C_SLAVE to the init function to create an instance
-	
-    I2C_LCD_Pos(I2C_SLAVE, 0x40); //Set Position to start bottom line
+    
+    I2C_LCD_Command(I2C_SLAVE, 0x01);
 
     sprintf(Sout, "Hello World");
 
     I2C_LCD_SWrite(I2C_SLAVE, Sout, 11);
+    
+    __delay_ms(50);
+    
+    I2C_LCD_Command(I2C_SLAVE, 0x01);
+    sprintf(Sout, "");
     
     RA4 = 0;
     
     while(1) {
         
         adc_value = ADC_Read();
+                
+        sprintf(Sout, "lightValue = %d", adc_value);
         
-        if (adc_value < 712.0f) RA4 = 1;
+        I2C_LCD_SWrite(I2C_SLAVE, Sout, 16);
+        
+        if (adc_value < 712) RA4 = 1;
         else RA4 = 0;
         
-//        RC1 = 1;               //TRIGGER HIGH
-//        __delay_us(10);               //10uS Delay
-//        RC1 = 0;               //TRIGGER LOW
-//
-//        int a = 0;
-//        while(!RA2);           //Waiting for Echo
-//        TMR1ON = 1;            //Timer Starts
-//        while(RA2);            //Waiting for Echo goes LOW
-//        TMR1ON = 0;            //Timer Stops
+        __delay_ms(50);
+        
+        I2C_LCD_Command(I2C_SLAVE, 0x01);
+        
+        RC1 = 1;               //TRIGGER HIGH
+        __delay_us(50);               //10uS Delay
+        RC1 = 0;               //TRIGGER LOW
+        int a = 0;
+ //       while(!RA2);           //Waiting for Echo
+        TMR1ON = 1;            //Timer Starts
+        while(RA2);            //Waiting for Echo goes LOW
+        TMR1ON = 0;            //Timer Stops
 
-//        a = (TMR1L | (TMR1H<<8));   //Reads Timer Value
-//        a = a/58.82;                //Converts Time to Distance
-//        a = a + 1;
+        a = (TMR1L | (TMR1H<<8));   //Reads Timer Value
+        a = a/58.82;                //Converts Time to Distance
+        a = a + 1;
   
     }
  

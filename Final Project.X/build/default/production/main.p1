@@ -46,6 +46,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 "7672 /opt/microchip/xc8/v1.45/include/pic16f1829.h
 [v _RA4 `Vb ~T0 @X0 0 e@100 ]
+"7686
+[v _RC1 `Vb ~T0 @X0 0 e@113 ]
+"7894
+[v _TMR1ON `Vb ~T0 @X0 0 e@192 ]
+"7668
+[v _RA2 `Vb ~T0 @X0 0 e@98 ]
 "13 main.c
 [p x FOSC=INTOSC ]
 "14
@@ -3678,46 +3684,103 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 84: I2C_LCD_Init(0x27);
 "84
 [e ( _I2C_LCD_Init (1 -> -> 39 `i `uc ]
-[; ;main.c: 86: I2C_LCD_Pos(0x27, 0x40);
+[; ;main.c: 86: I2C_LCD_Command(0x27, 0x01);
 "86
-[e ( _I2C_LCD_Pos (2 , -> -> 39 `i `uc -> -> 64 `i `uc ]
+[e ( _I2C_LCD_Command (2 , -> -> 39 `i `uc -> -> 1 `i `uc ]
 [; ;main.c: 88: sprintf(Sout, "Hello World");
 "88
 [e ( _sprintf (1 , &U _Sout :s 1C ]
 [; ;main.c: 90: I2C_LCD_SWrite(0x27, Sout, 11);
 "90
 [e ( _I2C_LCD_SWrite (3 , , -> -> 39 `i `uc &U _Sout -> -> 11 `i `uc ]
-[; ;main.c: 92: RA4 = 0;
+[; ;main.c: 92: _delay((unsigned long)((50)*(16000000/4000.0)));
 "92
-[e = _RA4 -> -> 0 `i `b ]
-[; ;main.c: 94: while(1) {
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 94: I2C_LCD_Command(0x27, 0x01);
 "94
+[e ( _I2C_LCD_Command (2 , -> -> 39 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 95: sprintf(Sout, "");
+"95
+[e ( _sprintf (1 , &U _Sout :s 2C ]
+[; ;main.c: 97: RA4 = 0;
+"97
+[e = _RA4 -> -> 0 `i `b ]
+[; ;main.c: 99: while(1) {
+"99
 [e :U 404 ]
 {
-[; ;main.c: 96: adc_value = ADC_Read();
-"96
+[; ;main.c: 101: adc_value = ADC_Read();
+"101
 [e = _adc_value ( _ADC_Read ..  ]
-[; ;main.c: 98: if (adc_value < 712.0f) RA4 = 1;
-"98
-[e $ ! < -> _adc_value `f -> .712.0 `f 406  ]
+[; ;main.c: 103: sprintf(Sout, "lightValue = %d", adc_value);
+"103
+[e ( _sprintf (1 , (. , &U _Sout :s 3C _adc_value ]
+[; ;main.c: 105: I2C_LCD_SWrite(0x27, Sout, 16);
+"105
+[e ( _I2C_LCD_SWrite (3 , , -> -> 39 `i `uc &U _Sout -> -> 16 `i `uc ]
+[; ;main.c: 107: if (adc_value < 712) RA4 = 1;
+"107
+[e $ ! < _adc_value -> -> 712 `i `ui 406  ]
 [e = _RA4 -> -> 1 `i `b ]
 [e $U 407  ]
-"99
+"108
 [e :U 406 ]
-[; ;main.c: 99: else RA4 = 0;
+[; ;main.c: 108: else RA4 = 0;
 [e = _RA4 -> -> 0 `i `b ]
 [e :U 407 ]
+[; ;main.c: 110: _delay((unsigned long)((50)*(16000000/4000.0)));
+"110
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;main.c: 112: I2C_LCD_Command(0x27, 0x01);
+"112
+[e ( _I2C_LCD_Command (2 , -> -> 39 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 114: RC1 = 1;
+"114
+[e = _RC1 -> -> 1 `i `b ]
+[; ;main.c: 115: _delay((unsigned long)((50)*(16000000/4000000.0)));
 "115
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 116: RC1 = 0;
+"116
+[e = _RC1 -> -> 0 `i `b ]
+"117
+[v _a `i ~T0 @X0 1 a ]
+[; ;main.c: 117: int a = 0;
+[e = _a -> 0 `i ]
+[; ;main.c: 119: TMR1ON = 1;
+"119
+[e = _TMR1ON -> -> 1 `i `b ]
+[; ;main.c: 120: while(RA2);
+"120
+[e $U 408  ]
+[e :U 409 ]
+[e :U 408 ]
+[e $ _RA2 409  ]
+[e :U 410 ]
+[; ;main.c: 121: TMR1ON = 0;
+"121
+[e = _TMR1ON -> -> 0 `i `b ]
+[; ;main.c: 123: a = (TMR1L | (TMR1H<<8));
+"123
+[e = _a | -> _TMR1L `i << -> _TMR1H `i -> 8 `i ]
+[; ;main.c: 124: a = a/58.82;
+"124
+[e = _a -> / -> _a `d .58.82 `i ]
+[; ;main.c: 125: a = a + 1;
+"125
+[e = _a + _a -> 1 `i ]
+"127
 }
 [e :U 403 ]
-"94
+"99
 [e $U 404  ]
 [e :U 405 ]
-[; ;main.c: 115: }
-[; ;main.c: 117: }
-"117
+[; ;main.c: 127: }
+[; ;main.c: 129: }
+"129
 [e :UE 402 ]
 }
-[p f _sprintf 8388608 ]
+[p f _sprintf 8388736 ]
 [a 1C 72 101 108 108 111 32 87 111 114 108 100 0 ]
-
+[a 3C 108 105 103 104 116 86 97 108 117 101 32 61 32 37 100 0 ]
+[a 2C 0 ]
