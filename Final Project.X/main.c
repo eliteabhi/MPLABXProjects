@@ -74,40 +74,39 @@ void main(void) {
     
     TRISC = 0x00;
     
-    ADC_Initialize();
+    ADC_Initialize(); // Initialize AD Converter
   
     //Variables
-	unsigned char  Sout[20];
-	unsigned char * Sptr;
+	unsigned char  Sout[20]; // Declare output char array
+	unsigned char * Sptr; //  Pointer to array
     int z;
 	Sptr = Sout;
 
 	i2c_Init();				// Start I2C as Master 100KH
 	I2C_LCD_Init(I2C_SLAVE); //pass I2C_SLAVE to the init function to create an instance
     
-    I2C_LCD_Command(I2C_SLAVE, 0x01);
+    I2C_LCD_Command(I2C_SLAVE, 0x01); // Clear LCD
 
-    sprintf(Sout, "Hello World");
+    sprintf(Sout, "Hello World"); // Instantiate string in Sout
 
-    I2C_LCD_SWrite(I2C_SLAVE, Sout, 11);
+    I2C_LCD_SWrite(I2C_SLAVE, Sout, 11); // Print to LCD
     
     __delay_ms(50);
     
-    I2C_LCD_Command(I2C_SLAVE, 0x01);
-    sprintf(Sout, "");
+    I2C_LCD_Command(I2C_SLAVE, 0x01); // Clear LCD
     
-    RA4 = 0;
+    RA4 = 0; // Set LED Pin to low
     
-    while(1) {
+    while(1) { // Infinite Loop
         
-        adc_value = ADC_Read();
+        adc_value = ADC_Read(); // Get Value from photo Resistor
                 
         
-        if (adc_value < 800) RA4 = 1;
+        if (adc_value < 800) RA4 = 1; // If value below threshold, turn on LED
         else RA4 = 0;
         
         RC0 = 1;               //TRIGGER HIGH
-        __delay_us(10);               //10uS Delay
+        __delay_us(10);        //10uS Delay
         RC0 = 0;               //TRIGGER LOW
         int a = 0;
        // while(!RA1);         //Waiting for Echo
