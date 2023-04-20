@@ -103,14 +103,14 @@ void main(void) {
         adc_value = ADC_Read();
                 
         
-        if (adc_value < 712) RA4 = 1;
+        if (adc_value < 800) RA4 = 1;
         else RA4 = 0;
         
         RC0 = 1;               //TRIGGER HIGH
         __delay_us(10);               //10uS Delay
         RC0 = 0;               //TRIGGER LOW
         int a = 0;
-        while(!RA1);         //Waiting for Echo
+       // while(!RA1);         //Waiting for Echo
         TMR1ON = 1;            //Timer Starts
         while(RA1);            //Waiting for Echo goes LOW
         TMR1ON = 0;            //Timer Stops
@@ -128,7 +128,6 @@ void main(void) {
         sprintf(Sout, "DistValue = %d", a);
         
         I2C_LCD_SWrite(I2C_SLAVE, Sout, 16);
-
                 
         __delay_ms(50);
         

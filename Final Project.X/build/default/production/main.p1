@@ -50,10 +50,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RA4 `Vb ~T0 @X0 0 e@100 ]
 "7684
 [v _RC0 `Vb ~T0 @X0 0 e@112 ]
-"7666
-[v _RA1 `Vb ~T0 @X0 0 e@97 ]
 "7894
 [v _TMR1ON `Vb ~T0 @X0 0 e@192 ]
+"7666
+[v _RA1 `Vb ~T0 @X0 0 e@97 ]
 "13 main.c
 [p x FOSC=INTOSC ]
 "14
@@ -3717,9 +3717,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 103: adc_value = ADC_Read();
 "103
 [e = _adc_value ( _ADC_Read ..  ]
-[; ;main.c: 106: if (adc_value < 712) RA4 = 1;
+[; ;main.c: 106: if (adc_value < 800) RA4 = 1;
 "106
-[e $ ! < _adc_value -> -> 712 `i `ui 406  ]
+[e $ ! < _adc_value -> -> 800 `i `ui 406  ]
 [e = _RA4 -> -> 1 `i `b ]
 [e $U 407  ]
 "107
@@ -3740,23 +3740,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _a `i ~T0 @X0 1 a ]
 [; ;main.c: 112: int a = 0;
 [e = _a -> 0 `i ]
-[; ;main.c: 113: while(!RA1);
-"113
-[e $U 408  ]
-[e :U 409 ]
-[e :U 408 ]
-[e $ ! _RA1 409  ]
-[e :U 410 ]
 [; ;main.c: 114: TMR1ON = 1;
 "114
 [e = _TMR1ON -> -> 1 `i `b ]
 [; ;main.c: 115: while(RA1);
 "115
-[e $U 411  ]
-[e :U 412 ]
-[e :U 411 ]
-[e $ _RA1 412  ]
-[e :U 413 ]
+[e $U 408  ]
+[e :U 409 ]
+[e :U 408 ]
+[e $ _RA1 409  ]
+[e :U 410 ]
 [; ;main.c: 116: TMR1ON = 0;
 "116
 [e = _TMR1ON -> -> 0 `i `b ]
@@ -3784,21 +3777,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 130: I2C_LCD_SWrite(0x27, Sout, 16);
 "130
 [e ( _I2C_LCD_SWrite (3 , , -> -> 39 `i `uc &U _Sout -> -> 16 `i `uc ]
-[; ;main.c: 133: _delay((unsigned long)((50)*(8000000/4000.0)));
-"133
+[; ;main.c: 132: _delay((unsigned long)((50)*(8000000/4000.0)));
+"132
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-[; ;main.c: 135: I2C_LCD_Command(0x27, 0x01);
-"135
+[; ;main.c: 134: I2C_LCD_Command(0x27, 0x01);
+"134
 [e ( _I2C_LCD_Command (2 , -> -> 39 `i `uc -> -> 1 `i `uc ]
-"137
+"136
 }
 [e :U 403 ]
 "101
 [e $U 404  ]
 [e :U 405 ]
-[; ;main.c: 137: }
-[; ;main.c: 139: }
-"139
+[; ;main.c: 136: }
+[; ;main.c: 138: }
+"138
 [e :UE 402 ]
 }
 [p f _sprintf 8388736 ]

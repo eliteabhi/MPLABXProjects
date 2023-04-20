@@ -4364,14 +4364,14 @@ while(1) {
 adc_value = ADC_Read();
 
 
-if (adc_value < 712) RA4 = 1;
+if (adc_value < 800) RA4 = 1;
 else RA4 = 0;
 
 RC0 = 1;
 _delay((unsigned long)((10)*(8000000/4000000.0)));
 RC0 = 0;
 int a = 0;
-while(!RA1);
+
 TMR1ON = 1;
 while(RA1);
 TMR1ON = 0;
@@ -4389,7 +4389,6 @@ I2C_LCD_Pos(0x27, 0x40);
 sprintf(Sout, "DistValue = %d", a);
 
 I2C_LCD_SWrite(0x27, Sout, 16);
-
 
 _delay((unsigned long)((50)*(8000000/4000.0)));
 

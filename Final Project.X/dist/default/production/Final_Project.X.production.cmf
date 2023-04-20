@@ -11,40 +11,40 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$/tmp/xcXIlXZH0.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 2 2 2 2
+config CONFIG 0 8007 8007 2 2
 $dist/default/production/Final_Project.X.production.obj
 cinit CODE 0 7FD 7FD 3 2
-text1 CODE 0 644 644 CD 2
-text2 CODE 0 2F0 2F0 2C 2
-text3 CODE 0 350 350 34 2
-text4 CODE 0 285 285 C 2
-text5 CODE 0 514 514 87 2
-text6 CODE 0 59B 59B A9 2
-text7 CODE 0 2D0 2D0 20 2
-text8 CODE 0 4B0 4B0 64 2
-text9 CODE 0 455 455 5B 2
-text10 CODE 0 384 384 37 2
-text11 CODE 0 3BB 3BB 43 2
-text12 CODE 0 31C 31C 34 2
-text13 CODE 0 3FE 3FE 57 2
-text14 CODE 0 276 276 7 2
-text15 CODE 0 26B 26B 5 2
-text16 CODE 0 266 266 5 2
-text17 CODE 0 261 261 5 2
-text18 CODE 0 2B4 2B4 1C 2
-text19 CODE 0 291 291 F 2
-text20 CODE 0 27D 27D 8 2
-text21 CODE 0 2A0 2A0 14 2
-text22 CODE 0 270 270 6 2
-maintext CODE 0 711 711 EC 2
+text1 CODE 0 646 646 CD 2
+text2 CODE 0 2F2 2F2 2C 2
+text3 CODE 0 352 352 34 2
+text4 CODE 0 287 287 C 2
+text5 CODE 0 516 516 87 2
+text6 CODE 0 59D 59D A9 2
+text7 CODE 0 2D2 2D2 20 2
+text8 CODE 0 4B2 4B2 64 2
+text9 CODE 0 457 457 5B 2
+text10 CODE 0 386 386 37 2
+text11 CODE 0 3BD 3BD 43 2
+text12 CODE 0 31E 31E 34 2
+text13 CODE 0 400 400 57 2
+text14 CODE 0 278 278 7 2
+text15 CODE 0 26D 26D 5 2
+text16 CODE 0 268 268 5 2
+text17 CODE 0 263 263 5 2
+text18 CODE 0 2B6 2B6 1C 2
+text19 CODE 0 293 293 F 2
+text20 CODE 0 27F 27F 8 2
+text21 CODE 0 2A2 2A2 14 2
+text22 CODE 0 272 272 6 2
+maintext CODE 0 713 713 EA 2
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 39 1
 stringtext1 STRCODE 0 800 800 1A 2
 stringtext2 STRCODE 0 81A 81A F 2
 stringtext3 STRCODE 0 829 829 C 2
-$/tmp/xcXmRnm9f.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 2 2 2 2
-config CONFIG 0 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -74,9 +74,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-260 2
+CONST 4-262 2
 CONST 835-1FFF 2
-ENTRY 4-260 2
+ENTRY 4-262 2
 ENTRY 835-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -102,7 +102,7 @@ SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 2039-23EF 1
-CODE 4-260 2
+CODE 4-262 2
 CODE 835-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -119,9 +119,9 @@ BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 EEDATA F000-F0FF 2
-STRCODE 4-260 2
+STRCODE 4-262 2
 STRCODE 835-1FFF 2
-STRING 4-260 2
+STRING 4-262 2
 STRING 835-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -137,286 +137,285 @@ STRING 835-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/Final_Project.X.production.obj
-7FD cinit CODE >568:/tmp/xcXgREk5u
-7FD cinit CODE >571:/tmp/xcXgREk5u
-7FD cinit CODE >577:/tmp/xcXgREk5u
-7FD cinit CODE >579:/tmp/xcXgREk5u
-7FE cinit CODE >580:/tmp/xcXgREk5u
-270 text22 CODE >49:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-270 text22 CODE >51:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-273 text22 CODE >52:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-275 text22 CODE >53:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-2A0 text21 CODE >55:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-2A0 text21 CODE >57:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-2A3 text21 CODE >59:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-2AB text21 CODE >60:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-2AD text21 CODE >61:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-2AF text21 CODE >62:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-27D text20 CODE >29:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-27D text20 CODE >30:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-291 text19 CODE >62:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-292 text19 CODE >66:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-296 text19 CODE >67:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-29A text19 CODE >68:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-29C text19 CODE >69:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-29F text19 CODE >70:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2B4 text18 CODE >73:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2B5 text18 CODE >80:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2B8 text18 CODE >81:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2BA text18 CODE >82:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2BD text18 CODE >83:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2C2 text18 CODE >84:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2C5 text18 CODE >85:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2CB text18 CODE >86:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2CD text18 CODE >87:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-2CE text18 CODE >89:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-261 text17 CODE >41:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-261 text17 CODE >42:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-263 text17 CODE >43:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-265 text17 CODE >44:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-266 text16 CODE >34:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-266 text16 CODE >36:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-268 text16 CODE >37:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-26A text16 CODE >38:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-26B text15 CODE >47:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-26B text15 CODE >49:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-26D text15 CODE >50:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-26F text15 CODE >51:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-276 text14 CODE >54:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-277 text14 CODE >56:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-279 text14 CODE >57:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-27C text14 CODE >58:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-3FE text13 CODE >11:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3FF text13 CODE >14:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-402 text13 CODE >15:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-407 text13 CODE >16:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-40B text13 CODE >17:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-40F text13 CODE >18:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-412 text13 CODE >19:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-418 text13 CODE >20:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-41F text13 CODE >21:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-426 text13 CODE >22:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-42A text13 CODE >23:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-42D text13 CODE >24:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-432 text13 CODE >25:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-436 text13 CODE >26:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-43A text13 CODE >27:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-43D text13 CODE >28:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-443 text13 CODE >29:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-44A text13 CODE >30:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-44D text13 CODE >31:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-451 text13 CODE >32:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-453 text13 CODE >33:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-31C text12 CODE >98:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-31D text12 CODE >101:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-322 text12 CODE >102:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-32D text12 CODE >103:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-330 text12 CODE >104:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-335 text12 CODE >105:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-33A text12 CODE >106:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-33F text12 CODE >107:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-344 text12 CODE >108:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-349 text12 CODE >109:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-34D text12 CODE >110:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-34F text12 CODE >111:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3BB text11 CODE >40:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3BC text11 CODE >42:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3BF text11 CODE >43:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3C4 text11 CODE >44:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3C8 text11 CODE >45:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3CC text11 CODE >46:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3D0 text11 CODE >47:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3D4 text11 CODE >48:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3D8 text11 CODE >49:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3DC text11 CODE >50:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3E0 text11 CODE >51:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3E4 text11 CODE >52:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3E8 text11 CODE >53:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3EC text11 CODE >54:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3F0 text11 CODE >55:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3F4 text11 CODE >56:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3FB text11 CODE >57:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3FD text11 CODE >58:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-384 text10 CODE >61:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-385 text10 CODE >63:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-38A text10 CODE >64:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-395 text10 CODE >65:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-398 text10 CODE >66:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-39D text10 CODE >67:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3A2 text10 CODE >68:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3A7 text10 CODE >69:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3AC text10 CODE >70:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3B1 text10 CODE >71:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3B8 text10 CODE >72:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-3BA text10 CODE >73:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-455 text9 CODE >76:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-457 text9 CODE >79:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-45A text9 CODE >80:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-460 text9 CODE >82:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-46E text9 CODE >84:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-47A text9 CODE >85:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-48B text9 CODE >87:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-490 text9 CODE >88:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-496 text9 CODE >89:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-49C text9 CODE >90:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-4A2 text9 CODE >82:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-4A8 text9 CODE >93:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-4AD text9 CODE >94:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-4AF text9 CODE >95:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
-4B0 text8 CODE >62:/opt/microchip/xc8/v1.45/sources/common/float.c
-4B0 text8 CODE >64:/opt/microchip/xc8/v1.45/sources/common/float.c
-4B8 text8 CODE >65:/opt/microchip/xc8/v1.45/sources/common/float.c
-4BF text8 CODE >67:/opt/microchip/xc8/v1.45/sources/common/float.c
-4C3 text8 CODE >68:/opt/microchip/xc8/v1.45/sources/common/float.c
-4C9 text8 CODE >66:/opt/microchip/xc8/v1.45/sources/common/float.c
-4CE text8 CODE >71:/opt/microchip/xc8/v1.45/sources/common/float.c
-4D2 text8 CODE >72:/opt/microchip/xc8/v1.45/sources/common/float.c
-4DC text8 CODE >73:/opt/microchip/xc8/v1.45/sources/common/float.c
-4E2 text8 CODE >70:/opt/microchip/xc8/v1.45/sources/common/float.c
-4E2 text8 CODE >74:/opt/microchip/xc8/v1.45/sources/common/float.c
-4E7 text8 CODE >76:/opt/microchip/xc8/v1.45/sources/common/float.c
-4E9 text8 CODE >77:/opt/microchip/xc8/v1.45/sources/common/float.c
-4EF text8 CODE >75:/opt/microchip/xc8/v1.45/sources/common/float.c
-4F5 text8 CODE >79:/opt/microchip/xc8/v1.45/sources/common/float.c
-4F7 text8 CODE >80:/opt/microchip/xc8/v1.45/sources/common/float.c
-4FD text8 CODE >81:/opt/microchip/xc8/v1.45/sources/common/float.c
-4FF text8 CODE >82:/opt/microchip/xc8/v1.45/sources/common/float.c
-50F text8 CODE >83:/opt/microchip/xc8/v1.45/sources/common/float.c
-512 text8 CODE >84:/opt/microchip/xc8/v1.45/sources/common/float.c
-513 text8 CODE >86:/opt/microchip/xc8/v1.45/sources/common/float.c
-2D0 text7 CODE >32:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
-2D0 text7 CODE >36:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
-2D1 text7 CODE >37:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
-2D3 text7 CODE >38:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
-2D8 text7 CODE >39:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
-2DA text7 CODE >41:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
-59B text6 CODE >56:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-59B text6 CODE >63:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5AB text6 CODE >64:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5B2 text6 CODE >65:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5C1 text6 CODE >66:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5C8 text6 CODE >67:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5CE text6 CODE >68:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5D3 text6 CODE >69:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5E3 text6 CODE >70:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5F3 text6 CODE >71:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5F7 text6 CODE >72:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5F8 text6 CODE >73:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5FE text6 CODE >74:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-5FF text6 CODE >75:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-605 text6 CODE >76:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-609 text6 CODE >78:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-60F text6 CODE >79:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-61B text6 CODE >80:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-621 text6 CODE >81:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-622 text6 CODE >83:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-628 text6 CODE >84:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-62C text6 CODE >85:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
-514 text5 CODE >44:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-514 text5 CODE >49:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-524 text5 CODE >50:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-52D text5 CODE >51:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-53D text5 CODE >52:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-53E text5 CODE >53:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-544 text5 CODE >54:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-54B text5 CODE >55:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-54D text5 CODE >56:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-54F text5 CODE >57:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-554 text5 CODE >58:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-55D text5 CODE >60:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-564 text5 CODE >61:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-56B text5 CODE >63:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-56F text5 CODE >64:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-578 text5 CODE >66:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-57F text5 CODE >67:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-581 text5 CODE >65:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-581 text5 CODE >68:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-584 text5 CODE >70:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-587 text5 CODE >71:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-592 text5 CODE >72:/opt/microchip/xc8/v1.45/sources/common/fttol.c
-285 text4 CODE >12:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-285 text4 CODE >16:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-287 text4 CODE >17:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-288 text4 CODE >19:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-28B text4 CODE >20:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-28C text4 CODE >22:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-28E text4 CODE >24:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-290 text4 CODE >26:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
-350 text3 CODE >6:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-350 text3 CODE >14:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-352 text3 CODE >15:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-356 text3 CODE >16:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-358 text3 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-35A text3 CODE >18:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-35F text3 CODE >19:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-363 text3 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-364 text3 CODE >22:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-369 text3 CODE >23:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-371 text3 CODE >24:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-375 text3 CODE >25:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-376 text3 CODE >27:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-37B text3 CODE >28:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-37F text3 CODE >30:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
-2F0 text2 CODE >6:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-2F0 text2 CODE >13:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-2F4 text2 CODE >14:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-2F6 text2 CODE >15:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-2F8 text2 CODE >16:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-2FD text2 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-301 text2 CODE >15:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-302 text2 CODE >20:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-30A text2 CODE >21:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-30E text2 CODE >22:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-313 text2 CODE >23:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-317 text2 CODE >25:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
-644 text1 CODE >492:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-646 text1 CODE >533:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-64A text1 CODE >536:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-65C text1 CODE >538:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-660 text1 CODE >541:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-66B text1 CODE >542:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-66C text1 CODE >548:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-66D text1 CODE >635:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-684 text1 CODE >1259:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-68F text1 CODE >1261:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-691 text1 CODE >1262:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-695 text1 CODE >1263:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-69A text1 CODE >1305:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-6A0 text1 CODE >1306:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-6B7 text1 CODE >1305:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-6BF text1 CODE >1438:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-6C3 text1 CODE >1439:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-6CE text1 CODE >1472:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-6D2 text1 CODE >1474:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-6D9 text1 CODE >1489:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-700 text1 CODE >1524:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-70B text1 CODE >1474:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-70C text1 CODE >1538:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
-711 maintext CODE >65:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-711 maintext CODE >67:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-714 maintext CODE >69:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-716 maintext CODE >71:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-718 maintext CODE >73:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-71A maintext CODE >75:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-71B maintext CODE >77:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-71E maintext CODE >83:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-723 maintext CODE >85:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-726 maintext CODE >86:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-72A maintext CODE >88:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-730 maintext CODE >90:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-739 maintext CODE >92:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-746 maintext CODE >94:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-74F maintext CODE >96:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-755 maintext CODE >97:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-75E maintext CODE >99:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-760 maintext CODE >103:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-768 maintext CODE >106:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-771 maintext CODE >107:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-772 maintext CODE >109:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-773 maintext CODE >110:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-777 maintext CODE >111:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-779 maintext CODE >112:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-77B maintext CODE >113:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+7FD cinit CODE >568:/tmp/xcX05bJku
+7FD cinit CODE >571:/tmp/xcX05bJku
+7FD cinit CODE >577:/tmp/xcX05bJku
+7FD cinit CODE >579:/tmp/xcX05bJku
+7FE cinit CODE >580:/tmp/xcX05bJku
+272 text22 CODE >49:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+272 text22 CODE >51:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+275 text22 CODE >52:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+277 text22 CODE >53:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+2A2 text21 CODE >55:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+2A2 text21 CODE >57:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+2A5 text21 CODE >59:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+2AD text21 CODE >60:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+2AF text21 CODE >61:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+2B1 text21 CODE >62:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+27F text20 CODE >29:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+27F text20 CODE >30:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+293 text19 CODE >62:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+294 text19 CODE >66:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+298 text19 CODE >67:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+29C text19 CODE >68:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+29E text19 CODE >69:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2A1 text19 CODE >70:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2B6 text18 CODE >73:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2B7 text18 CODE >80:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2BA text18 CODE >81:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2BC text18 CODE >82:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2BF text18 CODE >83:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2C4 text18 CODE >84:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2C7 text18 CODE >85:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2CD text18 CODE >86:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2CF text18 CODE >87:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+2D0 text18 CODE >89:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+263 text17 CODE >41:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+263 text17 CODE >42:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+265 text17 CODE >43:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+267 text17 CODE >44:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+268 text16 CODE >34:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+268 text16 CODE >36:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+26A text16 CODE >37:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+26C text16 CODE >38:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+26D text15 CODE >47:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+26D text15 CODE >49:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+26F text15 CODE >50:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+271 text15 CODE >51:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+278 text14 CODE >54:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+279 text14 CODE >56:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+27B text14 CODE >57:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+27E text14 CODE >58:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+400 text13 CODE >11:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+401 text13 CODE >14:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+404 text13 CODE >15:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+409 text13 CODE >16:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+40D text13 CODE >17:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+411 text13 CODE >18:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+414 text13 CODE >19:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+41A text13 CODE >20:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+421 text13 CODE >21:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+428 text13 CODE >22:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+42C text13 CODE >23:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+42F text13 CODE >24:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+434 text13 CODE >25:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+438 text13 CODE >26:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+43C text13 CODE >27:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+43F text13 CODE >28:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+445 text13 CODE >29:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+44C text13 CODE >30:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+44F text13 CODE >31:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+453 text13 CODE >32:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+455 text13 CODE >33:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+31E text12 CODE >98:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+31F text12 CODE >101:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+324 text12 CODE >102:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+32F text12 CODE >103:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+332 text12 CODE >104:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+337 text12 CODE >105:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+33C text12 CODE >106:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+341 text12 CODE >107:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+346 text12 CODE >108:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+34B text12 CODE >109:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+34F text12 CODE >110:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+351 text12 CODE >111:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3BD text11 CODE >40:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3BE text11 CODE >42:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3C1 text11 CODE >43:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3C6 text11 CODE >44:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3CA text11 CODE >45:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3CE text11 CODE >46:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3D2 text11 CODE >47:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3D6 text11 CODE >48:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3DA text11 CODE >49:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3DE text11 CODE >50:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3E2 text11 CODE >51:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3E6 text11 CODE >52:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3EA text11 CODE >53:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3EE text11 CODE >54:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3F2 text11 CODE >55:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3F6 text11 CODE >56:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3FD text11 CODE >57:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3FF text11 CODE >58:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+386 text10 CODE >61:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+387 text10 CODE >63:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+38C text10 CODE >64:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+397 text10 CODE >65:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+39A text10 CODE >66:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+39F text10 CODE >67:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3A4 text10 CODE >68:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3A9 text10 CODE >69:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3AE text10 CODE >70:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3B3 text10 CODE >71:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3BA text10 CODE >72:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+3BC text10 CODE >73:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+457 text9 CODE >76:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+459 text9 CODE >79:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+45C text9 CODE >80:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+462 text9 CODE >82:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+470 text9 CODE >84:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+47C text9 CODE >85:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+48D text9 CODE >87:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+492 text9 CODE >88:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+498 text9 CODE >89:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+49E text9 CODE >90:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+4A4 text9 CODE >82:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+4AA text9 CODE >93:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+4AF text9 CODE >94:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+4B1 text9 CODE >95:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c.h
+4B2 text8 CODE >62:/opt/microchip/xc8/v1.45/sources/common/float.c
+4B2 text8 CODE >64:/opt/microchip/xc8/v1.45/sources/common/float.c
+4BA text8 CODE >65:/opt/microchip/xc8/v1.45/sources/common/float.c
+4C1 text8 CODE >67:/opt/microchip/xc8/v1.45/sources/common/float.c
+4C5 text8 CODE >68:/opt/microchip/xc8/v1.45/sources/common/float.c
+4CB text8 CODE >66:/opt/microchip/xc8/v1.45/sources/common/float.c
+4D0 text8 CODE >71:/opt/microchip/xc8/v1.45/sources/common/float.c
+4D4 text8 CODE >72:/opt/microchip/xc8/v1.45/sources/common/float.c
+4DE text8 CODE >73:/opt/microchip/xc8/v1.45/sources/common/float.c
+4E4 text8 CODE >70:/opt/microchip/xc8/v1.45/sources/common/float.c
+4E4 text8 CODE >74:/opt/microchip/xc8/v1.45/sources/common/float.c
+4E9 text8 CODE >76:/opt/microchip/xc8/v1.45/sources/common/float.c
+4EB text8 CODE >77:/opt/microchip/xc8/v1.45/sources/common/float.c
+4F1 text8 CODE >75:/opt/microchip/xc8/v1.45/sources/common/float.c
+4F7 text8 CODE >79:/opt/microchip/xc8/v1.45/sources/common/float.c
+4F9 text8 CODE >80:/opt/microchip/xc8/v1.45/sources/common/float.c
+4FF text8 CODE >81:/opt/microchip/xc8/v1.45/sources/common/float.c
+501 text8 CODE >82:/opt/microchip/xc8/v1.45/sources/common/float.c
+511 text8 CODE >83:/opt/microchip/xc8/v1.45/sources/common/float.c
+514 text8 CODE >84:/opt/microchip/xc8/v1.45/sources/common/float.c
+515 text8 CODE >86:/opt/microchip/xc8/v1.45/sources/common/float.c
+2D2 text7 CODE >32:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
+2D2 text7 CODE >36:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
+2D3 text7 CODE >37:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
+2D5 text7 CODE >38:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
+2DA text7 CODE >39:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
+2DC text7 CODE >41:/opt/microchip/xc8/v1.45/sources/common/awtoft.c
+59D text6 CODE >56:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+59D text6 CODE >63:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5AD text6 CODE >64:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5B4 text6 CODE >65:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5C3 text6 CODE >66:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5CA text6 CODE >67:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5D0 text6 CODE >68:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5D5 text6 CODE >69:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5E5 text6 CODE >70:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5F5 text6 CODE >71:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5F9 text6 CODE >72:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+5FA text6 CODE >73:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+600 text6 CODE >74:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+601 text6 CODE >75:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+607 text6 CODE >76:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+60B text6 CODE >78:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+611 text6 CODE >79:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+61D text6 CODE >80:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+623 text6 CODE >81:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+624 text6 CODE >83:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+62A text6 CODE >84:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+62E text6 CODE >85:/opt/microchip/xc8/v1.45/sources/common/ftdiv.c
+516 text5 CODE >44:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+516 text5 CODE >49:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+526 text5 CODE >50:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+52F text5 CODE >51:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+53F text5 CODE >52:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+540 text5 CODE >53:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+546 text5 CODE >54:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+54D text5 CODE >55:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+54F text5 CODE >56:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+551 text5 CODE >57:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+556 text5 CODE >58:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+55F text5 CODE >60:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+566 text5 CODE >61:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+56D text5 CODE >63:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+571 text5 CODE >64:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+57A text5 CODE >66:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+581 text5 CODE >67:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+583 text5 CODE >65:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+583 text5 CODE >68:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+586 text5 CODE >70:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+589 text5 CODE >71:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+594 text5 CODE >72:/opt/microchip/xc8/v1.45/sources/common/fttol.c
+287 text4 CODE >12:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+287 text4 CODE >16:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+289 text4 CODE >17:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+28A text4 CODE >19:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+28D text4 CODE >20:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+28E text4 CODE >22:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+290 text4 CODE >24:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+292 text4 CODE >26:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/i2c_LCD.h
+352 text3 CODE >6:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+352 text3 CODE >14:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+354 text3 CODE >15:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+358 text3 CODE >16:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+35A text3 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+35C text3 CODE >18:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+361 text3 CODE >19:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+365 text3 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+366 text3 CODE >22:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+36B text3 CODE >23:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+373 text3 CODE >24:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+377 text3 CODE >25:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+378 text3 CODE >27:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+37D text3 CODE >28:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+381 text3 CODE >30:/opt/microchip/xc8/v1.45/sources/common/lwdiv.c
+2F2 text2 CODE >6:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+2F2 text2 CODE >13:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+2F6 text2 CODE >14:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+2F8 text2 CODE >15:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+2FA text2 CODE >16:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+2FF text2 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+303 text2 CODE >15:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+304 text2 CODE >20:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+30C text2 CODE >21:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+310 text2 CODE >22:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+315 text2 CODE >23:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+319 text2 CODE >25:/opt/microchip/xc8/v1.45/sources/common/lwmod.c
+646 text1 CODE >492:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+648 text1 CODE >533:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+64C text1 CODE >536:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+65E text1 CODE >538:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+662 text1 CODE >541:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+66D text1 CODE >542:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+66E text1 CODE >548:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+66F text1 CODE >635:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+686 text1 CODE >1259:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+691 text1 CODE >1261:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+693 text1 CODE >1262:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+697 text1 CODE >1263:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+69C text1 CODE >1305:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+6A2 text1 CODE >1306:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+6B9 text1 CODE >1305:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+6C1 text1 CODE >1438:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+6C5 text1 CODE >1439:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+6D0 text1 CODE >1472:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+6D4 text1 CODE >1474:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+6DB text1 CODE >1489:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+702 text1 CODE >1524:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+70D text1 CODE >1474:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+70E text1 CODE >1538:/opt/microchip/xc8/v1.45/sources/common/doprnt.c
+713 maintext CODE >65:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+713 maintext CODE >67:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+716 maintext CODE >69:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+718 maintext CODE >71:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+71A maintext CODE >73:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+71C maintext CODE >75:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+71D maintext CODE >77:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+720 maintext CODE >83:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+725 maintext CODE >85:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+728 maintext CODE >86:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+72C maintext CODE >88:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+732 maintext CODE >90:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+73B maintext CODE >92:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+748 maintext CODE >94:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+751 maintext CODE >96:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+757 maintext CODE >97:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+760 maintext CODE >99:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+762 maintext CODE >103:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+76A maintext CODE >106:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+773 maintext CODE >107:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+774 maintext CODE >109:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+775 maintext CODE >110:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+779 maintext CODE >111:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+77B maintext CODE >112:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 77D maintext CODE >114:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 77E maintext CODE >115:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 780 maintext CODE >116:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
@@ -428,8 +427,8 @@ $dist/default/production/Final_Project.X.production.obj
 7CA maintext CODE >126:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 7D3 maintext CODE >128:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 7E0 maintext CODE >130:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-7ED maintext CODE >133:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
-7F6 maintext CODE >135:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+7ED maintext CODE >132:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
+7F6 maintext CODE >134:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 7FC maintext CODE >101:/home/abhi/Documents/Code-local/MPLABXProjects/Final Project.X/main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
@@ -457,21 +456,21 @@ I2C_LCD_Pos@LoBytex 7D 0 COMMON 1 cstackCOMMON dist/default/production/Final_Pro
 I2C_LCD_Pos@Pos 78 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 ___awtoft@sign 7D 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_i2c_Init 50A 0 CODE 0 text4 dist/default/production/Final_Project.X.production.obj
-_i2c_Read 568 0 CODE 0 text18 dist/default/production/Final_Project.X.production.obj
-_i2c_Stop 4D6 0 CODE 0 text15 dist/default/production/Final_Project.X.production.obj
-_i2c_Wait 4FA 0 CODE 0 text20 dist/default/production/Final_Project.X.production.obj
+_i2c_Init 50E 0 CODE 0 text4 dist/default/production/Final_Project.X.production.obj
+_i2c_Read 56C 0 CODE 0 text18 dist/default/production/Final_Project.X.production.obj
+_i2c_Stop 4DA 0 CODE 0 text15 dist/default/production/Final_Project.X.production.obj
+_i2c_Wait 4FE 0 CODE 0 text20 dist/default/production/Final_Project.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 main@a 57 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack /tmp/xcXmRnm9f.obj
-_main E22 0 CODE 0 maintext dist/default/production/Final_Project.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcXIlXZH0.obj
+_main E26 0 CODE 0 maintext dist/default/production/Final_Project.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
-start 4 0 CODE 0 init /tmp/xcXmRnm9f.obj
-__end_of_i2c_Init 522 0 CODE 0 text4 dist/default/production/Final_Project.X.production.obj
-__end_of_i2c_Read 5A0 0 CODE 0 text18 dist/default/production/Final_Project.X.production.obj
-__end_of_i2c_Stop 4E0 0 CODE 0 text15 dist/default/production/Final_Project.X.production.obj
-__end_of_i2c_Wait 50A 0 CODE 0 text20 dist/default/production/Final_Project.X.production.obj
+start 4 0 CODE 0 init /tmp/xcXIlXZH0.obj
+__end_of_i2c_Init 526 0 CODE 0 text4 dist/default/production/Final_Project.X.production.obj
+__end_of_i2c_Read 5A4 0 CODE 0 text18 dist/default/production/Final_Project.X.production.obj
+__end_of_i2c_Stop 4E4 0 CODE 0 text15 dist/default/production/Final_Project.X.production.obj
+__end_of_i2c_Wait 50E 0 CODE 0 text20 dist/default/production/Final_Project.X.production.obj
 __size_of___ftdiv 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __size_of___fttol 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
@@ -481,16 +480,16 @@ __size_of___lwmod 0 0 ABS 0 - dist/default/production/Final_Project.X.production
 ___ftdiv@f1 23 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 ___ftdiv@f2 20 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 ___ftdiv@f3 2B 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
-_I2C_LCD_Busy 7FC 0 CODE 0 text13 dist/default/production/Final_Project.X.production.obj
-_I2C_LCD_Init 776 0 CODE 0 text11 dist/default/production/Final_Project.X.production.obj
+_I2C_LCD_Busy 800 0 CODE 0 text13 dist/default/production/Final_Project.X.production.obj
+_I2C_LCD_Init 77A 0 CODE 0 text11 dist/default/production/Final_Project.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_ADC_Read 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
-intlevel0 0 0 ENTRY 0 functab /tmp/xcXmRnm9f.obj
-intlevel1 0 0 ENTRY 0 functab /tmp/xcXmRnm9f.obj
-intlevel2 0 0 ENTRY 0 functab /tmp/xcXmRnm9f.obj
-intlevel3 0 0 ENTRY 0 functab /tmp/xcXmRnm9f.obj
-intlevel4 0 0 ENTRY 0 functab /tmp/xcXmRnm9f.obj
-intlevel5 0 0 ENTRY 0 functab /tmp/xcXmRnm9f.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXIlXZH0.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXIlXZH0.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXIlXZH0.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXIlXZH0.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXIlXZH0.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXIlXZH0.obj
 __size_of_ADC_Initialize 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -503,40 +502,40 @@ _ADRESH 9C 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 _ADRESL 9B 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __size_of_I2C_LCD_Busy 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __size_of_I2C_LCD_Init 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
-_i2c_Address 522 0 CODE 0 text19 dist/default/production/Final_Project.X.production.obj
+_i2c_Address 526 0 CODE 0 text19 dist/default/production/Final_Project.X.production.obj
 __size_of___awtoft 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 i2c_Read@ack 71 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 __size_of_I2C_LCD_SWrite 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
-__end_of_i2c_Start 4D6 0 CODE 0 text16 dist/default/production/Final_Project.X.production.obj
-__end_of_i2c_Write 4FA 0 CODE 0 text14 dist/default/production/Final_Project.X.production.obj
+__end_of_i2c_Start 4DA 0 CODE 0 text16 dist/default/production/Final_Project.X.production.obj
+__end_of_i2c_Write 4FE 0 CODE 0 text14 dist/default/production/Final_Project.X.production.obj
 ___fttol@f1 30 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_sprintf 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 i2c_Write@data 70 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 __size_of_i2c_Start 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __size_of_i2c_Write 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
-_ADC_Read 540 0 CODE 0 text21 dist/default/production/Final_Project.X.production.obj
+_ADC_Read 544 0 CODE 0 text21 dist/default/production/Final_Project.X.production.obj
 ___lwmod@divisor 78 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 __size_of___ftpack 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
-__end_of___ftdiv C88 0 CODE 0 text6 dist/default/production/Final_Project.X.production.obj
-__end_of___fttol B36 0 CODE 0 text5 dist/default/production/Final_Project.X.production.obj
-__end_of___lwdiv 708 0 CODE 0 text3 dist/default/production/Final_Project.X.production.obj
-__end_of___lwmod 638 0 CODE 0 text2 dist/default/production/Final_Project.X.production.obj
-__end_of_I2C_LCD_Busy 8AA 0 CODE 0 text13 dist/default/production/Final_Project.X.production.obj
-__end_of_I2C_LCD_Init 7FC 0 CODE 0 text11 dist/default/production/Final_Project.X.production.obj
-__end_of_ADC_Read 568 0 CODE 0 text21 dist/default/production/Final_Project.X.production.obj
+__end_of___ftdiv C8C 0 CODE 0 text6 dist/default/production/Final_Project.X.production.obj
+__end_of___fttol B3A 0 CODE 0 text5 dist/default/production/Final_Project.X.production.obj
+__end_of___lwdiv 70C 0 CODE 0 text3 dist/default/production/Final_Project.X.production.obj
+__end_of___lwmod 63C 0 CODE 0 text2 dist/default/production/Final_Project.X.production.obj
+__end_of_I2C_LCD_Busy 8AE 0 CODE 0 text13 dist/default/production/Final_Project.X.production.obj
+__end_of_I2C_LCD_Init 800 0 CODE 0 text11 dist/default/production/Final_Project.X.production.obj
+__end_of_ADC_Read 56C 0 CODE 0 text21 dist/default/production/Final_Project.X.production.obj
 _dpowers 1000 0 STRCODE 0 stringtext1 dist/default/production/Final_Project.X.production.obj
-_i2c_Start 4CC 0 CODE 0 text16 dist/default/production/Final_Project.X.production.obj
-_i2c_Write 4EC 0 CODE 0 text14 dist/default/production/Final_Project.X.production.obj
+_i2c_Start 4D0 0 CODE 0 text16 dist/default/production/Final_Project.X.production.obj
+_i2c_Write 4F0 0 CODE 0 text14 dist/default/production/Final_Project.X.production.obj
 ___lwdiv@quotient 75 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 ___lwmod@dividend 7A 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 start_initialization FFA 0 CODE 0 cinit dist/default/production/Final_Project.X.production.obj
-___awtoft 5A0 0 CODE 0 text7 dist/default/production/Final_Project.X.production.obj
-_i2c_Restart 4C2 0 CODE 0 text17 dist/default/production/Final_Project.X.production.obj
+___awtoft 5A4 0 CODE 0 text7 dist/default/production/Final_Project.X.production.obj
+_i2c_Restart 4C6 0 CODE 0 text17 dist/default/production/Final_Project.X.production.obj
 _GO_nDONE 4E9 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 I2C_LCD_SWrite@Max 79 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
-__end_of___awtoft 5E0 0 CODE 0 text7 dist/default/production/Final_Project.X.production.obj
+__end_of___awtoft 5E4 0 CODE 0 text7 dist/default/production/Final_Project.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 ___fttol@exp1 3D 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 ___fttol@lval 39 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
@@ -544,12 +543,12 @@ _TMR1ON C0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 _TRISB4 46C 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 _TRISB6 46E 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 I2C_LCD_Command@Cmd 78 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
-__end_of_I2C_LCD_Pos 776 0 CODE 0 text10 dist/default/production/Final_Project.X.production.obj
-___ftpack 960 0 CODE 0 text8 dist/default/production/Final_Project.X.production.obj
+__end_of_I2C_LCD_Pos 77A 0 CODE 0 text10 dist/default/production/Final_Project.X.production.obj
+___ftpack 964 0 CODE 0 text8 dist/default/production/Final_Project.X.production.obj
 ___ftpack@arg 70 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 ___ftpack@exp 73 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXmRnm9f.obj
-__end_of___ftpack A28 0 CODE 0 text8 dist/default/production/Final_Project.X.production.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXIlXZH0.obj
+__end_of___ftpack A2C 0 CODE 0 text8 dist/default/production/Final_Project.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -610,7 +609,7 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
-__end_of_sprintf E22 0 CODE 0 text1 dist/default/production/Final_Project.X.production.obj
+__end_of_sprintf E26 0 CODE 0 text1 dist/default/production/Final_Project.X.production.obj
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
@@ -699,35 +698,35 @@ I2C_LCD_Command@HiBytex 7C 0 COMMON 1 cstackCOMMON dist/default/production/Final
 I2C_LCD_SWrite@Data 78 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 sprintf@val 2B 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXmRnm9f.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXIlXZH0.obj
 I2C_LCD_SWrite@Slave 20 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
 __Lstringtext3 0 0 ABS 0 stringtext3 -
 __Lstringtext4 0 0 ABS 0 stringtext4 -
 ?___awtoft 78 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
-_ADC_Initialize 4E0 0 CODE 0 text22 dist/default/production/Final_Project.X.production.obj
+_ADC_Initialize 4E4 0 CODE 0 text22 dist/default/production/Final_Project.X.production.obj
 i2c_Address@l_address 73 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 sprintf@flag 29 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 sprintf@prec 2A 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
-__end_of_i2c_Address 540 0 CODE 0 text19 dist/default/production/Final_Project.X.production.obj
-__ptext10 708 0 CODE 0 text10 dist/default/production/Final_Project.X.production.obj
-__ptext11 776 0 CODE 0 text11 dist/default/production/Final_Project.X.production.obj
-__ptext12 638 0 CODE 0 text12 dist/default/production/Final_Project.X.production.obj
-__ptext13 7FC 0 CODE 0 text13 dist/default/production/Final_Project.X.production.obj
-__ptext14 4EC 0 CODE 0 text14 dist/default/production/Final_Project.X.production.obj
-__ptext15 4D6 0 CODE 0 text15 dist/default/production/Final_Project.X.production.obj
-__ptext16 4CC 0 CODE 0 text16 dist/default/production/Final_Project.X.production.obj
-__ptext17 4C2 0 CODE 0 text17 dist/default/production/Final_Project.X.production.obj
-__ptext18 568 0 CODE 0 text18 dist/default/production/Final_Project.X.production.obj
-__ptext19 522 0 CODE 0 text19 dist/default/production/Final_Project.X.production.obj
-__ptext20 4FA 0 CODE 0 text20 dist/default/production/Final_Project.X.production.obj
-__ptext21 540 0 CODE 0 text21 dist/default/production/Final_Project.X.production.obj
-__ptext22 4E0 0 CODE 0 text22 dist/default/production/Final_Project.X.production.obj
-___ftdiv B36 0 CODE 0 text6 dist/default/production/Final_Project.X.production.obj
-___fttol A28 0 CODE 0 text5 dist/default/production/Final_Project.X.production.obj
-___lwdiv 6A0 0 CODE 0 text3 dist/default/production/Final_Project.X.production.obj
-___lwmod 5E0 0 CODE 0 text2 dist/default/production/Final_Project.X.production.obj
+__end_of_i2c_Address 544 0 CODE 0 text19 dist/default/production/Final_Project.X.production.obj
+__ptext10 70C 0 CODE 0 text10 dist/default/production/Final_Project.X.production.obj
+__ptext11 77A 0 CODE 0 text11 dist/default/production/Final_Project.X.production.obj
+__ptext12 63C 0 CODE 0 text12 dist/default/production/Final_Project.X.production.obj
+__ptext13 800 0 CODE 0 text13 dist/default/production/Final_Project.X.production.obj
+__ptext14 4F0 0 CODE 0 text14 dist/default/production/Final_Project.X.production.obj
+__ptext15 4DA 0 CODE 0 text15 dist/default/production/Final_Project.X.production.obj
+__ptext16 4D0 0 CODE 0 text16 dist/default/production/Final_Project.X.production.obj
+__ptext17 4C6 0 CODE 0 text17 dist/default/production/Final_Project.X.production.obj
+__ptext18 56C 0 CODE 0 text18 dist/default/production/Final_Project.X.production.obj
+__ptext19 526 0 CODE 0 text19 dist/default/production/Final_Project.X.production.obj
+__ptext20 4FE 0 CODE 0 text20 dist/default/production/Final_Project.X.production.obj
+__ptext21 544 0 CODE 0 text21 dist/default/production/Final_Project.X.production.obj
+__ptext22 4E4 0 CODE 0 text22 dist/default/production/Final_Project.X.production.obj
+___ftdiv B3A 0 CODE 0 text6 dist/default/production/Final_Project.X.production.obj
+___fttol A2C 0 CODE 0 text5 dist/default/production/Final_Project.X.production.obj
+___lwdiv 6A4 0 CODE 0 text3 dist/default/production/Final_Project.X.production.obj
+___lwmod 5E4 0 CODE 0 text2 dist/default/production/Final_Project.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -750,7 +749,7 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext E22 0 CODE 0 maintext dist/default/production/Final_Project.X.production.obj
+__pmaintext E26 0 CODE 0 maintext dist/default/production/Final_Project.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 I2C_LCD_Busy@read_byte 76 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
@@ -766,21 +765,21 @@ __size_of_I2C_LCD_Pos 0 0 ABS 0 - dist/default/production/Final_Project.X.produc
 main@Sout 40 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 main@Sptr 54 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
 ___lwdiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
-_I2C_LCD_SWrite 8AA 0 CODE 0 text9 dist/default/production/Final_Project.X.production.obj
-stackhi 23EF 0 ABS 0 - /tmp/xcXmRnm9f.obj
-stacklo 2039 0 ABS 0 - /tmp/xcXmRnm9f.obj
-__end_of_I2C_LCD_Command 6A0 0 CODE 0 text12 dist/default/production/Final_Project.X.production.obj
+_I2C_LCD_SWrite 8AE 0 CODE 0 text9 dist/default/production/Final_Project.X.production.obj
+stackhi 23EF 0 ABS 0 - /tmp/xcXIlXZH0.obj
+stacklo 2039 0 ABS 0 - /tmp/xcXIlXZH0.obj
+__end_of_I2C_LCD_Command 6A4 0 CODE 0 text12 dist/default/production/Final_Project.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
-__end_of_ADC_Initialize 4EC 0 CODE 0 text22 dist/default/production/Final_Project.X.production.obj
+__end_of_ADC_Initialize 4F0 0 CODE 0 text22 dist/default/production/Final_Project.X.production.obj
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __Lend_init 4 0 CODE 0 end_init -
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production/Final_Project.X.production.obj
-__end_of_i2c_Restart 4CC 0 CODE 0 text17 dist/default/production/Final_Project.X.production.obj
+__end_of_i2c_Restart 4D0 0 CODE 0 text17 dist/default/production/Final_Project.X.production.obj
 __Hintentry 4 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
@@ -792,19 +791,19 @@ ___lwdiv@dividend 72 0 COMMON 1 cstackCOMMON dist/default/production/Final_Proje
 __Hreset_vec 4 0 CODE 0 reset_vec -
 I2C_LCD_Pos@HiBytex 7C 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 I2C_LCD_Pos@Slave 7B 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
-__ptext1 C88 0 CODE 0 text1 dist/default/production/Final_Project.X.production.obj
-__ptext2 5E0 0 CODE 0 text2 dist/default/production/Final_Project.X.production.obj
-__ptext3 6A0 0 CODE 0 text3 dist/default/production/Final_Project.X.production.obj
-__ptext4 50A 0 CODE 0 text4 dist/default/production/Final_Project.X.production.obj
-__ptext5 A28 0 CODE 0 text5 dist/default/production/Final_Project.X.production.obj
-__ptext6 B36 0 CODE 0 text6 dist/default/production/Final_Project.X.production.obj
-__ptext7 5A0 0 CODE 0 text7 dist/default/production/Final_Project.X.production.obj
-__ptext8 960 0 CODE 0 text8 dist/default/production/Final_Project.X.production.obj
-__ptext9 8AA 0 CODE 0 text9 dist/default/production/Final_Project.X.production.obj
+__ptext1 C8C 0 CODE 0 text1 dist/default/production/Final_Project.X.production.obj
+__ptext2 5E4 0 CODE 0 text2 dist/default/production/Final_Project.X.production.obj
+__ptext3 6A4 0 CODE 0 text3 dist/default/production/Final_Project.X.production.obj
+__ptext4 50E 0 CODE 0 text4 dist/default/production/Final_Project.X.production.obj
+__ptext5 A2C 0 CODE 0 text5 dist/default/production/Final_Project.X.production.obj
+__ptext6 B3A 0 CODE 0 text6 dist/default/production/Final_Project.X.production.obj
+__ptext7 5A4 0 CODE 0 text7 dist/default/production/Final_Project.X.production.obj
+__ptext8 964 0 CODE 0 text8 dist/default/production/Final_Project.X.production.obj
+__ptext9 8AE 0 CODE 0 text9 dist/default/production/Final_Project.X.production.obj
 I2C_LCD_Command@LoBytex 7D 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
-_sprintf C88 0 CODE 0 text1 dist/default/production/Final_Project.X.production.obj
-_I2C_LCD_Command 638 0 CODE 0 text12 dist/default/production/Final_Project.X.production.obj
-__end_of_I2C_LCD_SWrite 960 0 CODE 0 text9 dist/default/production/Final_Project.X.production.obj
+_sprintf C8C 0 CODE 0 text1 dist/default/production/Final_Project.X.production.obj
+_I2C_LCD_Command 63C 0 CODE 0 text12 dist/default/production/Final_Project.X.production.obj
+__end_of_I2C_LCD_SWrite 964 0 CODE 0 text9 dist/default/production/Final_Project.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 sprintf@ap 28 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.production.obj
@@ -851,7 +850,7 @@ ___fttol@sign1 38 0 BANK0 1 cstackBANK0 dist/default/production/Final_Project.X.
 __initialization FFA 0 CODE 0 cinit dist/default/production/Final_Project.X.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
-_I2C_LCD_Pos 708 0 CODE 0 text10 dist/default/production/Final_Project.X.production.obj
+_I2C_LCD_Pos 70C 0 CODE 0 text10 dist/default/production/Final_Project.X.production.obj
 I2C_LCD_Command@Slave 7B 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
 __size_of_I2C_LCD_Command 0 0 ABS 0 - dist/default/production/Final_Project.X.production.obj
 I2C_LCD_Busy@Slave 77 0 COMMON 1 cstackCOMMON dist/default/production/Final_Project.X.production.obj
@@ -882,29 +881,29 @@ I2C_LCD_Busy@Temp1 75 0 COMMON 1 cstackCOMMON dist/default/production/Final_Proj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FD FFA 3 2
-text1 0 644 C88 CD 2
-text2 0 2F0 5E0 2C 2
-text3 0 350 6A0 34 2
-text4 0 285 50A C 2
-text5 0 514 A28 87 2
-text6 0 59B B36 A9 2
-text7 0 2D0 5A0 20 2
-text8 0 4B0 960 64 2
-text9 0 455 8AA 5B 2
-text10 0 384 708 37 2
-text11 0 3BB 776 43 2
-text12 0 31C 638 34 2
-text13 0 3FE 7FC 57 2
-text14 0 276 4EC 7 2
-text15 0 26B 4D6 5 2
-text16 0 266 4CC 5 2
-text17 0 261 4C2 5 2
-text18 0 2B4 568 1C 2
-text19 0 291 522 F 2
-text20 0 27D 4FA 8 2
-text21 0 2A0 540 14 2
-text22 0 270 4E0 6 2
-maintext 0 711 E22 EC 2
+text1 0 646 C8C CD 2
+text2 0 2F2 5E4 2C 2
+text3 0 352 6A4 34 2
+text4 0 287 50E C 2
+text5 0 516 A2C 87 2
+text6 0 59D B3A A9 2
+text7 0 2D2 5A4 20 2
+text8 0 4B2 964 64 2
+text9 0 457 8AE 5B 2
+text10 0 386 70C 37 2
+text11 0 3BD 77A 43 2
+text12 0 31E 63C 34 2
+text13 0 400 800 57 2
+text14 0 278 4F0 7 2
+text15 0 26D 4DA 5 2
+text16 0 268 4D0 5 2
+text17 0 263 4C6 5 2
+text18 0 2B6 56C 1C 2
+text19 0 293 526 F 2
+text20 0 27F 4FE 8 2
+text21 0 2A2 544 14 2
+text22 0 272 4E4 6 2
+maintext 0 713 E26 EA 2
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 39 1
 stringtext1 0 800 1000 35 2
